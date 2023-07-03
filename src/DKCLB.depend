@@ -1,0 +1,4124 @@
+# depslib dependency file v1.0
+1659728743 source:s:\delta\src\__programclasses\cprogrambase.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+	"DeltaApiInfo.h"
+
+1618892832 s:\delta\src\main\include.h
+	"program_id.h"
+	"types.h"
+	"alleg_win.h"
+	"Libs\Nvwa\debug_new.h"
+	"Libs\MemDLL\MemoryModule.h"
+	"Libs\7zCrypto\7zCrypto.h"
+	"Libs\Simplex\simplexnoise.h"
+	"Libs\CrcFn\CRC.h"
+	"Libs\MurmurHash2A.h"
+	"Libs\sysmf.h"
+	"Libs\consthashmacro.h"
+	"Libs\autocstrmacro.h"
+	"math.h"
+	"defines.h"
+	"Types\STokenLine.h"
+	"resources.h"
+	"KFramework.h"
+	"Types\dirtpile.h"
+	"Types\dtime.h"
+	"Types\LUCID.h"
+	"Types\EXTHD.h"
+	"CFileIO.h"
+	"CFileType.h"
+	"auxillary.h"
+	"nitro_error.h"
+
+1619098517 s:\delta\src\res\program_id.h
+
+1640457393 s:\delta\src\main\types\types.h
+	<cstddef>
+	<vector>
+	<string>
+
+1621164114 s:\delta\src\main\alleg_win.h
+	<allegro.h>
+	<winalleg.h>
+
+1611456483 s:\delta\src\\libs\nvwa\debug_new.h
+	<new>
+	<stdio.h>
+	<stdlib.h>
+
+1446187318 s:\delta\src\\libs\memdll\memorymodule.h
+
+1619324555 s:\delta\src\\libs\7zcrypto\7zcrypto.h
+
+1398740975 s:\delta\src\\libs\simplex\simplexnoise.h
+
+1619324554 s:\delta\src\\libs\crcfn\crc.h
+
+1610417870 s:\delta\src\\libs\murmurhash2a.h
+
+1605210629 s:\delta\src\\libs\sysmf.h
+	"Shlobj.h"
+
+1618894334 s:\delta\src\\libs\consthashmacro.h
+
+1621654344 s:\delta\src\\libs\autocstrmacro.h
+
+1619098518 s:\delta\src\main\defines.h
+
+1619324554 s:\delta\src\main\types\stokenline.h
+
+1620999026 s:\delta\src\res\resources.h
+
+1659380463 s:\delta\src\fwk\kframework.h
+	"Types\dtime.h"
+	"CConfig.h"
+
+1619975377 s:\delta\src\main\types\dtime.h
+
+1620999344 s:\delta\src\fwk\config\cconfig.h
+
+1659923047 s:\delta\src\main\types\dirtpile.h
+
+1638570765 s:\delta\src\main\types\lucid.h
+
+1618980227 s:\delta\src\main\types\exthd.h
+
+1621000221 s:\delta\src\fwk\fileio\cfileio.h
+
+1621000221 s:\delta\src\fwk\filetypeinfo\cfiletype.h
+
+1659984895 s:\delta\src\fwk\auxillary\auxillary.h
+
+1619713582 s:\delta\src\main\nitro_error.h
+
+1633277902 s:\delta\src\main\engine\include_engine.h
+	"CInput.h"
+	"CVideo.h"
+	"CStats.h"
+	"CNitroGUI.h"
+	"CRender.h"
+	"CEngine.h"
+	"CProgramBase.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"CGameDataMaster.h"
+	"CAudio.h"
+	"UList.h"
+	"IDtmlTag.h"
+	"TDtmlTags.h"
+
+1631991110 s:\delta\src\main\engine\input\cinput.h
+
+1644709888 s:\delta\src\main\engine\video\cvideo.h
+
+1635469332 s:\delta\src\main\engine\video\cstats.h
+
+1656271767 s:\delta\src\ngui\cnitrogui.h
+	"LDtmlLine.h"
+	"LDtmlTag.h"
+	"LDtmlCmd.h"
+	"LDtmlVal.h"
+	"LDtmlTree.h"
+	"LDtmlCmdTree.h"
+	"LDtmlStrTree.h"
+	"LDtmlTag2.h"
+	"LDtmlCmd2.h"
+	"LDtmlTracker.h"
+
+1628654484 s:\delta\src\ngui\lexer\ldtmlline.h
+
+1631475437 s:\delta\src\ngui\lexer\ldtmltag.h
+	"LDtmlCmd.h"
+
+1630166195 s:\delta\src\ngui\lexer\ldtmlcmd.h
+	"LDtmlVal.h"
+	"LDtmlStr.h"
+	"LDtmlInd.h"
+
+1631640861 s:\delta\src\ngui\lexer\ldtmlval.h
+
+1631640861 s:\delta\src\ngui\lexer\ldtmlstr.h
+
+1631640548 s:\delta\src\ngui\lexer\ldtmlind.h
+
+1630517418 s:\delta\src\ngui\lexer\ldtmltree.h
+
+1629929134 s:\delta\src\ngui\lexer\ldtmlcmdtree.h
+
+1629171152 s:\delta\src\ngui\lexer\ldtmlstrtree.h
+
+1628975252 s:\delta\src\ngui\lexer\ldtmltag2.h
+
+1628976263 s:\delta\src\ngui\lexer\ldtmlcmd2.h
+
+1631594408 s:\delta\src\ngui\lexer\ldtmltracker.h
+
+1659922411 s:\delta\src\main\engine\render\crender.h
+
+1619970815 s:\delta\src\main\engine\cengine.h
+
+1655928772 s:\delta\src\__programclasses\cprogrambase.h
+
+1659729550 s:\delta\src\_filetypeclasses\cfileinfo.h
+	"file_chunk_id.h"
+
+1620573387 s:\delta\src\_filetypeclasses\file_chunk_id.h
+
+1657410103 s:\delta\src\_filetypeclasses\cfileinfomanager.h
+
+1643306288 s:\delta\src\_filetypeclasses\cgamedatamaster.h
+
+1636234182 s:\delta\src\main\engine\audio\caudio.h
+
+1656528858 s:\delta\src\ngui\ulist.h
+
+1644430945 s:\delta\src\ngui\idtmltag.h
+	"CDtmlVar.h"
+	"CSmart.h"
+	"DtmlTagVec.h"
+
+1624750285 s:\delta\src\ngui\cdtmlvar.h
+
+1658600532 s:\delta\src\ngui\tdtmltags.h
+	"IDtmlTag.h"
+
+1658169225 s:\delta\src\__programclasses\guidialoghandlers\include_gui_dialogs.h
+	"HMessageBox.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HPickFolder.h"
+	"HColorPicker.h"
+	"HConfigInput.h"
+	"HConfigVideo.h"
+	"HConfigAudio.h"
+	"HNewFile.h"
+	"GFileManager.h"
+	"HDpxCull.h"
+	"HDpxDuration.h"
+	"HDpxFlip.h"
+	"HDpxRotate.h"
+	"HDpxRotSpriteA.h"
+	"HDpxRotSpriteF.h"
+	"HDpxScale.h"
+	"HDpxTranslate.h"
+	"HDmsAdvanced.h"
+	"HDmsSupportFiles.h"
+	"HEasyScript.h"
+	"HDlvLayerConfig.h"
+	"HDlvExtraUnit.h"
+
+1627768269 s:\delta\src\__programclasses\guidialoghandlers\hmessagebox.h
+
+1632336251 s:\delta\src\__programclasses\guidialoghandlers\hopenfile.h
+	"SFileWorkInfo.h"
+
+1619324555 s:\delta\src\ngui\sfileworkinfo.h
+
+1632335857 s:\delta\src\__programclasses\guidialoghandlers\hsavefile.h
+	"SFileWorkInfo.h"
+
+1628032043 s:\delta\src\__programclasses\guidialoghandlers\hpickfolder.h
+	"SFileWorkInfo.h"
+
+1631647504 s:\delta\src\__programclasses\guidialoghandlers\hconfiginput.h
+
+1631991110 s:\delta\src\__programclasses\guidialoghandlers\hconfigvideo.h
+
+1631994227 s:\delta\src\__programclasses\guidialoghandlers\hconfigaudio.h
+
+1632246438 s:\delta\src\__programclasses\guidialoghandlers\hnewfile.h
+
+1655928772 s:\delta\src\__programclasses\guihandlers\gfilemanager.h
+
+1633306000 s:\delta\src\__programclasses\editordialogs\dpx\hdpxcull.h
+
+1633307729 s:\delta\src\__programclasses\editordialogs\dpx\hdpxduration.h
+
+1633306849 s:\delta\src\__programclasses\editordialogs\dpx\hdpxflip.h
+
+1633306849 s:\delta\src\__programclasses\editordialogs\dpx\hdpxrotate.h
+
+1633306849 s:\delta\src\__programclasses\editordialogs\dpx\hdpxrotspritea.h
+
+1633306849 s:\delta\src\__programclasses\editordialogs\dpx\hdpxrotspritef.h
+
+1633306849 s:\delta\src\__programclasses\editordialogs\dpx\hdpxscale.h
+
+1633309963 s:\delta\src\__programclasses\editordialogs\dpx\hdpxtranslate.h
+
+1633309930 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxcull.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxCull.h"
+
+1633310113 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxduration.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxDuration.h"
+
+1633307593 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxflip.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxFlip.h"
+
+1633307593 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxrotate.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxRotate.h"
+
+1633310090 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxrotspritea.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxRotSpriteA.h"
+
+1633310095 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxrotspritef.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxRotSpriteF.h"
+
+1633307693 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxscale.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxScale.h"
+
+1633310894 source:s:\delta\src\__programclasses\editordialogs\dpx\hdpxtranslate.cpp
+	"include.h"
+	"include_engine.h"
+	"HDpxTranslate.h"
+
+1631994595 source:s:\delta\src\__programclasses\guidialoghandlers\hconfigaudio.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HConfigAudio.h"
+
+1636310667 source:s:\delta\src\__programclasses\guidialoghandlers\hconfiginput.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HConfigInput.h"
+
+1636310696 source:s:\delta\src\__programclasses\guidialoghandlers\hconfigvideo.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HConfigVideo.h"
+
+1632328346 source:s:\delta\src\__programclasses\guidialoghandlers\hmessagebox.cpp
+	"include.h"
+	"include_engine.h"
+	"HMessageBox.h"
+
+1660086152 source:s:\delta\src\__programclasses\guidialoghandlers\hnewfile.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HNewFile.h"
+
+1655948287 source:s:\delta\src\__programclasses\guidialoghandlers\hopenfile.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HMessageBox.h"
+
+1636310609 source:s:\delta\src\__programclasses\guidialoghandlers\hpickfolder.cpp
+	"include.h"
+	"include_engine.h"
+	"HPickFolder.h"
+	"HMessageBox.h"
+
+1636259103 source:s:\delta\src\__programclasses\guidialoghandlers\hsavefile.cpp
+	"include.h"
+	"include_engine.h"
+	"HSaveFile.h"
+	"HMessageBox.h"
+
+1658169520 source:s:\delta\src\__programclasses\guieditors\gdlveditor.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+	"GDlvEditor.h"
+
+1656623996 s:\delta\src\__programclasses\guieditors\gdlveditor.h
+	"IFileEditor.h"
+	"include_editors.h"
+
+1656623996 s:\delta\src\__programclasses\guieditors\ifileeditor.h
+
+1656623996 source:s:\delta\src\__programclasses\guieditors\gdpxeditor.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+	"GDpxEditor.h"
+
+1656623996 s:\delta\src\__programclasses\guieditors\gdpxeditor.h
+	"IFileEditor.h"
+	"include_editors.h"
+
+1660090156 s:\delta\src\_editorclasses\include_editors.h
+	"ESprite.h"
+	"EAnimation.h"
+	"EGraphic.h"
+	"EMusicGroup.h"
+	"ESoundGroup.h"
+	"EPhysics.h"
+	"include_gamedata.h"
+	"CAnimation.h"
+
+1636602945 s:\delta\src\_editorclasses\esprite.h
+
+1633548777 s:\delta\src\_editorclasses\eanimation.h
+
+1659987966 s:\delta\src\_editorclasses\egraphic.h
+
+1657392241 s:\delta\src\_dataclasses\dsprite.h
+	"IGameData.h"
+
+1621090311 s:\delta\src\_filetypeclasses\igamedata.h
+
+1657392771 s:\delta\src\_dataclasses\danimation.h
+
+1657218329 s:\delta\src\_dataclasses\dgraphic.h
+
+1655948899 s:\delta\src\_instanceclasses\canimation.h
+
+1660067707 source:s:\delta\src\__programclasses\guihandlers\gfilemanager.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"GFileManager.h"
+	"HMessageBox.h"
+	"HNewFile.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HPickFolder.h"
+	"FileEditors.h"
+
+1657822124 s:\delta\src\_filetypeclasses\include_gamedata.h
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"CGameDataMaster.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"DAudioGroup.h"
+	"DAudioTrack.h"
+	"DAudioDynamic.h"
+	"DAudioFile.h"
+	"DEmbeddedAudio.h"
+	"DAudioPlugin.h"
+	"BLevel.h"
+	"BLevelObject.h"
+	"BLevelObjectEngine.h"
+	"BLevelTile.h"
+	"BLevelTileMap.h"
+	"BLevelTileSet.h"
+	"BLevelTileSlot.h"
+	"BLevelBackground.h"
+	"BLevelBaseBacking.h"
+	"BLevelPhys.h"
+	"BLevelPhysMap.h"
+	"BLevelPhysSet.h"
+	"BLevelPhysSlot.h"
+	"BLevelComposition.h"
+	"DDxzFormat.h"
+	"DPhysics.h"
+
+1634941407 s:\delta\src\_dataclasses\daudiogroup.h
+	"IGameData.h"
+
+1634940858 s:\delta\src\_dataclasses\daudiotrack.h
+
+1643222810 s:\delta\src\_dataclasses\daudiodynamic.h
+
+1636140626 s:\delta\src\_dataclasses\daudiofile.h
+	"DAudioSupportFile.h"
+	"CAudioBuffer.h"
+
+1620922119 s:\delta\src\_dataclasses\daudiosupportfile.h
+
+1621181489 s:\delta\src\_instanceclasses\audio\caudiobuffer.h
+	"samplerate.h"
+	"CAudioPosition.h"
+
+1618894332 s:\delta\src\libs\resample\samplerate.h
+
+1621175598 s:\delta\src\_instanceclasses\audio\caudioposition.h
+
+1621165299 s:\delta\src\_dataclasses\dembeddedaudio.h
+	"IGameData.h"
+
+1621164967 s:\delta\src\_dataclasses\daudioplugin.h
+	"IGameData.h"
+
+1660067536 s:\delta\src\__programclasses\guieditors\fileeditors.h
+	"GDlvEditor.h"
+	"GDpxEditor.h"
+	"GDmsEditor.h"
+	"GDssEditor.h"
+	"GDptEditor.h"
+
+1657421565 source:s:\delta\src\_dataclasses\danimation.cpp
+	"include.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"CRender.h"
+
+1643222803 source:s:\delta\src\_dataclasses\daudiodynamic.cpp
+	"include.h"
+	"include_engine.h"
+	"DAudioDynamic.h"
+	"DAudioFile.h"
+
+1636140626 source:s:\delta\src\_dataclasses\daudiofile.cpp
+	"include.h"
+	"DAudioFile.h"
+
+1634941396 source:s:\delta\src\_dataclasses\daudiogroup.cpp
+	"include.h"
+	"DAudioGroup.h"
+	"DAudioTrack.h"
+
+1621166640 source:s:\delta\src\_dataclasses\daudioplugin.cpp
+	"include.h"
+	"DAudioPlugin.h"
+
+1620922118 source:s:\delta\src\_dataclasses\daudiosupportfile.cpp
+	"include.h"
+	"DAudioSupportFile.h"
+
+1634940857 source:s:\delta\src\_dataclasses\daudiotrack.cpp
+	"include.h"
+	"DAudioTrack.h"
+	"DAudioDynamic.h"
+
+1621165297 source:s:\delta\src\_dataclasses\dembeddedaudio.cpp
+	"include.h"
+	"DEmbeddedAudio.h"
+
+1657657454 source:s:\delta\src\_dataclasses\dgraphic.cpp
+	"include.h"
+	"DGraphic.h"
+
+1657392770 source:s:\delta\src\_dataclasses\dsprite.cpp
+	"include.h"
+	"DSprite.h"
+	"DAnimation.h"
+
+1659987980 source:s:\delta\src\_editorclasses\eanimation.cpp
+	"include.h"
+	"include_engine.h"
+	"include_editors.h"
+	"include_gui_dialogs.h"
+	"GDpxEditor.h"
+
+1659989331 source:s:\delta\src\_editorclasses\egraphic.cpp
+	"include.h"
+	"include_engine.h"
+	"include_editors.h"
+	"include_gui_dialogs.h"
+	"GDpxEditor.h"
+
+1636651867 source:s:\delta\src\_editorclasses\esprite.cpp
+	"include.h"
+	"include_engine.h"
+	"include_editors.h"
+	"include_gui_dialogs.h"
+	"GDpxEditor.h"
+
+1658102413 source:s:\delta\src\_filetypeclasses\cfileinfo.cpp
+	"include.h"
+	"CFileInfo.h"
+
+1657410102 source:s:\delta\src\_filetypeclasses\cfileinfomanager.cpp
+	"include.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"resources.rc"
+
+1659728711 s:\delta\src\res\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resources.h"
+
+1659729550 source:s:\delta\src\_filetypeclasses\cgamedatamaster.cpp
+	"include.h"
+	"CGameDataMaster.h"
+	"IGameData.h"
+	"IDeltaFileHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"CDpxHandler.h"
+	"CDmsHandler.h"
+	"CDssHandler.h"
+	"CDasHandler.h"
+	"CDapHandler.h"
+	"CDloHandler.h"
+	"CDliHandler.h"
+	"CDlvHandler.h"
+	"CDptHandler.h"
+	"CDltHandler.h"
+	"CDxoHandler.h"
+	"CDxtHandler.h"
+	"CDxpHandler.h"
+	"CDxhHandler.h"
+	"CDsxHandler.h"
+
+1643251376 s:\delta\src\_filetypeclasses\ideltafilehandler.h
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdpxhandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdmshandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdsshandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdashandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdaphandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 source:s:\delta\src\_filetypeclasses\filetypes\cdaphandler.cpp
+	"include.h"
+	"CDapHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DAudioPlugin.h"
+
+1643251376 source:s:\delta\src\_filetypeclasses\filetypes\cdashandler.cpp
+	"include.h"
+	"CDasHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DEmbeddedAudio.h"
+
+1643251376 source:s:\delta\src\_filetypeclasses\filetypes\cdmshandler.cpp
+	"include.h"
+	"CDmsHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DAudioGroup.h"
+	"DAudioTrack.h"
+	"DAudioDynamic.h"
+	"DAudioFile.h"
+
+1657400174 source:s:\delta\src\_filetypeclasses\filetypes\cdpxhandler.cpp
+	"include.h"
+	"CDpxHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+
+1643251376 source:s:\delta\src\_filetypeclasses\filetypes\cdsshandler.cpp
+	"include.h"
+	"CDssHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DAudioGroup.h"
+	"DAudioTrack.h"
+	"DAudioDynamic.h"
+	"DAudioFile.h"
+
+1621184213 source:s:\delta\src\_filetypeclasses\igamedata.cpp
+	"include.h"
+	"IGameData.h"
+
+1636227028 source:s:\delta\src\_instanceclasses\audio\caudiobuffer.cpp
+	"include.h"
+	"CAudioBuffer.h"
+
+1636158210 source:s:\delta\src\_instanceclasses\audio\caudiodynamic.cpp
+	"include.h"
+	"CAudioBuffer.h"
+	"CAudioDynamic.h"
+	"DAudioDynamic.h"
+	"CAudioFile.h"
+
+1620995802 s:\delta\src\_instanceclasses\audio\caudiodynamic.h
+
+1620995846 s:\delta\src\_instanceclasses\audio\caudiofile.h
+
+1643252139 source:s:\delta\src\_instanceclasses\audio\caudiofile.cpp
+	"include.h"
+	"include_engine.h"
+	"DAudioFile.h"
+	"CAudioFile.h"
+	"DEmbeddedAudio.h"
+	"CAudioStreamWAV.h"
+	"CAudioStreamFLAC.h"
+	"CAudioStreamOGG.h"
+	"CAudioStreamMP3.h"
+	"CAudioStreamDAP.h"
+
+1620996527 s:\delta\src\_instanceclasses\audiohandlers\caudiostreamwav.h
+	"libwav.h"
+	"IAudioStreamer.h"
+
+1619324554 s:\delta\src\_instanceclasses\audiohandlers\libwav.h
+
+1620996741 s:\delta\src\_instanceclasses\audiohandlers\iaudiostreamer.h
+
+1620996195 s:\delta\src\_instanceclasses\audiohandlers\caudiostreamflac.h
+	<stdio.h>
+	<stdlib.h>
+	"share/compat.h"
+	"FLAC/stream_decoder.h"
+	"IAudioStreamer.h"
+
+1620996460 s:\delta\src\_instanceclasses\audiohandlers\caudiostreamogg.h
+	"IAudioStreamer.h"
+	"vorbis/codec.h"
+	"vorbis/vorbisfile.h"
+
+1620996362 s:\delta\src\_instanceclasses\audiohandlers\caudiostreammp3.h
+	"IAudioStreamer.h"
+	"mpg123\mpg123.h"
+
+1620996196 s:\delta\src\_instanceclasses\audiohandlers\caudiostreamdap.h
+	"libdap.h"
+	"IAudioStreamer.h"
+
+1619976488 s:\delta\src\_instanceclasses\audiohandlers\libdap.h
+
+1621169473 source:s:\delta\src\_instanceclasses\audio\caudioposition.cpp
+	"include.h"
+	"CAudioPosition.h"
+
+1636158069 source:s:\delta\src\_instanceclasses\audio\caudiotrack.cpp
+	"include.h"
+	"CAudioTrack.h"
+	"DAudioTrack.h"
+	"CAudioDynamic.h"
+	"CAudioBuffer.h"
+
+1621181713 s:\delta\src\_instanceclasses\audio\caudiotrack.h
+
+1635463692 source:s:\delta\src\_instanceclasses\audiohandlers\caudiostreamdap.cpp
+	"include.h"
+	"CAudioStreamDAP.h"
+	"CAudioBuffer.h"
+
+1621523899 source:s:\delta\src\_instanceclasses\audiohandlers\caudiostreamflac.cpp
+	"include.h"
+	"CAudioStreamFLAC.h"
+	"CAudioBuffer.h"
+
+1636224751 source:s:\delta\src\_instanceclasses\audiohandlers\caudiostreammp3.cpp
+	"include.h"
+	"CAudioStreamMP3.h"
+	"CAudioBuffer.h"
+	"mpg123\mpg123.h"
+
+1621523899 source:s:\delta\src\_instanceclasses\audiohandlers\caudiostreamogg.cpp
+	"include.h"
+	"CAudioStreamOGG.h"
+	"CAudioBuffer.h"
+
+1621523899 source:s:\delta\src\_instanceclasses\audiohandlers\caudiostreamwav.cpp
+	"include.h"
+	"CAudioStreamWAV.h"
+	"CAudioBuffer.h"
+
+1619976598 source:s:\delta\src\_instanceclasses\audiohandlers\kapaudio\cdapout.cpp
+	"include.h"
+	"CDapOut.h"
+	"CAudioBuffer.h"
+
+1621180268 s:\delta\src\_instanceclasses\audiohandlers\kapaudio\cdapout.h
+
+1643306326 source:s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dap.cpp
+	"include.h"
+	"include_gamedata.h"
+	"dap.h"
+
+1620996726 s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dap.h
+	"dapin2.h"
+
+1618894334 s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dapin2.h
+	"dapout.h"
+
+1618894331 s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dapout.h
+
+1606440399 source:s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dap_asm.s
+
+1619324553 source:s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dap_dispatch.cpp
+	"include.h"
+	"dapout.h"
+	"CDapOut.h"
+	"dap_function.h"
+
+1618886307 s:\delta\src\_instanceclasses\audiohandlers\kapaudio\dap_function.h
+
+1621180310 source:s:\delta\src\_instanceclasses\audiohandlers\libdap.cpp
+	"include.h"
+	"dap.h"
+	"libdap.h"
+	"CDapOut.h"
+
+1619324555 source:s:\delta\src\_instanceclasses\audiohandlers\libwav.cpp
+	"include.h"
+	"libwav.h"
+
+1655948923 source:s:\delta\src\_instanceclasses\canimation.cpp
+	"include.h"
+	"include_engine.h"
+	"CAnimation.h"
+	"DAnimation.h"
+	"DGraphic.h"
+
+1659986325 source:s:\delta\src\fwk\auxillary\auxillary.cpp
+	"include.h"
+
+1619712017 source:s:\delta\src\fwk\auxillary\pwr_upscale.cpp
+	"include.h"
+
+1627649951 source:s:\delta\src\fwk\auxillary\textformat.cpp
+	<stdarg.h>
+	"include.h"
+	"Hex128.h"
+
+1619098518 s:\delta\src\main\types\hex128.h
+	"types.h"
+	"Vsx128.h"
+
+1619098520 s:\delta\src\main\types\vsx128.h
+	"types.h"
+	"Hex128.h"
+
+1619712691 source:s:\delta\src\fwk\clipboard.cpp
+	"include.h"
+
+1620999344 source:s:\delta\src\fwk\config\cconfig.cpp
+	"include.h"
+	"CConfig.h"
+
+1621654344 source:s:\delta\src\fwk\config\cconfigmanager.cpp
+	"include.h"
+	"CConfigManager.h"
+	"CConfigSection.h"
+	"CConfig.h"
+
+1620999344 s:\delta\src\fwk\config\cconfigmanager.h
+
+1620999344 s:\delta\src\fwk\config\cconfigsection.h
+
+1621654344 source:s:\delta\src\fwk\config\cconfigsection.cpp
+	"include.h"
+	"CConfigSection.h"
+	"CConfig.h"
+
+1619098521 source:s:\delta\src\fwk\debug.cpp
+	<stdio.h>
+	"include.h"
+
+1621524449 source:s:\delta\src\fwk\deltaerror.cpp
+	"include.h"
+
+1621000221 source:s:\delta\src\fwk\fileio\cfileio.cpp
+	"include.h"
+
+1620583178 source:s:\delta\src\fwk\fileio\cfileio_chunks.cpp
+	"include.h"
+
+1620534702 source:s:\delta\src\fwk\fileio\cfileio_getset.cpp
+	"include.h"
+
+1619712017 source:s:\delta\src\fwk\fileio\cfileio_png.cpp
+	<png.h>
+	<pngstruct.h>
+	"include.h"
+
+1619099132 source:s:\delta\src\fwk\fileio\cfileio_png_c.c
+	<png.h>
+	<pngstruct.h>
+	<allegro.h>
+	<allegro/internal/aintern.h>
+
+1619712016 source:s:\delta\src\fwk\fileio\cfileio_png_fast.cpp
+	"include.h"
+
+1620188903 source:s:\delta\src\fwk\fileio\cfileio_szio.cpp
+	<cstdio>
+	"include.h"
+
+1620186857 source:s:\delta\src\fwk\fileio\cfileio_virtual.cpp
+	<algorithm>
+	"include.h"
+
+1628043536 source:s:\delta\src\fwk\filesystem.cpp
+	"include.h"
+
+1624842824 source:s:\delta\src\fwk\filetypeinfo\cfiletype.cpp
+	"include.h"
+	"CFileTypeManager.h"
+	"CFileType.h"
+
+1621000221 s:\delta\src\fwk\filetypeinfo\cfiletypemanager.h
+
+1621654344 source:s:\delta\src\fwk\filetypeinfo\cfiletypemanager.cpp
+	"include.h"
+	"CFileTypeManager.h"
+	"CFileType.h"
+
+1619887337 source:s:\delta\src\fwk\filetypeinfo\filetypeinfo.cpp
+	"include.h"
+	"Shellapi.h"
+	"math.h"
+
+1633034665 source:s:\delta\src\fwk\kframework.cpp
+	"include.h"
+
+1619324554 source:s:\delta\src\fwk\registry.cpp
+	<TChar.H>
+	"include.h"
+
+1659380452 source:s:\delta\src\fwk\string.cpp
+	"include.h"
+
+1619324554 source:s:\delta\src\fwk\stringequations.cpp
+	<stack>
+	"include.h"
+
+1636318342 source:s:\delta\src\fwk\system.cpp
+	"include.h"
+	<winsock2.h>
+	<iphlpapi.h>
+
+1619324554 source:s:\delta\src\fwk\utils.cpp
+	"include.h"
+
+1619324554 source:s:\delta\src\fwk\utils_serialize.cpp
+	"include.h"
+
+1619324556 source:s:\delta\src\fwk\utils_unserialize.cpp
+	"include.h"
+
+1619324554 source:s:\delta\src\libs\7zcrypto\7zcrypto.cpp
+	"include.h"
+	"Sha256.h"
+	"Aes.h"
+
+1360485395 s:\delta\src\libs\7zcrypto\sha256.h
+	"Types7z.h"
+
+1342242387 s:\delta\src\libs\7zcrypto\types7z.h
+	<stddef.h>
+	<windows.h>
+
+1360485395 s:\delta\src\libs\7zcrypto\aes.h
+	"Types7z.h"
+
+1342242387 source:s:\delta\src\libs\7zcrypto\aes.cpp
+	"Aes.h"
+	"CpuArch.h"
+
+1306785890 s:\delta\src\libs\7zcrypto\cpuarch.h
+
+1342242387 source:s:\delta\src\libs\7zcrypto\sha256.cpp
+	"Sha256.h"
+	"RotateDefs.h"
+
+1306785708 s:\delta\src\libs\7zcrypto\rotatedefs.h
+	<stdlib.h>
+
+1619324555 source:s:\delta\src\libs\crcfn\adler32.cpp
+	"include.h"
+
+1619713018 source:s:\delta\src\libs\crcfn\crc32.cpp
+	"include.h"
+
+1619713018 source:s:\delta\src\libs\crcfn\crc64.cpp
+	"include.h"
+
+1340901734 source:s:\delta\src\libs\memdll\memorymodule.c
+	<Windows.h>
+	<winnt.h>
+	<stdio.h>
+	"MemoryModule.h"
+
+1446187318 s:\delta\src\libs\memdll\memorymodule.h
+
+1610417870 source:s:\delta\src\libs\murmurhash2a.cpp
+	"MurmurHash2A.h"
+
+1610417870 s:\delta\src\libs\murmurhash2a.h
+
+1618892177 source:s:\delta\src\libs\nvwa\bool_array.cpp
+	<limits.h>
+	<string.h>
+	"bool_array.h"
+
+1618892188 s:\delta\src\libs\nvwa\bool_array.h
+	<assert.h>
+	<stdlib.h>
+	<new>
+	<stdexcept>
+	<string>
+
+1618894331 source:s:\delta\src\libs\nvwa\debug_new.cpp
+	<new>
+	<assert.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<alloca.h>
+	<malloc.h>
+	"fast_mutex.h"
+	"static_assert.h"
+	<stdexcept>
+	"debug_new.h"
+
+1342242388 s:\delta\src\libs\nvwa\fast_mutex.h
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+	<windows.h>
+
+1219542174 s:\delta\src\libs\nvwa\static_assert.h
+
+1611456483 s:\delta\src\libs\nvwa\debug_new.h
+	<new>
+	<stdio.h>
+	<stdlib.h>
+
+1219542166 source:s:\delta\src\libs\nvwa\mem_pool_base.cpp
+	<stdlib.h>
+	<new>
+	"mem_pool_base.h"
+
+1219542168 s:\delta\src\libs\nvwa\mem_pool_base.h
+	<stddef.h>
+
+1219542174 source:s:\delta\src\libs\nvwa\static_mem_pool.cpp
+	<algorithm>
+	"cont_ptr_utils.h"
+	"static_mem_pool.h"
+
+1619324555 s:\delta\src\libs\nvwa\cont_ptr_utils.h
+
+1619976996 s:\delta\src\libs\nvwa\static_mem_pool.h
+	<new>
+	<stdexcept>
+	<string>
+	<vector>
+	<assert.h>
+	<stddef.h>
+	"class_level_lock.h"
+	"mem_pool_base.h"
+	<iostream>
+
+1342242388 s:\delta\src\libs\nvwa\class_level_lock.h
+	"fast_mutex.h"
+
+1618892177 source:s:\delta\src\libs\resample\samplerate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"samplerate.h"
+	"src_float_cast.h"
+	"src_common.h"
+
+1621654344 s:\delta\src\libs\resample\src_config.h
+
+1573863925 s:\delta\src\libs\resample\src_float_cast.h
+	"src_config.h"
+	<math.h>
+
+1473765218 s:\delta\src\libs\resample\src_common.h
+	<stdint.h>
+	"samplerate.h"
+
+1618892177 source:s:\delta\src\libs\resample\src_linear.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"src_float_cast.h"
+	"src_common.h"
+
+1633132254 source:s:\delta\src\libs\resample\src_sinc.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"src_float_cast.h"
+	"src_common.h"
+	"fastest_coeffs.h"
+	"mid_qual_coeffs.h"
+
+1473765218 s:\delta\src\libs\resample\fastest_coeffs.h
+
+1610069975 s:\delta\src\libs\resample\mid_qual_coeffs.h
+
+1618892188 source:s:\delta\src\libs\resample\src_zoh.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"src_float_cast.h"
+	"src_common.h"
+
+1643575077 source:s:\delta\src\libs\simplex\simplexnoise.cpp
+	"simplexnoise.h"
+
+1398740975 s:\delta\src\libs\simplex\simplexnoise.h
+
+1619977071 source:s:\delta\src\libs\sysmf.cpp
+	"include.h"
+	<assert.h>
+
+1621164112 source:s:\delta\src\main\alleg_win.cpp
+	"include.h"
+
+1644720554 source:s:\delta\src\main\cmain.cpp
+	"include.h"
+	"include_engine.h"
+	"CMain.h"
+	"CFileTypeManager.h"
+
+1619975596 s:\delta\src\main\cmain.h
+
+1643306350 source:s:\delta\src\main\engine\audio\caudio.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"CAudioBuffer.h"
+	"CAudioOutput.h"
+	"CAudioInput.h"
+	"mpg123\mpg123.h"
+	"DAudioGroup.h"
+	"DAudioTrack.h"
+	"DAudioDynamic.h"
+	"CAudioTrack.h"
+
+1621350345 s:\delta\src\main\engine\audio\caudiooutput.h
+
+1621183829 s:\delta\src\main\engine\audio\caudioinput.h
+
+1636227255 source:s:\delta\src\main\engine\audio\caudioinput.cpp
+	"include.h"
+	"CAudioInput.h"
+	"CAudioBuffer.h"
+	"CAudioTrack.h"
+	"CStats.h"
+
+1621433654 source:s:\delta\src\main\engine\audio\caudiooutput.cpp
+	"include.h"
+	"include_engine.h"
+	"CAudioOutput.h"
+	"CAudioBuffer.h"
+	<shlobj.h>
+	<mmsystem.h>
+	"samplerate.h"
+
+1658864996 source:s:\delta\src\main\engine\cengine.cpp
+	"include.h"
+	"include_engine.h"
+	"DeltaApi.h"
+
+1631991189 source:s:\delta\src\main\engine\input\cinput.cpp
+	"include.h"
+	<ddk/hidsdi.h>
+	"CInput.h"
+	"CInputDevice.h"
+	"CInputPlayer.h"
+	"Dbt.h"
+
+1621182205 s:\delta\src\main\engine\input\cinputdevice.h
+	<ddk/hidsdi.h>
+
+1620999680 s:\delta\src\main\engine\input\cinputplayer.h
+
+1656815151 source:s:\delta\src\main\engine\input\cinputdevice.cpp
+	"include.h"
+	<ddk/hidsdi.h>
+	"CInput.h"
+	"CInputDevice.h"
+	"CKeyState.h"
+
+1620999680 s:\delta\src\main\engine\input\ckeystate.h
+
+1655054870 source:s:\delta\src\main\engine\input\cinputplayer.cpp
+	"include.h"
+	"CInput.h"
+	"CInputDevice.h"
+	"CInputPlayer.h"
+	"CKeyState.h"
+
+1620999680 source:s:\delta\src\main\engine\input\ckeystate.cpp
+	"include.h"
+	"CKeyState.h"
+
+1659922412 source:s:\delta\src\main\engine\render\crender.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"IRenderMode.h"
+	"CPhazon.h"
+
+1659922237 s:\delta\src\main\engine\render\irendermode.h
+
+1659922237 s:\delta\src\main\engine\render\modes\cphazon.h
+	"IRenderMode.h"
+
+1627649938 source:s:\delta\src\main\engine\render\crender2.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"IRenderMode.h"
+	"CPhazon.h"
+
+1659923096 source:s:\delta\src\main\engine\render\modes\cphazon.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"CPhazon.h"
+
+1624753900 source:s:\delta\src\main\engine\render\modes\phazonasm\sse2_blitline.s
+	"SSECE_0000_AsmMacro.inc"
+
+1624743140 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0000_asmmacro.inc
+
+1505846449 source:s:\delta\src\main\engine\render\modes\phazonasm\ssece.cpp
+	"include.h"
+
+1656700852 source:s:\delta\src\main\engine\render\modes\phazonasm\ssece_asm.s
+	"SSECE_0000_Defines.inc"
+	"SSECE_0000_DataCache.inc"
+	"SSECE_0000_Variables.inc"
+	"SSECE_0000_AsmMacro.inc"
+	"SSECE_JumpTableBeg.inc"
+	"SSECE_00_BasicModes.inc"
+	"SSECE_01_Standard.inc"
+	"SSECE_02_Math.inc"
+	"SSECE_03_AdvMath.inc"
+	"SSECE_04_AdvMath_Soft.inc"
+	"SSECE_05_TrigMath.inc"
+	"SSECE_06_HorizMath.inc"
+	"SSECE_07_AdvLighting.inc"
+	"SSECE_08_AltColorSpaces.inc"
+	"SSECE_09_ProfessionalModes.inc"
+	"SSECE_0A_AdvancedModes2.inc"
+	"SSECE_0B_ParameterBlenders.inc"
+	"SSECE_0C_HdModeBlenders.inc"
+	"SSECE_JumpTableEnd.inc"
+
+1497634620 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0000_defines.inc
+
+1622435217 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0000_datacache.inc
+
+1623116527 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0000_variables.inc
+
+1505859889 s:\delta\src\main\engine\render\modes\phazonasm\ssece_jumptablebeg.inc
+
+1624660611 s:\delta\src\main\engine\render\modes\phazonasm\ssece_00_basicmodes.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1656700912 s:\delta\src\main\engine\render\modes\phazonasm\ssece_blenderloopbeg.inc
+
+1658005266 s:\delta\src\main\engine\render\modes\phazonasm\ssece_blenderloopend.inc
+
+1624743335 s:\delta\src\main\engine\render\modes\phazonasm\ssece_01_standard.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619887337 s:\delta\src\main\engine\render\modes\phazonasm\ssece_02_math.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603824421 s:\delta\src\main\engine\render\modes\phazonasm\ssece_03_advmath.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603825715 s:\delta\src\main\engine\render\modes\phazonasm\ssece_04_advmath_soft.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603824828 s:\delta\src\main\engine\render\modes\phazonasm\ssece_05_trigmath.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603825292 s:\delta\src\main\engine\render\modes\phazonasm\ssece_06_horizmath.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619887337 s:\delta\src\main\engine\render\modes\phazonasm\ssece_07_advlighting.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603829376 s:\delta\src\main\engine\render\modes\phazonasm\ssece_08_altcolorspaces.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619845840 s:\delta\src\main\engine\render\modes\phazonasm\ssece_09_professionalmodes.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619098517 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0a_advancedmodes2.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619098517 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0b_parameterblenders.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1622002590 s:\delta\src\main\engine\render\modes\phazonasm\ssece_0c_hdmodeblenders.inc
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+
+1642624375 s:\delta\src\main\engine\render\modes\phazonasm\ssece_hdblenderloopbeg.inc
+
+1642624375 s:\delta\src\main\engine\render\modes\phazonasm\ssece_hdblenderloopend.inc
+
+1497809559 s:\delta\src\main\engine\render\modes\phazonasm\ssece_jumptableend.inc
+
+1658172596 source:s:\delta\src\main\engine\render\modes\phazonasm\ssece_once_asm.s
+	"SSECE_0000_Defines.inc"
+	"SSECE_0000_DataCache.inc"
+	"SSECE_0000_Variables.inc"
+	"SSECE_0000_AsmMacro.inc"
+	"SSECE_JumpTableBeg.inc"
+	"SSECE_00_BasicModes.inc"
+	"SSECE_01_Standard.inc"
+	"SSECE_02_Math.inc"
+	"SSECE_03_AdvMath.inc"
+	"SSECE_04_AdvMath_Soft.inc"
+	"SSECE_05_TrigMath.inc"
+	"SSECE_06_HorizMath.inc"
+	"SSECE_07_AdvLighting.inc"
+	"SSECE_08_AltColorSpaces.inc"
+	"SSECE_09_ProfessionalModes.inc"
+	"SSECE_0A_AdvancedModes2.inc"
+	"SSECE_0B_ParameterBlenders.inc"
+	"SSECE_0C_HdModeBlenders.inc"
+	"SSECE_JumpTableEnd.inc"
+
+1635474494 source:s:\delta\src\main\engine\video\cstats.cpp
+	"include.h"
+	"CStats.h"
+
+1656738668 source:s:\delta\src\main\engine\video\cvideo.cpp
+	"include.h"
+	"include_engine.h"
+	<allegro/internal/aintern.h>
+
+1618894334 source:s:\delta\src\main\nitro_error.cpp
+	"include.h"
+	<csignal>
+
+1659925059 source:s:\delta\src\main\types\dirtpile.cpp
+	"include.h"
+
+1618894332 source:s:\delta\src\main\types\dtime.cpp
+	<stdio.h>
+	<stdlib.h>
+	"include.h"
+	<time.h>
+
+1618892833 source:s:\delta\src\main\types\exthd.cpp
+	"include.h"
+
+1492435320 source:s:\delta\src\main\types\hex128.cpp
+
+1638570815 source:s:\delta\src\main\types\lucid.cpp
+	"include.h"
+
+1619098517 source:s:\delta\src\main\types\types.cpp
+	"include.h"
+
+1492435322 source:s:\delta\src\main\types\vsx128.cpp
+
+1624750284 source:s:\delta\src\ngui\cdtmlvar.cpp
+	"include.h"
+	"include_engine.h"
+	"CDtmlVar.h"
+
+1619098521 source:s:\delta\src\ngui\cixdrag.cpp
+	"include.h"
+	"include_engine.h"
+	"CIxDrag.h"
+
+1619098519 s:\delta\src\ngui\cixdrag.h
+
+1659202492 source:s:\delta\src\ngui\cixtext.cpp
+	"include.h"
+	"include_engine.h"
+	"CIxText.h"
+
+1621005645 s:\delta\src\ngui\cixtext.h
+
+1659730229 source:s:\delta\src\ngui\cnitrogui.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"CIxDrag.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+	"UList.h"
+
+1619324554 s:\delta\src\ngui\lexer\cnitroguilexerfn.h
+
+1644546487 source:s:\delta\src\ngui\idtmltag.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"TDtmlTags.h"
+
+1632011651 source:s:\delta\src\ngui\lexer\cnitroguilexer.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+
+1630380182 source:s:\delta\src\ngui\lexer\cnitroguilexer1.cpp
+	<algorithm>
+	<cstring>
+	"include.h"
+	"include_engine.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+
+1644043920 source:s:\delta\src\ngui\lexer\cnitroguilexer2.cpp
+	<algorithm>
+	<cstring>
+	"include.h"
+	"include_engine.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+
+1630938347 source:s:\delta\src\ngui\lexer\ldtmlcmd.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1630170884 source:s:\delta\src\ngui\lexer\ldtmlcmdtree.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1631640548 source:s:\delta\src\ngui\lexer\ldtmlind.cpp
+	"include.h"
+	"LDtmlCmd.h"
+	"LDtmlInd.h"
+	"CNitroGUI.h"
+
+1628654485 source:s:\delta\src\ngui\lexer\ldtmlline.cpp
+	"include.h"
+	"LDtmlLine.h"
+
+1631644294 source:s:\delta\src\ngui\lexer\ldtmlstr.cpp
+	"include.h"
+	"LDtmlCmd.h"
+	"LDtmlStr.h"
+	"CNitroGUI.h"
+
+1629863972 source:s:\delta\src\ngui\lexer\ldtmlstrtree.cpp
+	<cstring>
+	"include.h"
+	"CNitroGUI.h"
+
+1630608669 source:s:\delta\src\ngui\lexer\ldtmltag.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1631640166 source:s:\delta\src\ngui\lexer\ldtmltracker.cpp
+	"include.h"
+	"include_engine.h"
+	"LDtmlTracker.h"
+
+1630517493 source:s:\delta\src\ngui\lexer\ldtmltree.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1631640861 source:s:\delta\src\ngui\lexer\ldtmlval.cpp
+	"include.h"
+	"LDtmlCmd.h"
+	"LDtmlVal.h"
+	"CNitroGUI.h"
+
+1625588496 source:s:\delta\src\ngui\smoothingalgorithm.cpp
+	"include.h"
+
+1658889228 source:s:\delta\src\ngui\tdtmltags.cpp
+	"include.h"
+	"include_engine.h"
+	"TDtmlTags.h"
+	"CIxText.h"
+	"CIxDrag.h"
+	"CAnimation.h"
+
+1656538468 source:s:\delta\src\ngui\ulist.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"UList.h"
+
+1619098517 source:s:\delta\src\res\program_id.cpp
+	"include.h"
+
+1619978059 source:s:\delta\src\res\resources.cpp
+	<algorithm>
+	"include.h"
+	"resources.rc"
+
+1659728711 source:s:\delta\src\res\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resources.h"
+
+1644462329 s:\delta\src\__programclasses\guidialoghandlers\hcolorpicker.h
+
+1644549885 source:s:\delta\src\__programclasses\guidialoghandlers\hcolorpicker.cpp
+	"include.h"
+	"include_engine.h"
+	"HColorPicker.h"
+
+1656623996 s:\delta\src\__programclasses\guieditors\gdmseditor.h
+	"IFileEditor.h"
+	"include_editors.h"
+
+1656623996 s:\delta\src\__programclasses\guieditors\gdsseditor.h
+	"IFileEditor.h"
+	"include_editors.h"
+
+1656623996 source:s:\delta\src\__programclasses\guieditors\gdmseditor.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+	"GDmsEditor.h"
+
+1656623996 source:s:\delta\src\__programclasses\guieditors\gdsseditor.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+	"GDssEditor.h"
+
+1635965960 s:\delta\src\_editorclasses\eaudiogroup.h
+
+1636139623 source:s:\delta\src\_editorclasses\eaudiogroup.cpp
+	"include.h"
+	"include_engine.h"
+	"include_editors.h"
+	"include_gui_dialogs.h"
+	"GDmsEditor.h"
+
+1635990583 s:\delta\src\__programclasses\editordialogs\dms\hdmsadvanced.h
+
+1636141435 source:s:\delta\src\__programclasses\editordialogs\dms\hdmsadvanced.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"include_gui_dialogs.h"
+	"HDmsAdvanced.h"
+
+1636139623 s:\delta\src\__programclasses\editordialogs\dms\hdmssupportfiles.h
+
+1643238908 source:s:\delta\src\__programclasses\editordialogs\dms\hdmssupportfiles.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"include_gui_dialogs.h"
+	"HDmsSupportFiles.h"
+
+1636149172 s:\delta\src\_editorclasses\emusicgroup.h
+
+1636152348 s:\delta\src\_editorclasses\esoundgroup.h
+
+1643383231 source:s:\delta\src\_editorclasses\emusicgroup.cpp
+	"include.h"
+	"include_engine.h"
+	"include_editors.h"
+	"include_gui_dialogs.h"
+	"GDmsEditor.h"
+
+1636314666 source:s:\delta\src\_editorclasses\esoundgroup.cpp
+	"include.h"
+	"include_engine.h"
+	"include_editors.h"
+	"include_gui_dialogs.h"
+	"GDssEditor.h"
+
+1639785180 s:\delta\src\fwk\radixsort.h
+
+1637877207 source:s:\delta\src\_instanceclasses\clevelobjectlookup.cpp
+	"include.h"
+	"include_engine.h"
+	"CLevelObjectLookup.h"
+
+1637874958 s:\delta\src\_instanceclasses\clevelobjectlookup.h
+
+1658864026 source:s:\delta\src\__apifunctions\deltaapi.cpp
+	"include.h"
+	"include_engine.h"
+
+1658863877 source:s:\delta\src\__apifunctions\deltaapitable.cpp
+	"include.h"
+	"DeltaApi.h"
+
+1658863965 s:\delta\src\__apifunctions\deltaapi.h
+
+1659570128 source:s:\delta\src\_instanceclasses\clevelobject.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevelObject.h"
+	"RadixSort.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"CAnimation.h"
+	"CLevelAnim.h"
+	"SerializeChunk.h"
+
+1660015733 source:s:\delta\src\_instanceclasses\clevel.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelObject.h"
+	"BLevelObjectEngine.h"
+	"BLevelTileMap.h"
+	"BLevelTileSlot.h"
+	"BLevelTileSet.h"
+	"BLevelBackground.h"
+	"BLevelBaseBacking.h"
+	"BLevelPhysMap.h"
+	"BLevelPhysSlot.h"
+	"BLevelPhysSet.h"
+	"BLevelComposition.h"
+	"BLevelPath.h"
+	"DDxzFormat.h"
+	"include_gui_dialogs.h"
+	"IFileEditor.h"
+	"CSelectorOverlay.h"
+	"CSelectorOverlay1.h"
+	"CSelectorOverlay2.h"
+	"CSelectorOverlay4.h"
+	"CSelectorOverlay44.h"
+	"CDashBoardOverlay.h"
+	"CSelectorOverlay5.h"
+	"DSprite.h"
+	"DPhysics.h"
+	"SSECE.h"
+
+1638664831 source:s:\delta\src\_instanceclasses\clevelscript.cpp
+
+1639173391 s:\delta\src\_instanceclasses\clevelobject.h
+	"ILevelLayer.h"
+
+1659569653 s:\delta\src\_instanceclasses\ilevellayer.h
+
+1639165838 source:s:\delta\src\_dataclasses\dlevelobjectengine.cpp
+	"include.h"
+	"DLevelObjectEngine.h"
+
+1639165838 s:\delta\src\_dataclasses\dlevelobjectengine.h
+	"IGameData.h"
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdlohandler.h
+	"IDeltaFileHandler.h"
+
+1657828460 source:s:\delta\src\_filetypeclasses\filetypes\cdlohandler.cpp
+	"include.h"
+	"CDloHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"BLevelObjectEngine.h"
+
+1648406940 source:s:\delta\src\_instanceclasses\clevelobjectengine.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevelObjectEngine.h"
+	"b_deltaplugin.h"
+	"d_deltaplugin.h"
+	"p_deltaplugin.h"
+
+1639166462 s:\delta\src\_instanceclasses\clevelobjectengine.h
+
+1639317033 s:\delta\src\_instanceclasses\clevel.h
+
+1641927221 source:s:\delta\src\_instanceclasses\cleveltile.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelTile.h"
+	"DAnimation.h"
+
+1639319789 s:\delta\src\_instanceclasses\cleveltile.h
+
+1656989382 source:s:\delta\src\_instanceclasses\cleveltileslot.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelTile.h"
+	"BLevelTileSlot.h"
+	"DAnimation.h"
+	"CLevelAnim.h"
+
+1639321416 s:\delta\src\_instanceclasses\cleveltileslot.h
+
+1658285639 source:s:\delta\src\_instanceclasses\cleveltilemap.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelTile.h"
+	"BLevelTileSlot.h"
+	"BLevelTileMap.h"
+	"BLevelTileSet.h"
+	"SerializeChunk.h"
+	"CLevelAnim.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"CSelectorOverlay.h"
+
+1639323031 s:\delta\src\_instanceclasses\cleveltilemap.h
+	"ILevelLayer.h"
+
+1639321081 s:\delta\src\_instanceclasses\cleveltileset.h
+
+1643340502 source:s:\delta\src\_instanceclasses\cleveltileset.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelTile.h"
+	"BLevelTileSet.h"
+	"DSprite.h"
+	"DAnimation.h"
+
+1659747860 s:\delta\src\_instanceclasses\blevel.h
+	"IGameData.h"
+	"RadixSort.h"
+
+1659569671 s:\delta\src\_instanceclasses\blevelobject.h
+	"ILevelLayer.h"
+
+1640816107 s:\delta\src\_instanceclasses\blevelobjectengine.h
+	"IGameData.h"
+
+1641927236 s:\delta\src\_instanceclasses\bleveltile.h
+
+1656989382 s:\delta\src\_instanceclasses\bleveltileslot.h
+
+1658167996 s:\delta\src\_instanceclasses\bleveltilemap.h
+	"ILevelLayer.h"
+
+1643338905 s:\delta\src\_instanceclasses\bleveltileset.h
+
+1658109049 s:\delta\src\_instanceclasses\blevelbackground.h
+	"ILevelLayer.h"
+
+1658285610 source:s:\delta\src\_instanceclasses\clevelbackground.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelBackground.h"
+	"include_gamedata.h"
+	"CAnimation.h"
+	"SerializeChunk.h"
+	"CLevelAnim.h"
+
+1659977771 source:s:\delta\src\_filetypeclasses\filetypes\cdlvhandler.cpp
+	"include.h"
+	"CDlvHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+	"CAnimation.h"
+	"BLevelPath.h"
+
+1657768971 s:\delta\src\_filetypeclasses\filetypes\cdlvhandler.h
+	"IDeltaFileHandler.h"
+
+1658109049 s:\delta\src\_instanceclasses\blevelbasebacking.h
+	"ILevelLayer.h"
+
+1658285427 source:s:\delta\src\_instanceclasses\clevelbasebacking.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelBaseBacking.h"
+	"include_gamedata.h"
+	"CAnimation.h"
+	"SerializeChunk.h"
+
+1640799632 source:s:\delta\src\z_dlo_default\d_deltatypes.cpp
+	"d_deltatypes.h"
+
+1638592712 s:\delta\src\z_dlo_default\d_deltatypes.h
+	<cstddef>
+	"string.h"
+
+1640804731 source:s:\delta\src\z_dlo_default\d_deltaplugin.cpp
+	"include.h"
+	"d_deltaplugin.h"
+	"d_deltaapi.h"
+	"d_object.h"
+	<new>
+
+1640803900 s:\delta\src\z_dlo_default\d_deltaplugin.h
+
+1658863965 s:\delta\src\z_dlo_default\d_deltaapi.h
+
+1640804379 s:\delta\src\z_dlo_default\d_object.h
+
+1655844048 source:s:\delta\src\z_dlo_default\d_object.cpp
+	"include.h"
+	"d_object.h"
+	"d_deltaapi.h"
+
+1640804731 source:s:\delta\src\z_dlo_physics\p_deltaplugin.cpp
+	"include.h"
+	"p_deltaplugin.h"
+	"p_deltaapi.h"
+	"p_object.h"
+	<new>
+
+1640804606 s:\delta\src\z_dlo_physics\p_deltaplugin.h
+
+1658863965 s:\delta\src\z_dlo_physics\p_deltaapi.h
+
+1640804614 s:\delta\src\z_dlo_physics\p_object.h
+
+1655844047 source:s:\delta\src\z_dlo_physics\p_object.cpp
+	"include.h"
+	"p_object.h"
+	"p_deltaapi.h"
+
+1640828744 s:\delta\src\z_dlo_base\b_deltaplugin.h
+
+1655844049 source:s:\delta\src\z_dlo_base\b_object.cpp
+	"include.h"
+	"b_object.h"
+	"b_deltaapi.h"
+
+1640828778 s:\delta\src\z_dlo_base\b_object.h
+
+1658863965 s:\delta\src\z_dlo_base\b_deltaapi.h
+
+1640828847 source:s:\delta\src\z_dlo_base\b_deltaplugin.cpp
+	"include.h"
+	"b_deltaplugin.h"
+	"b_deltaapi.h"
+	"b_object.h"
+	<new>
+
+1659569653 source:s:\delta\src\_instanceclasses\ilevellayer.cpp
+	"include.h"
+	"include_engine.h"
+	"ILevelLayer.h"
+
+1643143555 source:s:\delta\src\_dataclasses\ddltdata.cpp
+	"include.h"
+	"DDltData.h"
+
+1643144194 s:\delta\src\_dataclasses\ddltdata.h
+	"IGameData.h"
+
+1643251376 s:\delta\src\_filetypeclasses\filetypes\cdlthandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 source:s:\delta\src\_filetypeclasses\filetypes\cdlthandler.cpp
+	"include.h"
+	"CDltHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DDltData.h"
+	"GFileManager.h"
+
+1643492206 s:\delta\src\ngui\csmart.h
+
+1622002589 s:\delta\src\main\engine\render\modes\phazonasm\ssece.h
+
+1644044410 s:\delta\src\ngui\dtmltagvec.h
+
+1659380134 s:\delta\src\__programclasses\editordialogs\dlv\heasyscript.h
+
+1659382236 source:s:\delta\src\__programclasses\editordialogs\dlv\heasyscript.cpp
+	"include.h"
+	"include_engine.h"
+	"HEasyScript.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"DeltaApiInfo.h"
+	"DDxzFormat.h"
+
+1659897979 source:s:\delta\src\_instanceclasses\clevelanim.cpp
+	"include.h"
+	"include_engine.h"
+	"CLevelAnim.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"DPhysics.h"
+	"BLevelPhys.h"
+	"SSECE.h"
+
+1659896531 s:\delta\src\_instanceclasses\clevelanim.h
+
+1657820490 s:\delta\src\_filetypeclasses\filetypes\serializechunk.h
+
+1658098057 source:s:\delta\src\_filetypeclasses\filetypes\serializechunk.cpp
+	"include.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1657220100 s:\delta\src\_dataclasses\ddxzformat.h
+	"IGameData.h"
+
+1657220100 source:s:\delta\src\_dataclasses\ddxzformat.cpp
+	"include.h"
+	"DDxzFormat.h"
+
+1657220433 s:\delta\src\_filetypeclasses\filetypes\cdlihandler.h
+	"IDeltaFileHandler.h"
+
+1657220434 s:\delta\src\_filetypeclasses\filetypes\cdxthandler.h
+	"IDeltaFileHandler.h"
+
+1657220434 s:\delta\src\_filetypeclasses\filetypes\cdxohandler.h
+	"IDeltaFileHandler.h"
+
+1657220563 source:s:\delta\src\_filetypeclasses\filetypes\cdlihandler.cpp
+	"include.h"
+	"CDliHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1657562873 source:s:\delta\src\_filetypeclasses\filetypes\cdxohandler.cpp
+	"include.h"
+	"CDxoHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1657562915 source:s:\delta\src\_filetypeclasses\filetypes\cdxthandler.cpp
+	"include.h"
+	"CDxtHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1658094345 source:s:\delta\src\_instanceclasses\cselectoroverlay.cpp
+	"include.h"
+	"include_engine.h"
+	"CSelectorOverlay.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"DDxzFormat.h"
+	"BLevelTileSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+
+1657760267 s:\delta\src\_instanceclasses\cselectoroverlay.h
+
+1657931635 source:s:\delta\src\_instanceclasses\cselectoroverlay1.cpp
+	"include.h"
+	"include_engine.h"
+	"CSelectorOverlay1.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"DDxzFormat.h"
+	"BLevelTileSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+
+1657931433 s:\delta\src\_instanceclasses\cselectoroverlay1.h
+
+1657765034 source:s:\delta\src\_instanceclasses\cselectoroverlay2.cpp
+	"include.h"
+	"include_engine.h"
+	"CSelectorOverlay2.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"DDxzFormat.h"
+	"BLevelTileSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+
+1657762000 s:\delta\src\_instanceclasses\cselectoroverlay2.h
+
+1658165211 s:\delta\src\_instanceclasses\blevelphysmap.h
+	"ILevelLayer.h"
+
+1658109049 s:\delta\src\_instanceclasses\blevelcomposition.h
+	"ILevelLayer.h"
+
+1658285662 source:s:\delta\src\_instanceclasses\clevelphysmap.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelPhys.h"
+	"BLevelPhysSlot.h"
+	"BLevelPhysMap.h"
+	"BLevelPhysSet.h"
+	"SerializeChunk.h"
+	"CLevelAnim.h"
+	"DPhysics.h"
+	"CSelectorOverlay4.h"
+
+1658285609 source:s:\delta\src\_instanceclasses\clevelcomposition.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelComposition.h"
+	"include_gamedata.h"
+	"CAnimation.h"
+	"SerializeChunk.h"
+
+1657820623 s:\delta\src\_instanceclasses\blevelphys.h
+
+1657820323 s:\delta\src\_instanceclasses\blevelphysset.h
+
+1657819930 s:\delta\src\_instanceclasses\blevelphysslot.h
+
+1657828186 source:s:\delta\src\_dataclasses\dphysics.cpp
+	"include.h"
+	"DPhysics.h"
+
+1657904009 s:\delta\src\_dataclasses\dphysics.h
+	"IGameData.h"
+
+1657819983 source:s:\delta\src\_instanceclasses\clevelphys.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelPhys.h"
+	"DPhysics.h"
+
+1658112768 source:s:\delta\src\_instanceclasses\clevelphysslot.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelPhys.h"
+	"BLevelPhysSlot.h"
+	"DPhysics.h"
+	"CLevelAnim.h"
+
+1657822100 source:s:\delta\src\_instanceclasses\clevelphysset.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelPhys.h"
+	"BLevelPhysSet.h"
+	"DPhysics.h"
+
+1657911949 source:s:\delta\src\_filetypeclasses\filetypes\cdpthandler.cpp
+	"include.h"
+	"CDptHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DPhysics.h"
+
+1657826832 s:\delta\src\_filetypeclasses\filetypes\cdpthandler.h
+	"IDeltaFileHandler.h"
+
+1657914823 s:\delta\src\_instanceclasses\cselectoroverlay4.h
+
+1657915996 source:s:\delta\src\_instanceclasses\cselectoroverlay4.cpp
+	"include.h"
+	"include_engine.h"
+	"CSelectorOverlay4.h"
+	"DPhysics.h"
+	"BLevelPhysSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+	"DDxzFormat.h"
+
+1657851644 s:\delta\src\_filetypeclasses\filetypes\cdxphandler.h
+	"IDeltaFileHandler.h"
+
+1657851643 source:s:\delta\src\_filetypeclasses\filetypes\cdxphandler.cpp
+	"include.h"
+	"CDxpHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1657931425 s:\delta\src\_instanceclasses\cselectoroverlay44.h
+
+1657931635 source:s:\delta\src\_instanceclasses\cselectoroverlay44.cpp
+	"include.h"
+	"include_engine.h"
+	"CSelectorOverlay44.h"
+	"DPhysics.h"
+	"DDxzFormat.h"
+	"BLevelPhysSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+
+1658081097 source:s:\delta\src\_instanceclasses\cdashboardoverlay.cpp
+	"include.h"
+	"include_engine.h"
+	"CDashBoardOverlay.h"
+	"DPhysics.h"
+	"DDxzFormat.h"
+	"BLevelPhysSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+
+1658080159 s:\delta\src\_instanceclasses\cdashboardoverlay.h
+
+1658097548 s:\delta\src\__programclasses\editordialogs\dlv\hdlvlayerconfig.h
+
+1658100016 source:s:\delta\src\__programclasses\editordialogs\dlv\hdlvlayerconfig.cpp
+	"include.h"
+	"include_engine.h"
+	"HDlvLayerConfig.h"
+
+1658169482 s:\delta\src\__programclasses\editordialogs\dlv\hdlvextraunit.h
+
+1658169570 source:s:\delta\src\__programclasses\editordialogs\dlv\hdlvextraunit.cpp
+	"include.h"
+	"include_engine.h"
+	"HDlvExtraUnit.h"
+
+1659380128 source:s:\delta\src\__apifunctions\deltaapiinfo.cpp
+	"include.h"
+	"include_engine.h"
+	"DeltaApiInfo.h"
+
+1658624607 s:\delta\src\__apifunctions\deltaapiinfo.h
+
+1658360887 source:s:\delta\src\_instanceclasses\ceasyscript.cpp
+	"include.h"
+	"include_engine.h"
+	"CEasyScript.h"
+
+1658359434 s:\delta\src\_instanceclasses\ceasyscript.h
+
+1658633322 source:s:\delta\src\test.s
+
+1659203063 s:\delta\src\__programclasses\editordialogs\dlv\heasyscript2.h
+
+1659204548 source:s:\delta\src\__programclasses\editordialogs\dlv\heasyscript2.cpp
+	"include.h"
+	"include_engine.h"
+	"HEasyScript.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"DeltaApiInfo.h"
+	"DDxzFormat.h"
+
+1659204381 s:\delta\src\_filetypeclasses\filetypes\cdsxhandler.h
+	"IDeltaFileHandler.h"
+
+1659204380 source:s:\delta\src\_filetypeclasses\filetypes\cdsxhandler.cpp
+	"include.h"
+	"CDsxHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1659980338 source:s:\delta\src\_instanceclasses\clevelpath.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevelPath.h"
+	"CLevelAnim.h"
+
+1659927280 source:s:\delta\src\_instanceclasses\clevel2.cpp
+	"include.h"
+	"include_engine.h"
+	"BLevel.h"
+	"BLevelObject.h"
+	"BLevelObjectEngine.h"
+	"BLevelTileMap.h"
+	"BLevelTileSlot.h"
+	"BLevelTileSet.h"
+	"BLevelBackground.h"
+	"BLevelBaseBacking.h"
+	"BLevelPhysMap.h"
+	"BLevelPhysSlot.h"
+	"BLevelPhysSet.h"
+	"BLevelComposition.h"
+	"BLevelPath.h"
+	"DDxzFormat.h"
+	"include_gui_dialogs.h"
+	"IFileEditor.h"
+	"CSelectorOverlay5.h"
+
+1659980165 s:\delta\src\_instanceclasses\blevelpath.h
+
+1659729419 s:\delta\src\_filetypeclasses\filetypes\cdxhhandler.h
+	"IDeltaFileHandler.h"
+
+1659729420 source:s:\delta\src\_filetypeclasses\filetypes\cdxhhandler.cpp
+	"include.h"
+	"CDxhHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"SerializeChunk.h"
+	"include_gamedata.h"
+
+1659894324 s:\delta\src\_instanceclasses\cselectoroverlay5.h
+
+1659980214 source:s:\delta\src\_instanceclasses\cselectoroverlay5.cpp
+	"include.h"
+	"include_engine.h"
+	"CSelectorOverlay5.h"
+	"DPhysics.h"
+	"BLevelPhysSet.h"
+	"CLevelAnim.h"
+	"BLevel.h"
+	"DDxzFormat.h"
+
+1660067882 source:s:\delta\src\__programclasses\guieditors\gdpteditor.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+	"GDptEditor.h"
+
+1660090164 s:\delta\src\__programclasses\guieditors\gdpteditor.h
+	"IFileEditor.h"
+	"include_editors.h"
+
+1660090211 s:\delta\src\_editorclasses\ephysics.h
+
+1644549885 source:s:\dkcre\src\__programclasses\guidialoghandlers\hcolorpicker.cpp
+	"include.h"
+	"include_engine.h"
+	"HColorPicker.h"
+
+1618892832 s:\dkcre\src\main\include.h
+	"program_id.h"
+	"types.h"
+	"alleg_win.h"
+	"Libs\Nvwa\debug_new.h"
+	"Libs\MemDLL\MemoryModule.h"
+	"Libs\7zCrypto\7zCrypto.h"
+	"Libs\Simplex\simplexnoise.h"
+	"Libs\CrcFn\CRC.h"
+	"Libs\MurmurHash2A.h"
+	"Libs\sysmf.h"
+	"Libs\consthashmacro.h"
+	"Libs\autocstrmacro.h"
+	"math.h"
+	"defines.h"
+	"Types\STokenLine.h"
+	"resources.h"
+	"KFramework.h"
+	"Types\dirtpile.h"
+	"Types\dtime.h"
+	"Types\LUCID.h"
+	"Types\EXTHD.h"
+	"CFileIO.h"
+	"CFileType.h"
+	"auxillary.h"
+	"nitro_error.h"
+
+1619098517 s:\dkcre\src\res\program_id.h
+
+1640457393 s:\dkcre\src\main\types\types.h
+	<cstddef>
+	<vector>
+	<string>
+
+1621164114 s:\dkcre\src\main\alleg_win.h
+	<allegro.h>
+	<winalleg.h>
+
+1611456483 s:\dkcre\src\\libs\nvwa\debug_new.h
+	<new>
+	<stdio.h>
+	<stdlib.h>
+
+1446187318 s:\dkcre\src\\libs\memdll\memorymodule.h
+
+1619324555 s:\dkcre\src\\libs\7zcrypto\7zcrypto.h
+
+1398740975 s:\dkcre\src\\libs\simplex\simplexnoise.h
+
+1619324554 s:\dkcre\src\\libs\crcfn\crc.h
+
+1610417870 s:\dkcre\src\\libs\murmurhash2a.h
+
+1605210629 s:\dkcre\src\\libs\sysmf.h
+	"Shlobj.h"
+
+1618894334 s:\dkcre\src\\libs\consthashmacro.h
+
+1621654344 s:\dkcre\src\\libs\autocstrmacro.h
+
+1619098518 s:\dkcre\src\main\defines.h
+
+1619324554 s:\dkcre\src\main\types\stokenline.h
+
+1620999026 s:\dkcre\src\res\resources.h
+
+1660094449 s:\dkcre\src\fwk\kframework.h
+	"Types\dtime.h"
+	"CConfig.h"
+
+1619975377 s:\dkcre\src\main\types\dtime.h
+
+1620999344 s:\dkcre\src\fwk\config\cconfig.h
+
+1659923047 s:\dkcre\src\main\types\dirtpile.h
+
+1638570765 s:\dkcre\src\main\types\lucid.h
+
+1618980227 s:\dkcre\src\main\types\exthd.h
+
+1621000221 s:\dkcre\src\fwk\fileio\cfileio.h
+
+1621000221 s:\dkcre\src\fwk\filetypeinfo\cfiletype.h
+
+1659984895 s:\dkcre\src\fwk\auxillary\auxillary.h
+
+1619713582 s:\dkcre\src\main\nitro_error.h
+
+1660094411 s:\dkcre\src\main\engine\include_engine.h
+	"CInput.h"
+	"CVideo.h"
+	"CStats.h"
+	"CNitroGUI.h"
+	"CRender.h"
+	"CEngine.h"
+	"CProgramBase.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"CGameDataMaster.h"
+	"UList.h"
+	"IDtmlTag.h"
+	"TDtmlTags.h"
+
+1631991110 s:\dkcre\src\main\engine\input\cinput.h
+
+1644709888 s:\dkcre\src\main\engine\video\cvideo.h
+
+1635469332 s:\dkcre\src\main\engine\video\cstats.h
+
+1656271767 s:\dkcre\src\ngui\cnitrogui.h
+	"LDtmlLine.h"
+	"LDtmlTag.h"
+	"LDtmlCmd.h"
+	"LDtmlVal.h"
+	"LDtmlTree.h"
+	"LDtmlCmdTree.h"
+	"LDtmlStrTree.h"
+	"LDtmlTag2.h"
+	"LDtmlCmd2.h"
+	"LDtmlTracker.h"
+
+1628654484 s:\dkcre\src\ngui\lexer\ldtmlline.h
+
+1631475437 s:\dkcre\src\ngui\lexer\ldtmltag.h
+	"LDtmlCmd.h"
+
+1630166195 s:\dkcre\src\ngui\lexer\ldtmlcmd.h
+	"LDtmlVal.h"
+	"LDtmlStr.h"
+	"LDtmlInd.h"
+
+1631640861 s:\dkcre\src\ngui\lexer\ldtmlval.h
+
+1631640861 s:\dkcre\src\ngui\lexer\ldtmlstr.h
+
+1631640548 s:\dkcre\src\ngui\lexer\ldtmlind.h
+
+1630517418 s:\dkcre\src\ngui\lexer\ldtmltree.h
+
+1629929134 s:\dkcre\src\ngui\lexer\ldtmlcmdtree.h
+
+1629171152 s:\dkcre\src\ngui\lexer\ldtmlstrtree.h
+
+1628975252 s:\dkcre\src\ngui\lexer\ldtmltag2.h
+
+1628976263 s:\dkcre\src\ngui\lexer\ldtmlcmd2.h
+
+1631594408 s:\dkcre\src\ngui\lexer\ldtmltracker.h
+
+1659922411 s:\dkcre\src\main\engine\render\crender.h
+
+1619970815 s:\dkcre\src\main\engine\cengine.h
+
+1655928772 s:\dkcre\src\__programclasses\cprogrambase.h
+
+1659729550 s:\dkcre\src\_filetypeclasses\cfileinfo.h
+	"file_chunk_id.h"
+
+1620573387 s:\dkcre\src\_filetypeclasses\file_chunk_id.h
+
+1657410103 s:\dkcre\src\_filetypeclasses\cfileinfomanager.h
+
+1643306288 s:\dkcre\src\_filetypeclasses\cgamedatamaster.h
+
+1656528858 s:\dkcre\src\ngui\ulist.h
+
+1644430945 s:\dkcre\src\ngui\idtmltag.h
+	"CDtmlVar.h"
+	"CSmart.h"
+	"DtmlTagVec.h"
+
+1624750285 s:\dkcre\src\ngui\cdtmlvar.h
+
+1643492206 s:\dkcre\src\ngui\csmart.h
+
+1644044410 s:\dkcre\src\ngui\dtmltagvec.h
+
+1658600532 s:\dkcre\src\ngui\tdtmltags.h
+	"IDtmlTag.h"
+
+1644462329 s:\dkcre\src\__programclasses\guidialoghandlers\hcolorpicker.h
+
+1636310667 source:s:\dkcre\src\__programclasses\guidialoghandlers\hconfiginput.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HConfigInput.h"
+
+1632336251 s:\dkcre\src\__programclasses\guidialoghandlers\hopenfile.h
+	"SFileWorkInfo.h"
+
+1619324555 s:\dkcre\src\ngui\sfileworkinfo.h
+
+1632335857 s:\dkcre\src\__programclasses\guidialoghandlers\hsavefile.h
+	"SFileWorkInfo.h"
+
+1631647504 s:\dkcre\src\__programclasses\guidialoghandlers\hconfiginput.h
+
+1636310696 source:s:\dkcre\src\__programclasses\guidialoghandlers\hconfigvideo.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HConfigVideo.h"
+
+1631991110 s:\dkcre\src\__programclasses\guidialoghandlers\hconfigvideo.h
+
+1632328346 source:s:\dkcre\src\__programclasses\guidialoghandlers\hmessagebox.cpp
+	"include.h"
+	"include_engine.h"
+	"HMessageBox.h"
+
+1627768269 s:\dkcre\src\__programclasses\guidialoghandlers\hmessagebox.h
+
+1655948287 source:s:\dkcre\src\__programclasses\guidialoghandlers\hopenfile.cpp
+	"include.h"
+	"include_engine.h"
+	"HOpenFile.h"
+	"HMessageBox.h"
+
+1636310609 source:s:\dkcre\src\__programclasses\guidialoghandlers\hpickfolder.cpp
+	"include.h"
+	"include_engine.h"
+	"HPickFolder.h"
+	"HMessageBox.h"
+
+1628032043 s:\dkcre\src\__programclasses\guidialoghandlers\hpickfolder.h
+	"SFileWorkInfo.h"
+
+1660096046 source:s:\dkcre\src\__programclasses\cprogrambase.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"include_gui_dialogs.h"
+
+1660093268 s:\dkcre\src\__programclasses\guidialoghandlers\include_gui_dialogs.h
+	"HMessageBox.h"
+	"HOpenFile.h"
+	"HSaveFile.h"
+	"HPickFolder.h"
+	"HColorPicker.h"
+	"HConfigInput.h"
+	"HConfigVideo.h"
+
+1636259103 source:s:\dkcre\src\__programclasses\guidialoghandlers\hsavefile.cpp
+	"include.h"
+	"include_engine.h"
+	"HSaveFile.h"
+	"HMessageBox.h"
+
+1657421565 source:s:\dkcre\src\_dataclasses\danimation.cpp
+	"include.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"CRender.h"
+
+1657392771 s:\dkcre\src\_dataclasses\danimation.h
+
+1657218329 s:\dkcre\src\_dataclasses\dgraphic.h
+
+1657220100 source:s:\dkcre\src\_dataclasses\ddxzformat.cpp
+	"include.h"
+	"DDxzFormat.h"
+
+1657220100 s:\dkcre\src\_dataclasses\ddxzformat.h
+	"IGameData.h"
+
+1621090311 s:\dkcre\src\_filetypeclasses\igamedata.h
+
+1657657454 source:s:\dkcre\src\_dataclasses\dgraphic.cpp
+	"include.h"
+	"DGraphic.h"
+
+1657392770 source:s:\dkcre\src\_dataclasses\dsprite.cpp
+	"include.h"
+	"DSprite.h"
+	"DAnimation.h"
+
+1657392241 s:\dkcre\src\_dataclasses\dsprite.h
+	"IGameData.h"
+
+1658102413 source:s:\dkcre\src\_filetypeclasses\cfileinfo.cpp
+	"include.h"
+	"CFileInfo.h"
+
+1657410102 source:s:\dkcre\src\_filetypeclasses\cfileinfomanager.cpp
+	"include.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"resources.rc"
+
+1660095632 s:\dkcre\src\res\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resources.h"
+
+1657400174 source:s:\dkcre\src\_filetypeclasses\filetypes\cdpxhandler.cpp
+	"include.h"
+	"CDpxHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+
+1643251376 s:\dkcre\src\_filetypeclasses\filetypes\cdpxhandler.h
+	"IDeltaFileHandler.h"
+
+1643251376 s:\dkcre\src\_filetypeclasses\ideltafilehandler.h
+
+1621184213 source:s:\dkcre\src\_filetypeclasses\igamedata.cpp
+	"include.h"
+	"IGameData.h"
+
+1659986325 source:s:\dkcre\src\fwk\auxillary\auxillary.cpp
+	"include.h"
+
+1619712017 source:s:\dkcre\src\fwk\auxillary\pwr_upscale.cpp
+	"include.h"
+
+1660096063 source:s:\dkcre\src\_filetypeclasses\cgamedatamaster.cpp
+	"include.h"
+	"CGameDataMaster.h"
+	"IGameData.h"
+	"IDeltaFileHandler.h"
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"CDpxHandler.h"
+
+1627649951 source:s:\dkcre\src\fwk\auxillary\textformat.cpp
+	<stdarg.h>
+	"include.h"
+	"Hex128.h"
+
+1619098518 s:\dkcre\src\main\types\hex128.h
+	"types.h"
+	"Vsx128.h"
+
+1619098520 s:\dkcre\src\main\types\vsx128.h
+	"types.h"
+	"Hex128.h"
+
+1619712691 source:s:\dkcre\src\fwk\clipboard.cpp
+	"include.h"
+
+1620999344 source:s:\dkcre\src\fwk\config\cconfig.cpp
+	"include.h"
+	"CConfig.h"
+
+1621654344 source:s:\dkcre\src\fwk\config\cconfigmanager.cpp
+	"include.h"
+	"CConfigManager.h"
+	"CConfigSection.h"
+	"CConfig.h"
+
+1620999344 s:\dkcre\src\fwk\config\cconfigmanager.h
+
+1620999344 s:\dkcre\src\fwk\config\cconfigsection.h
+
+1621654344 source:s:\dkcre\src\fwk\config\cconfigsection.cpp
+	"include.h"
+	"CConfigSection.h"
+	"CConfig.h"
+
+1619098521 source:s:\dkcre\src\fwk\debug.cpp
+	<stdio.h>
+	"include.h"
+
+1660094449 source:s:\dkcre\src\fwk\dkcreerror.cpp
+	"include.h"
+
+1621000221 source:s:\dkcre\src\fwk\fileio\cfileio.cpp
+	"include.h"
+
+1620583178 source:s:\dkcre\src\fwk\fileio\cfileio_chunks.cpp
+	"include.h"
+
+1620534702 source:s:\dkcre\src\fwk\fileio\cfileio_getset.cpp
+	"include.h"
+
+1619712017 source:s:\dkcre\src\fwk\fileio\cfileio_png.cpp
+	<png.h>
+	<pngstruct.h>
+	"include.h"
+
+1619099132 source:s:\dkcre\src\fwk\fileio\cfileio_png_c.c
+	<png.h>
+	<pngstruct.h>
+	<allegro.h>
+	<allegro/internal/aintern.h>
+
+1619712016 source:s:\dkcre\src\fwk\fileio\cfileio_png_fast.cpp
+	"include.h"
+
+1620188903 source:s:\dkcre\src\fwk\fileio\cfileio_szio.cpp
+	<cstdio>
+	"include.h"
+
+1620186857 source:s:\dkcre\src\fwk\fileio\cfileio_virtual.cpp
+	<algorithm>
+	"include.h"
+
+1628043536 source:s:\dkcre\src\fwk\filesystem.cpp
+	"include.h"
+
+1624842824 source:s:\dkcre\src\fwk\filetypeinfo\cfiletype.cpp
+	"include.h"
+	"CFileTypeManager.h"
+	"CFileType.h"
+
+1621000221 s:\dkcre\src\fwk\filetypeinfo\cfiletypemanager.h
+
+1621654344 source:s:\dkcre\src\fwk\filetypeinfo\cfiletypemanager.cpp
+	"include.h"
+	"CFileTypeManager.h"
+	"CFileType.h"
+
+1619887337 source:s:\dkcre\src\fwk\filetypeinfo\filetypeinfo.cpp
+	"include.h"
+	"Shellapi.h"
+	"math.h"
+
+1660094449 source:s:\dkcre\src\fwk\kframework.cpp
+	"include.h"
+
+1619324554 source:s:\dkcre\src\fwk\registry.cpp
+	<TChar.H>
+	"include.h"
+
+1659380452 source:s:\dkcre\src\fwk\string.cpp
+	"include.h"
+
+1619324554 source:s:\dkcre\src\fwk\stringequations.cpp
+	<stack>
+	"include.h"
+
+1636318342 source:s:\dkcre\src\fwk\system.cpp
+	"include.h"
+	<winsock2.h>
+	<iphlpapi.h>
+
+1619324554 source:s:\dkcre\src\fwk\utils.cpp
+	"include.h"
+
+1619324554 source:s:\dkcre\src\fwk\utils_serialize.cpp
+	"include.h"
+
+1619324556 source:s:\dkcre\src\fwk\utils_unserialize.cpp
+	"include.h"
+
+1619324554 source:s:\dkcre\src\libs\7zcrypto\7zcrypto.cpp
+	"include.h"
+	"Sha256.h"
+	"Aes.h"
+
+1360485395 s:\dkcre\src\libs\7zcrypto\sha256.h
+	"Types7z.h"
+
+1342242387 s:\dkcre\src\libs\7zcrypto\types7z.h
+	<stddef.h>
+	<windows.h>
+
+1360485395 s:\dkcre\src\libs\7zcrypto\aes.h
+	"Types7z.h"
+
+1342242387 source:s:\dkcre\src\libs\7zcrypto\aes.cpp
+	"Aes.h"
+	"CpuArch.h"
+
+1306785890 s:\dkcre\src\libs\7zcrypto\cpuarch.h
+
+1342242387 source:s:\dkcre\src\libs\7zcrypto\sha256.cpp
+	"Sha256.h"
+	"RotateDefs.h"
+
+1306785708 s:\dkcre\src\libs\7zcrypto\rotatedefs.h
+	<stdlib.h>
+
+1619324555 source:s:\dkcre\src\libs\crcfn\adler32.cpp
+	"include.h"
+
+1619713018 source:s:\dkcre\src\libs\crcfn\crc32.cpp
+	"include.h"
+
+1619713018 source:s:\dkcre\src\libs\crcfn\crc64.cpp
+	"include.h"
+
+1340901734 source:s:\dkcre\src\libs\memdll\memorymodule.c
+	<Windows.h>
+	<winnt.h>
+	<stdio.h>
+	"MemoryModule.h"
+
+1446187318 s:\dkcre\src\libs\memdll\memorymodule.h
+
+1610417870 source:s:\dkcre\src\libs\murmurhash2a.cpp
+	"MurmurHash2A.h"
+
+1610417870 s:\dkcre\src\libs\murmurhash2a.h
+
+1618892177 source:s:\dkcre\src\libs\nvwa\bool_array.cpp
+	<limits.h>
+	<string.h>
+	"bool_array.h"
+
+1618892188 s:\dkcre\src\libs\nvwa\bool_array.h
+	<assert.h>
+	<stdlib.h>
+	<new>
+	<stdexcept>
+	<string>
+
+1618894331 source:s:\dkcre\src\libs\nvwa\debug_new.cpp
+	<new>
+	<assert.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<alloca.h>
+	<malloc.h>
+	"fast_mutex.h"
+	"static_assert.h"
+	<stdexcept>
+	"debug_new.h"
+
+1342242388 s:\dkcre\src\libs\nvwa\fast_mutex.h
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+	<windows.h>
+
+1219542174 s:\dkcre\src\libs\nvwa\static_assert.h
+
+1611456483 s:\dkcre\src\libs\nvwa\debug_new.h
+	<new>
+	<stdio.h>
+	<stdlib.h>
+
+1219542166 source:s:\dkcre\src\libs\nvwa\mem_pool_base.cpp
+	<stdlib.h>
+	<new>
+	"mem_pool_base.h"
+
+1219542168 s:\dkcre\src\libs\nvwa\mem_pool_base.h
+	<stddef.h>
+
+1219542174 source:s:\dkcre\src\libs\nvwa\static_mem_pool.cpp
+	<algorithm>
+	"cont_ptr_utils.h"
+	"static_mem_pool.h"
+
+1619324555 s:\dkcre\src\libs\nvwa\cont_ptr_utils.h
+
+1619976996 s:\dkcre\src\libs\nvwa\static_mem_pool.h
+	<new>
+	<stdexcept>
+	<string>
+	<vector>
+	<assert.h>
+	<stddef.h>
+	"class_level_lock.h"
+	"mem_pool_base.h"
+	<iostream>
+
+1342242388 s:\dkcre\src\libs\nvwa\class_level_lock.h
+	"fast_mutex.h"
+
+1618892177 source:s:\dkcre\src\libs\resample\samplerate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"samplerate.h"
+	"src_float_cast.h"
+	"src_common.h"
+
+1621654344 s:\dkcre\src\libs\resample\src_config.h
+
+1618894332 s:\dkcre\src\libs\resample\samplerate.h
+
+1573863925 s:\dkcre\src\libs\resample\src_float_cast.h
+	"src_config.h"
+	<math.h>
+
+1473765218 s:\dkcre\src\libs\resample\src_common.h
+	<stdint.h>
+	"samplerate.h"
+
+1618892177 source:s:\dkcre\src\libs\resample\src_linear.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"src_float_cast.h"
+	"src_common.h"
+
+1633132254 source:s:\dkcre\src\libs\resample\src_sinc.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"src_float_cast.h"
+	"src_common.h"
+	"fastest_coeffs.h"
+	"mid_qual_coeffs.h"
+
+1473765218 s:\dkcre\src\libs\resample\fastest_coeffs.h
+
+1610069975 s:\dkcre\src\libs\resample\mid_qual_coeffs.h
+
+1618892188 source:s:\dkcre\src\libs\resample\src_zoh.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"src_config.h"
+	"src_float_cast.h"
+	"src_common.h"
+
+1643575077 source:s:\dkcre\src\libs\simplex\simplexnoise.cpp
+	"simplexnoise.h"
+
+1398740975 s:\dkcre\src\libs\simplex\simplexnoise.h
+
+1619977071 source:s:\dkcre\src\libs\sysmf.cpp
+	"include.h"
+	<assert.h>
+
+1621164112 source:s:\dkcre\src\main\alleg_win.cpp
+	"include.h"
+
+1660095778 source:s:\dkcre\src\main\cmain.cpp
+	"include.h"
+	"include_engine.h"
+	"CMain.h"
+	"CFileTypeManager.h"
+
+1619975596 s:\dkcre\src\main\cmain.h
+
+1631991189 source:s:\dkcre\src\main\engine\input\cinput.cpp
+	"include.h"
+	<ddk/hidsdi.h>
+	"CInput.h"
+	"CInputDevice.h"
+	"CInputPlayer.h"
+	"Dbt.h"
+
+1621182205 s:\dkcre\src\main\engine\input\cinputdevice.h
+	<ddk/hidsdi.h>
+
+1620999680 s:\dkcre\src\main\engine\input\cinputplayer.h
+
+1656815151 source:s:\dkcre\src\main\engine\input\cinputdevice.cpp
+	"include.h"
+	<ddk/hidsdi.h>
+	"CInput.h"
+	"CInputDevice.h"
+	"CKeyState.h"
+
+1620999680 s:\dkcre\src\main\engine\input\ckeystate.h
+
+1655054870 source:s:\dkcre\src\main\engine\input\cinputplayer.cpp
+	"include.h"
+	"CInput.h"
+	"CInputDevice.h"
+	"CInputPlayer.h"
+	"CKeyState.h"
+
+1660096088 source:s:\dkcre\src\main\engine\cengine.cpp
+	"include.h"
+	"include_engine.h"
+
+1620999680 source:s:\dkcre\src\main\engine\input\ckeystate.cpp
+	"include.h"
+	"CKeyState.h"
+
+1659922412 source:s:\dkcre\src\main\engine\render\crender.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"IRenderMode.h"
+	"CPhazon.h"
+
+1660093859 s:\dkcre\src\_filetypeclasses\include_gamedata.h
+	"CFileInfo.h"
+	"CFileInfoManager.h"
+	"CGameDataMaster.h"
+	"DSprite.h"
+	"DAnimation.h"
+	"DGraphic.h"
+	"DDxzFormat.h"
+
+1659922237 s:\dkcre\src\main\engine\render\irendermode.h
+
+1659922237 s:\dkcre\src\main\engine\render\modes\cphazon.h
+	"IRenderMode.h"
+
+1627649938 source:s:\dkcre\src\main\engine\render\crender2.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"IRenderMode.h"
+	"CPhazon.h"
+
+1659923096 source:s:\dkcre\src\main\engine\render\modes\cphazon.cpp
+	"include.h"
+	"include_engine.h"
+	"include_gamedata.h"
+	"CPhazon.h"
+
+1624753900 source:s:\dkcre\src\main\engine\render\modes\phazonasm\sse2_blitline.s
+	"SSECE_0000_AsmMacro.inc"
+
+1624743140 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0000_asmmacro.inc
+
+1505846449 source:s:\dkcre\src\main\engine\render\modes\phazonasm\ssece.cpp
+	"include.h"
+
+1656700852 source:s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_asm.s
+	"SSECE_0000_Defines.inc"
+	"SSECE_0000_DataCache.inc"
+	"SSECE_0000_Variables.inc"
+	"SSECE_0000_AsmMacro.inc"
+	"SSECE_JumpTableBeg.inc"
+	"SSECE_00_BasicModes.inc"
+	"SSECE_01_Standard.inc"
+	"SSECE_02_Math.inc"
+	"SSECE_03_AdvMath.inc"
+	"SSECE_04_AdvMath_Soft.inc"
+	"SSECE_05_TrigMath.inc"
+	"SSECE_06_HorizMath.inc"
+	"SSECE_07_AdvLighting.inc"
+	"SSECE_08_AltColorSpaces.inc"
+	"SSECE_09_ProfessionalModes.inc"
+	"SSECE_0A_AdvancedModes2.inc"
+	"SSECE_0B_ParameterBlenders.inc"
+	"SSECE_0C_HdModeBlenders.inc"
+	"SSECE_JumpTableEnd.inc"
+
+1497634620 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0000_defines.inc
+
+1622435217 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0000_datacache.inc
+
+1623116527 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0000_variables.inc
+
+1505859889 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_jumptablebeg.inc
+
+1624660611 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_00_basicmodes.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1656700912 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_blenderloopbeg.inc
+
+1658005266 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_blenderloopend.inc
+
+1624743335 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_01_standard.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619887337 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_02_math.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603824421 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_03_advmath.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603825715 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_04_advmath_soft.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603824828 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_05_trigmath.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603825292 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_06_horizmath.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619887337 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_07_advlighting.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1603829376 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_08_altcolorspaces.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619845840 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_09_professionalmodes.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619098517 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0a_advancedmodes2.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1619098517 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0b_parameterblenders.inc
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+	"SSECE_BlenderLoopBeg.inc"
+	"SSECE_BlenderLoopEnd.inc"
+
+1622002590 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_0c_hdmodeblenders.inc
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+	"SSECE_HdBlenderLoopBeg.inc"
+	"SSECE_HdBlenderLoopEnd.inc"
+
+1642624375 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_hdblenderloopbeg.inc
+
+1642624375 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_hdblenderloopend.inc
+
+1497809559 s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_jumptableend.inc
+
+1658172596 source:s:\dkcre\src\main\engine\render\modes\phazonasm\ssece_once_asm.s
+	"SSECE_0000_Defines.inc"
+	"SSECE_0000_DataCache.inc"
+	"SSECE_0000_Variables.inc"
+	"SSECE_0000_AsmMacro.inc"
+	"SSECE_JumpTableBeg.inc"
+	"SSECE_00_BasicModes.inc"
+	"SSECE_01_Standard.inc"
+	"SSECE_02_Math.inc"
+	"SSECE_03_AdvMath.inc"
+	"SSECE_04_AdvMath_Soft.inc"
+	"SSECE_05_TrigMath.inc"
+	"SSECE_06_HorizMath.inc"
+	"SSECE_07_AdvLighting.inc"
+	"SSECE_08_AltColorSpaces.inc"
+	"SSECE_09_ProfessionalModes.inc"
+	"SSECE_0A_AdvancedModes2.inc"
+	"SSECE_0B_ParameterBlenders.inc"
+	"SSECE_0C_HdModeBlenders.inc"
+	"SSECE_JumpTableEnd.inc"
+
+1635474494 source:s:\dkcre\src\main\engine\video\cstats.cpp
+	"include.h"
+	"CStats.h"
+
+1660095552 source:s:\dkcre\src\main\engine\video\cvideo.cpp
+	"include.h"
+	"include_engine.h"
+	<allegro/internal/aintern.h>
+
+1618894334 source:s:\dkcre\src\main\nitro_error.cpp
+	"include.h"
+	<csignal>
+
+1659925059 source:s:\dkcre\src\main\types\dirtpile.cpp
+	"include.h"
+
+1618894332 source:s:\dkcre\src\main\types\dtime.cpp
+	<stdio.h>
+	<stdlib.h>
+	"include.h"
+	<time.h>
+
+1618892833 source:s:\dkcre\src\main\types\exthd.cpp
+	"include.h"
+
+1492435320 source:s:\dkcre\src\main\types\hex128.cpp
+
+1638570815 source:s:\dkcre\src\main\types\lucid.cpp
+	"include.h"
+
+1619098517 source:s:\dkcre\src\main\types\types.cpp
+	"include.h"
+
+1492435322 source:s:\dkcre\src\main\types\vsx128.cpp
+
+1624750284 source:s:\dkcre\src\ngui\cdtmlvar.cpp
+	"include.h"
+	"include_engine.h"
+	"CDtmlVar.h"
+
+1619098521 source:s:\dkcre\src\ngui\cixdrag.cpp
+	"include.h"
+	"include_engine.h"
+	"CIxDrag.h"
+
+1619098519 s:\dkcre\src\ngui\cixdrag.h
+
+1659202492 source:s:\dkcre\src\ngui\cixtext.cpp
+	"include.h"
+	"include_engine.h"
+	"CIxText.h"
+
+1621005645 s:\dkcre\src\ngui\cixtext.h
+
+1659730229 source:s:\dkcre\src\ngui\cnitrogui.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"CIxDrag.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+	"UList.h"
+
+1619324554 s:\dkcre\src\ngui\lexer\cnitroguilexerfn.h
+
+1644546487 source:s:\dkcre\src\ngui\idtmltag.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"TDtmlTags.h"
+
+1632011651 source:s:\dkcre\src\ngui\lexer\cnitroguilexer.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+
+1630380182 source:s:\dkcre\src\ngui\lexer\cnitroguilexer1.cpp
+	<algorithm>
+	<cstring>
+	"include.h"
+	"include_engine.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+
+1644043920 source:s:\dkcre\src\ngui\lexer\cnitroguilexer2.cpp
+	<algorithm>
+	<cstring>
+	"include.h"
+	"include_engine.h"
+	"CNitroGuiLexerFn.h"
+	"TDtmlTags.h"
+
+1630938347 source:s:\dkcre\src\ngui\lexer\ldtmlcmd.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1630170884 source:s:\dkcre\src\ngui\lexer\ldtmlcmdtree.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1631640548 source:s:\dkcre\src\ngui\lexer\ldtmlind.cpp
+	"include.h"
+	"LDtmlCmd.h"
+	"LDtmlInd.h"
+	"CNitroGUI.h"
+
+1628654485 source:s:\dkcre\src\ngui\lexer\ldtmlline.cpp
+	"include.h"
+	"LDtmlLine.h"
+
+1631644294 source:s:\dkcre\src\ngui\lexer\ldtmlstr.cpp
+	"include.h"
+	"LDtmlCmd.h"
+	"LDtmlStr.h"
+	"CNitroGUI.h"
+
+1629863972 source:s:\dkcre\src\ngui\lexer\ldtmlstrtree.cpp
+	<cstring>
+	"include.h"
+	"CNitroGUI.h"
+
+1630608669 source:s:\dkcre\src\ngui\lexer\ldtmltag.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1631640166 source:s:\dkcre\src\ngui\lexer\ldtmltracker.cpp
+	"include.h"
+	"include_engine.h"
+	"LDtmlTracker.h"
+
+1630517493 source:s:\dkcre\src\ngui\lexer\ldtmltree.cpp
+	"include.h"
+	"CNitroGUI.h"
+
+1631640861 source:s:\dkcre\src\ngui\lexer\ldtmlval.cpp
+	"include.h"
+	"LDtmlCmd.h"
+	"LDtmlVal.h"
+	"CNitroGUI.h"
+
+1625588496 source:s:\dkcre\src\ngui\smoothingalgorithm.cpp
+	"include.h"
+
+1656538468 source:s:\dkcre\src\ngui\ulist.cpp
+	<algorithm>
+	"include.h"
+	"include_engine.h"
+	"UList.h"
+
+1660095657 source:s:\dkcre\src\res\program_id.cpp
+	"include.h"
+
+1619978059 source:s:\dkcre\src\res\resources.cpp
+	<algorithm>
+	"include.h"
+	"resources.rc"
+
+1660095632 source:s:\dkcre\src\res\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resources.h"
+
+1660096169 source:s:\dkcre\src\ngui\tdtmltags.cpp
+	"include.h"
+	"include_engine.h"
+	"TDtmlTags.h"
+	"CIxText.h"
+	"CIxDrag.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\_filetypeclasses\cfileinfo.cpp
+
+1687390287 source:s:\dkclbv0.0.0.1\src\_filetypeclasses\filetypes\cdlvhandler.cpp
+	"include.h"
+	"SerializeChunk.h"
+
+1687390288 s:\dkclbv0.0.0.1\src\main\include.h
+	<stdio.h>
+	<fcntl.h>
+	<io.h>
+	<iostream>
+	<fstream>
+	"types.h"
+	"alleg_win.h"
+	"Libs\Nvwa\debug_new.h"
+	"Libs\7zCrypto\7zCrypto.h"
+	"Libs\CrcFn\CRC.h"
+	"Libs\MurmurHash2A.h"
+	"math.h"
+	"defines.h"
+	"KFramework.h"
+	"Types\dtime.h"
+	"Types\LUCID.h"
+	"Types\EXTHD.h"
+	"CFileIO.h"
+	"auxillary.h"
+
+1687394830 s:\dkclbv0.0.0.1\src\main\types\types.h
+	<cstddef>
+	"checked.h"
+
+1674798030 s:\dkclbv0.0.0.1\src\main\types\checked.h
+	<vector>
+	<string>
+
+1687390288 s:\dkclbv0.0.0.1\src\main\alleg_win.h
+	<allegro.h>
+	<winalleg.h>
+
+1611456483 s:\dkclbv0.0.0.1\src\\libs\nvwa\debug_new.h
+	<new>
+	<stdio.h>
+	<stdlib.h>
+
+1687390287 s:\dkclbv0.0.0.1\src\\libs\7zcrypto\7zcrypto.h
+
+1687390288 s:\dkclbv0.0.0.1\src\\libs\crcfn\crc.h
+
+1610417870 s:\dkclbv0.0.0.1\src\\libs\murmurhash2a.h
+
+1605210629 s:\dkclbv0.0.0.1\src\\libs\sysmf.h
+	"Shlobj.h"
+
+1687390287 s:\dkclbv0.0.0.1\src\main\defines.h
+
+1687390287 s:\dkclbv0.0.0.1\src\fwk\kframework.h
+	"CConfig.h"
+	"CConfigManager.h"
+
+1687390287 s:\dkclbv0.0.0.1\src\fwk\config\cconfig.h
+	"CConfigSection.h"
+
+1687390287 s:\dkclbv0.0.0.1\src\fwk\config\cconfigsection.h
+
+1687390287 s:\dkclbv0.0.0.1\src\fwk\config\cconfigmanager.h
+
+1687390287 s:\dkclbv0.0.0.1\src\main\types\dtime.h
+
+1687390287 s:\dkclbv0.0.0.1\src\main\types\lucid.h
+
+1687390287 s:\dkclbv0.0.0.1\src\main\types\exthd.h
+
+1687390287 s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio.h
+
+1687390288 s:\dkclbv0.0.0.1\src\fwk\auxillary\auxillary.h
+
+1687390287 s:\dkclbv0.0.0.1\src\_filetypeclasses\filetypes\serializechunk.h
+
+1687390288 source:s:\dkclbv0.0.0.1\src\_filetypeclasses\filetypes\cdpxhandler.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\_filetypeclasses\filetypes\serializechunk.cpp
+	"include.h"
+	"SerializeChunk.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\auxillary\textformat.cpp
+	<stdarg.h>
+	"include.h"
+	"Hex128.h"
+
+1687390287 s:\dkclbv0.0.0.1\src\main\types\hex128.h
+	"types.h"
+	"Vsx128.h"
+
+1687390287 s:\dkclbv0.0.0.1\src\main\types\vsx128.h
+	"types.h"
+	"Hex128.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfigmanager.cpp
+	"include.h"
+	"CConfigManager.h"
+	"CConfigSection.h"
+	"CConfig.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfigsection.cpp
+	"include.h"
+	"CConfigSection.h"
+	"CConfig.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfig.cpp
+	"include.h"
+	"CConfig.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_chunks.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_getset.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png_c.c
+	<png.h>
+	<pngstruct.h>
+	<allegro.h>
+	<allegro/internal/aintern.h>
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png_fast.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\debug.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\kframework.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\utils.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\7zcrypto.cpp
+	"include.h"
+	"Sha256.h"
+	"Aes.h"
+
+1360485395 s:\dkclbv0.0.0.1\src\libs\7zcrypto\sha256.h
+	"Types7z.h"
+
+1342242387 s:\dkclbv0.0.0.1\src\libs\7zcrypto\types7z.h
+	<stddef.h>
+	<windows.h>
+
+1360485395 s:\dkclbv0.0.0.1\src\libs\7zcrypto\aes.h
+	"Types7z.h"
+
+1671048631 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\aes.cpp
+	"Aes.h"
+	"CpuArch.h"
+
+1306785890 s:\dkclbv0.0.0.1\src\libs\7zcrypto\cpuarch.h
+
+1342242387 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\sha256.cpp
+	"Sha256.h"
+	"RotateDefs.h"
+
+1306785708 s:\dkclbv0.0.0.1\src\libs\7zcrypto\rotatedefs.h
+	<stdlib.h>
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\filesystem.cpp
+	"include.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\registry.cpp
+	<TChar.H>
+	"include.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\string.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\libs\crcfn\adler32.cpp
+	"include.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\libs\crcfn\crc32.cpp
+	"include.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_szio.cpp
+	<cstdio>
+	"include.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\libs\crcfn\crc64.cpp
+	"include.h"
+
+1610417870 source:s:\dkclbv0.0.0.1\src\libs\murmurhash2a.cpp
+	"MurmurHash2A.h"
+
+1610417870 s:\dkclbv0.0.0.1\src\libs\murmurhash2a.h
+
+1618892177 source:s:\dkclbv0.0.0.1\src\libs\nvwa\bool_array.cpp
+	<limits.h>
+	<string.h>
+	"bool_array.h"
+
+1618892188 s:\dkclbv0.0.0.1\src\libs\nvwa\bool_array.h
+	<assert.h>
+	<stdlib.h>
+	<new>
+	<stdexcept>
+	<string>
+
+1674092500 source:s:\dkclbv0.0.0.1\src\libs\nvwa\debug_new.cpp
+	<new>
+	<assert.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<alloca.h>
+	<malloc.h>
+	"fast_mutex.h"
+	"static_assert.h"
+	<stdexcept>
+	"debug_new.h"
+
+1342242388 s:\dkclbv0.0.0.1\src\libs\nvwa\fast_mutex.h
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+	<windows.h>
+
+1219542174 s:\dkclbv0.0.0.1\src\libs\nvwa\static_assert.h
+
+1611456483 s:\dkclbv0.0.0.1\src\libs\nvwa\debug_new.h
+	<new>
+	<stdio.h>
+	<stdlib.h>
+
+1219542166 source:s:\dkclbv0.0.0.1\src\libs\nvwa\mem_pool_base.cpp
+	<stdlib.h>
+	<new>
+	"mem_pool_base.h"
+
+1219542168 s:\dkclbv0.0.0.1\src\libs\nvwa\mem_pool_base.h
+	<stddef.h>
+
+1219542174 source:s:\dkclbv0.0.0.1\src\libs\nvwa\static_mem_pool.cpp
+	<algorithm>
+	"cont_ptr_utils.h"
+	"static_mem_pool.h"
+
+1619324555 s:\dkclbv0.0.0.1\src\libs\nvwa\cont_ptr_utils.h
+
+1619976996 s:\dkclbv0.0.0.1\src\libs\nvwa\static_mem_pool.h
+	<new>
+	<stdexcept>
+	<string>
+	<vector>
+	<assert.h>
+	<stddef.h>
+	"class_level_lock.h"
+	"mem_pool_base.h"
+	<iostream>
+
+1342242388 s:\dkclbv0.0.0.1\src\libs\nvwa\class_level_lock.h
+	"fast_mutex.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\main\alleg_win.cpp
+	"include.h"
+
+1687390288 source:s:\dkclbv0.0.0.1\src\main\types\dtime.cpp
+	<stdio.h>
+	<stdlib.h>
+	"include.h"
+	<time.h>
+
+1687390288 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png.cpp
+	<png.h>
+	<pngstruct.h>
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\system.cpp
+	"include.h"
+	<winsock2.h>
+	<iphlpapi.h>
+
+1687390287 source:s:\dkclbv0.0.0.1\src\main\types\exthd.cpp
+	"include.h"
+
+1492435320 source:s:\dkclbv0.0.0.1\src\main\types\hex128.cpp
+
+1687390287 source:s:\dkclbv0.0.0.1\src\main\types\lucid.cpp
+	"include.h"
+
+1687390287 source:s:\dkclbv0.0.0.1\src\main\types\types.cpp
+	<limits>
+	"include.h"
+
+1492435322 source:s:\dkclbv0.0.0.1\src\main\types\vsx128.cpp
+
+1687230549 source:s:\dkclbv0.0.0.1\src\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+
+1687390287 source:s:\dkclbv0.0.0.1\src\main\cmain.cpp
+	"include.h"
+	"CMain.h"
+
+1687390287 s:\dkclbv0.0.0.1\src\main\cmain.h
+
+1687390287 source:s:\dkclbv0.0.0.1\src\fwk\deltaerror.cpp
+	"include.h"
+
+1687229318 source:s:\dkclbv0.0.0.1\src\main.cpp
+	"include.h"
+	"CMain.h"
+
+1687391437 source:s:\dkclbv0.0.0.1\src\program.cpp
+	"include.h"
+	"CMain.h"
+

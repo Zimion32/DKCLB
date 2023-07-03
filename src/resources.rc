@@ -1,0 +1,52 @@
+#include <windows.h>
+#include <commctrl.h>
+#include <richedit.h>
+#ifndef IDC_STATIC
+    #define IDC_STATIC (-1)
+#endif
+#define DEFRES(__x__,__y__,__z__) __COUNTER__ __x__ __z__
+
+DEFRES(ICON, IDI_APP_ICON, "dkclb.ico")
+
+VS_VERSION_INFO    VERSIONINFO
+  FILEVERSION      0,0,1,0
+  PRODUCTVERSION   0,0,1,0
+  FILEFLAGSMASK    0x3fL // VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS        0x1L  // VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#else
+  FILEFLAGS        0x0L  // final version
+#endif
+  FILEOS           VOS_NT_WINDOWS32
+  FILETYPE         VFT_APP
+  FILESUBTYPE      VFT2_UNKNOWN // not used
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "040904E4" // Lang=US English, CharSet=Windows Multilingual
+    {
+      VALUE "Build",            "DKC Level Builder Toolkit\0"
+      VALUE "Comments",         "\0"
+      VALUE "CompanyName",      "\0"
+      VALUE "Developer",        "Various\0"
+      VALUE "FileDescription",  "DKC Level Builder Toolkit\0"
+      VALUE "FileVersion",      "0.0.1.0\0"
+      VALUE "InternalName",     "DKC Level Builder Toolkit\0"
+      VALUE "LegalCopyright",   "\0"
+      VALUE "LegalTrademarks",  "\0"
+      VALUE "OriginalFilename", "dkclb.exe\0"
+      VALUE "PrivateBuild",     "\0"
+      VALUE "ProductName",      "DKC Level Builder Toolkit\0"
+      VALUE "ProductVersion",   "0.0.1.0\0"
+      VALUE "SpecialBuild",     "\0"
+      VALUE "Support",          "\0"
+      VALUE "Users",            "Unlimited.\0"
+    } // BLOCK "040904E4"
+  } // BLOCK "StringFileInfo"
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x409, 1252 // 1252 = 0x04E4
+  } // BLOCK "VarFileInfo"
+}
+
+#undef DEFRES

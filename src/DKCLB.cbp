@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="DKC Level Builder Toolkit" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option default_target="Release" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="Fwk\;Main\Types\;Main\;Libs\7zCrypto\;Res\;Libs\Nvwa\;Fwk\Auxillary\;Fwk\Config\;Fwk\FileIO\;Libs\;Libs\CrcFn\;_FileTypeClasses\;_FileTypeClasses\FileTypes\;" />
+		<Build>
+			<Target title="Final Release -O3X -UPX">
+				<Option platforms="Windows;" />
+				<Option output="./../rel/dkclb.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="./../rel" />
+				<Option object_output="S:/build/dkclb/objs" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-flto" />
+					<Add option="-O3" />
+					<Add option="-DRELEASE_BUILD=1" />
+					<Add option="-DFINAL_RELEASE_MODE=1" />
+				</Compiler>
+				<Linker>
+					<Add option="-flto" />
+					<Add option="-s" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='&quot;$(CODEBLOCKS)\UPX\upx.exe&quot; --best --compress-icons=0 &quot;$(PROJECT_DIR)$(TARGET_OUTPUT_FILE)&quot;' />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release -O3X -UPX">
+				<Option platforms="Windows;" />
+				<Option output="./../bin_rm/DKCLB.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="./../bin_rm" />
+				<Option object_output="S:/build/dkclb/objs_rm" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-DRELEASE_BUILD=1" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Debug Mode">
+				<Option platforms="Windows;" />
+				<Option output="./../bin_db/DKCLB [DM].exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="./../bin_db/" />
+				<Option object_output="S:/build/dkclb/objs_db/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-Wno-missing-declarations" />
+					<Add option="-Wmissing-field-initializers" />
+					<Add option="-Wmissing-braces" />
+					<Add option="-Wreturn-type" />
+					<Add option="-Wunused-variable" />
+					<Add option="-Wpointer-arith" />
+					<Add option="-Wtype-limits" />
+					<Add option="-Winvalid-pch" />
+					<Add option="-DDEBUG_BUILD=1" />
+					<Add option="-D_ITERATOR_DEBUG_LEVEL=0" />
+					<Add option="-D_HAS_ITERATOR_DEBUGGING=0" />
+					<Add option="-D_GLIBCXX_ASSERTIONS=1" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Winvalid-pch" />
+			<Add option="-fpermissive" />
+			<Add option="-fextended-identifiers" />
+			<Add option="-mno-ms-bitfields" />
+			<Add option="-ftrack-macro-expansion=0" />
+			<Add option="-fno-diagnostics-show-caret" />
+			<Add option="-DNITRO_WIN32=1" />
+			<Add option="-DALLEGRO_STATICLINK" />
+			<Add option="-DALLEGRO_NO_MAGIC_MAIN" />
+			<Add option="-DWINVER=0x0502" />
+			<Add option="-DGLIBCXX_FORCE_NEW=1" />
+			<Add option="-D_WIN32_WINNT=0x0502" />
+			<Add directory="Fwk" />
+			<Add directory="Libs" />
+			<Add directory="Main" />
+			<Add directory="Res" />
+			<Add directory="ResData" />
+			<Add directory="Main/Types" />
+			<Add directory="Fwk/FileIO" />
+			<Add directory="Fwk/Config" />
+			<Add directory="Main/Engine" />
+			<Add directory="Main/Engine/Audio" />
+			<Add directory="Main/Engine/Input" />
+			<Add directory="Main/Engine/Video" />
+			<Add directory="Main/Engine/GFX" />
+			<Add directory="Main/Engine/GFX2" />
+			<Add directory="Main/Engine/Render" />
+			<Add directory="Main/Engine/Render/Modes" />
+			<Add directory="Main/Engine/Render/Modes/PhazonASM" />
+			<Add directory="Fwk/Auxillary" />
+			<Add directory="NGUI" />
+			<Add directory="Fwk/FileTypeInfo" />
+			<Add directory="Libs/Resample" />
+			<Add directory="__ProgramClasses" />
+			<Add directory="__ProgramClasses/GuiDialogHandlers" />
+			<Add directory="__ProgramClasses/GuiEditors" />
+			<Add directory="__ProgramClasses/GuiHandlers" />
+			<Add directory="_DataClasses" />
+			<Add directory="_EditorClasses" />
+			<Add directory="_FileTypeClasses" />
+			<Add directory="_FileTypeClasses/FileTypes" />
+			<Add directory="_InstanceClasses" />
+			<Add directory="_InstanceClasses/AudioHandlers" />
+			<Add directory="_InstanceClasses/AudioHandlers/KapAudio" />
+			<Add directory="_InstanceClasses/Audio" />
+			<Add directory="Libs/Nvwa" />
+			<Add directory="Libs/MemDLL" />
+			<Add directory="Libs/Simplex" />
+			<Add directory="Libs/CrcFn" />
+			<Add directory="Libs/7zCrypto" />
+			<Add directory="NGUI/Lexer" />
+			<Add directory="__ProgramClasses/EditorDialogs" />
+			<Add directory="__ProgramClasses/EditorDialogs/DPX" />
+			<Add directory="__ProgramClasses/EditorDialogs/DMS" />
+			<Add directory="__ApiFunctions" />
+			<Add directory="Z_dlo_default" />
+			<Add directory="Z_dlo_physics" />
+			<Add directory="Z_dlo_base" />
+			<Add directory="__ProgramClasses/EditorDialogs/DLV" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,--stack,4194304" />
+			<Add option="-Wl,--large-address-aware" />
+			<Add library="liballeg.a" />
+			<Add library="libshell32.a" />
+			<Add library="libkernel32.a" />
+			<Add library="libuser32.a" />
+			<Add library="libgdi32.a" />
+			<Add library="libcomdlg32.a" />
+			<Add library="libcomctl32.a" />
+			<Add library="libole32.a" />
+			<Add library="libdinput.a" />
+			<Add library="libddraw.a" />
+			<Add library="libdxguid.a" />
+			<Add library="libwinmm.a" />
+			<Add library="libdsound.a" />
+			<Add library="libpng.a" />
+			<Add library="C:/MinGW/lib/libz.a" />
+			<Add library="libhid.a" />
+			<Add library="libiphlpapi.a" />
+			<Add library="libntdll.a" />
+			<Add library="libuuid.a" />
+			<Add library="libshlwapi.a" />
+		</Linker>
+		<Unit filename="Fwk/Auxillary/TextFormat.cpp">
+			<Option virtualFolder="Fwk/Auxillary/" />
+		</Unit>
+		<Unit filename="Fwk/Auxillary/auxillary.h">
+			<Option virtualFolder="Fwk/Auxillary/" />
+		</Unit>
+		<Unit filename="Fwk/Config/CConfig.cpp">
+			<Option virtualFolder="Fwk/Config/" />
+		</Unit>
+		<Unit filename="Fwk/Config/CConfig.h">
+			<Option virtualFolder="Fwk/Config/" />
+		</Unit>
+		<Unit filename="Fwk/Config/CConfigManager.cpp">
+			<Option virtualFolder="Fwk/Config/" />
+		</Unit>
+		<Unit filename="Fwk/Config/CConfigManager.h">
+			<Option virtualFolder="Fwk/Config/" />
+		</Unit>
+		<Unit filename="Fwk/Config/CConfigSection.cpp">
+			<Option virtualFolder="Fwk/Config/" />
+		</Unit>
+		<Unit filename="Fwk/Config/CConfigSection.h">
+			<Option virtualFolder="Fwk/Config/" />
+		</Unit>
+		<Unit filename="Fwk/Debug.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/DeltaError.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO.cpp">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO.h">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO_Chunks.cpp">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO_GetSet.cpp">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO_PNG.cpp">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO_PNG_C.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO_PNG_FAST.cpp">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileIO/CFileIO_SzIO.cpp">
+			<Option virtualFolder="Fwk/FileIO/" />
+		</Unit>
+		<Unit filename="Fwk/FileSystem.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/KFramework.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/KFramework.h">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/Registry.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/String.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/System.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/Utils.cpp">
+			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/7zCrypto.cpp">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/7zCrypto.h">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/Aes.cpp">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/Aes.h">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/CpuArch.h">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/RotateDefs.h">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/Sha256.cpp">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/Sha256.h">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/7zCrypto/Types7z.h">
+			<Option virtualFolder="Libs/7zCrypto/" />
+		</Unit>
+		<Unit filename="Libs/CrcFn/Adler32.cpp">
+			<Option virtualFolder="Libs/CrcFn/" />
+		</Unit>
+		<Unit filename="Libs/CrcFn/CRC.h">
+			<Option virtualFolder="Libs/CrcFn/" />
+		</Unit>
+		<Unit filename="Libs/CrcFn/CRC32.cpp">
+			<Option virtualFolder="Libs/CrcFn/" />
+		</Unit>
+		<Unit filename="Libs/CrcFn/CRC64.cpp">
+			<Option virtualFolder="Libs/CrcFn/" />
+		</Unit>
+		<Unit filename="Libs/MurmurHash2A.cpp">
+			<Option virtualFolder="Libs/" />
+		</Unit>
+		<Unit filename="Libs/MurmurHash2A.h">
+			<Option virtualFolder="Libs/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/bool_array.cpp">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/bool_array.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/class_level_lock.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/cont_ptr_utils.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/debug_new.cpp">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/debug_new.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/fast_mutex.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/fixed_mem_pool.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/mem_pool_base.cpp">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/mem_pool_base.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/object_level_lock.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/pctimer.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/set_assign.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/static_assert.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/static_mem_pool.cpp">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Libs/Nvwa/static_mem_pool.h">
+			<Option virtualFolder="Libs/Nvwa/" />
+		</Unit>
+		<Unit filename="Main/CMain.cpp">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="Main/CMain.h">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="Main/Types/EXTHD.cpp">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/EXTHD.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/Hex128.cpp">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/Hex128.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/LUCID.cpp">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/LUCID.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/Vsx128.cpp">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/Vsx128.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/dtime.cpp">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/dtime.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/types.cpp">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/Types/types.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
+		<Unit filename="Main/alleg_win.cpp">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="Main/alleg_win.h">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="Main/defines.h">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="Main/include.h">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/CFileInfo.cpp">
+			<Option virtualFolder="_FileTypeClasses/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/CFileInfo.h">
+			<Option virtualFolder="_FileTypeClasses/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/FileTypes/CDlvHandler.cpp">
+			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/FileTypes/CDpxHandler.cpp">
+			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/FileTypes/SerializeChunk.cpp">
+			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/FileTypes/SerializeChunk.h">
+			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
+		</Unit>
+		<Unit filename="_FileTypeClasses/file_chunk_id.h">
+			<Option virtualFolder="_FileTypeClasses/" />
+		</Unit>
+		<Unit filename="program.cpp">
+			<Option virtualFolder="Main/" />
+		</Unit>
+		<Unit filename="resources.rc">
+			<Option compilerVar="WINDRES" />
+			<Option virtualFolder="Res/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
