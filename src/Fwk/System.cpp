@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -151,6 +151,24 @@ B16 KSystem::GetSystemIdentityLUCID()
     WINPID.push_back((REGID >>  0) & 0xFF);
     return SHA256(WINPID, Utils.SuperRandom()).To128();//Salt -> Multiple identity values per user!!
 }
+BIT KSystem::OneInstanceOnly()
+{
+    static HANDLE startEventHandle = NULL;
+    startEventHandle = CreateEvent(NULL, TRUE, FALSE, String.ToWideC(PROGRAM_WCLASS));
+    if(GetLastError() == ERROR_ALREADY_EXISTS)
+    {
+        CloseHandle(startEventHandle);
+        startEventHandle = NULL;
+	    // We can't tell windows enough times to bring the window into focus...
+		HWND other = FindWindow(String.ToWideC(PROGRAM_WCLASS), NULL);
+		// Code to display a window regardless of its current state
+		ShowWindow(other, SW_SHOW);  // Make the window visible if it was hidden
+		ShowWindow(other, SW_RESTORE);  // Next, restore it if it was minimized
+		SetForegroundWindow(other);  // Finally, activate the window
+        return false;
+    }
+    return true;
+}
 INT KSystem::GetTaskBarHeight()
 {
 	RECT rect;
@@ -178,26 +196,21 @@ void KSystem::LoadCursors()
 	cursors_[12] = LoadCursor(NULL, IDC_NO);
 	MainCursorIndex = 0;
 }
-void KSystem::CheckAndResetCursor()
+void KSystem::CheckAndResetCursor(INT c)
 {
-    if(cursor_reset_delay_ > 0){
-        cursor_reset_delay_--;
-    }else{
-        MainCursorIndex = CURSOR_ARROW;
-        SetCursor(cursors_[MainCursorIndex]);
-    }
+    if(c != MainCursorIndex) return;
+    MainCursorIndex = CURSOR_ARROW;
+    SetCursor(cursors_[MainCursorIndex]);
 }
 void KSystem::ChangeCursor(INT c)
 {
-	if(c == -1){
-        if(MainCursorIndex == CURSOR_ARROW) return;
-        cursor_reset_delay_ = 2;
-        return;
-	}
-	//This check ensures that drag drop cursor is not overriden by the text edits in a treeview.
-	if((MainCursorIndex == CURSOR_DRAGDROP) && (c == CURSOR_TEXT)) return;
+	if(c == -1) return;
 	MainCursorIndex = c;
-	cursor_reset_delay_ = 2;
+	SetCursor(cursors_[MainCursorIndex]);
+}
+void KSystem::FixFullScreenCursor()
+{
+	SetCursor(cursors_[CURSOR_WAIT]);
 	SetCursor(cursors_[MainCursorIndex]);
 }
 void KSystem::PlayRegistrySound(TXT app, TXT event)

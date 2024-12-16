@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -569,11 +569,13 @@ TXT __real_ngui_textf(TXT fmt, va_list& ap)
 							S32 exp =  ((expbits - 1023) & 0x7FF);//actual exponent without bias
 							exp = (signed(exp << 21) >> 21);///BUGFIX!!! MUST BE SIGNED FOR 0.5 TYPE NUMBERS.
 							U64 mantissa = (fp_bits & 0x000FFFFFFFFFFFFFLL);
-							BIT is_SubNormal = ((sign == 1) && (expbits == ((1 - 1023) & 0x7FF)));
+							///BIT is_SubNormal = ((sign == 1) && (expbits == ((1 - 1023) & 0x7FF)));
 							BIT is_NotANumber = (expbits == 0x7FF);
 							BIT is_inf = ((mantissa == 0LL) && is_NotANumber);
-							mantissa |= (U64(!is_SubNormal) << 52);
-							if(is_SubNormal) exp = 0; //fix the exponent value to 0 if subnormal
+							///BUGFIX: Use exponent and high bit anyway if subnormal
+							mantissa |= (U64(1) << 52); 
+							///mantissa |= (U64(!is_SubNormal) << 52); //(BUG, REMOVED)
+							///if(is_SubNormal) exp = 0; //(BUG, REMOVED) fix the exponent value to 0 if subnormal
 							if((fp_bits & 0x7FFFFFFFFFFFFFFFLL) == 0)
 							{
 								//(Signed) Zero

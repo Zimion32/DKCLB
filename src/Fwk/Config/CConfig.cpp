@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -331,27 +331,35 @@ void CConfig::WriteDataTo(CFileIO& ini_bfa)
 	if(is_string_data_)
 	{
 		TXT str = string_data_;
-		size_t found = 0;
-		while((found = str.find_first_of("\t\n\r=#\\",found)) != TXT::npos){
-			CHR val = str[found];
-			switch(val){
+		//"\t\r=#\n\\"
+		///BUGFIX: Re-wrote this routine to remove \n missed-detection bug.
+		for(INT i = 0; i < str.size(); i++){
+			switch(str[i]){
 				case '\t':{
-					str.erase(found);
-					str.insert(found,"\\t");
+					str.erase(str.begin()+i);
+					str.insert(str.begin()+i,1,'t');
+					str.insert(str.begin()+i,1,'\\'); i++;
 				}break;
 				case '\n':{
-					str.erase(found);
-					str.insert(found,"\\n");
+					str.erase(str.begin()+i);
+					str.insert(str.begin()+i,1,'n');
+					str.insert(str.begin()+i,1,'\\'); i++;
 				}break;
 				case '\r':{
-					str.erase(found);
-					str.insert(found,"\\r");
+					str.erase(str.begin()+i);
+					str.insert(str.begin()+i,1,'r');
+					str.insert(str.begin()+i,1,'\\'); i++;
 				}break;
-				default:{
-					str.insert(found,"\\");
+				case '\\':{
+					str.insert(str.begin()+i,1,'\\'); i++;
+				}break;
+				case '=':{
+					str.insert(str.begin()+i,1,'\\'); i++;
+				}break;
+				case '#':{
+					str.insert(str.begin()+i,1,'\\'); i++;
 				}break;
 			}
-			found += 2;
 		}
 		ini_bfa.SvText((variable_name_ + ((variable_name_=="")?(""):(" ")) + "= "));
 		ini_bfa.SvText(str);

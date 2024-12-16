@@ -9,8 +9,8 @@
 DEFRES(ICON, IDI_APP_ICON, "dkclb.ico")
 
 VS_VERSION_INFO    VERSIONINFO
-  FILEVERSION      0,0,1,0
-  PRODUCTVERSION   0,0,1,0
+  FILEVERSION      0,0,0,2
+  PRODUCTVERSION   0,0,0,2
   FILEFLAGSMASK    0x3fL // VS_FFI_FILEFLAGSMASK
 #ifdef _DEBUG
   FILEFLAGS        0x1L  // VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
@@ -30,14 +30,14 @@ VS_VERSION_INFO    VERSIONINFO
       VALUE "CompanyName",      "\0"
       VALUE "Developer",        "Various\0"
       VALUE "FileDescription",  "DKC Level Builder Toolkit\0"
-      VALUE "FileVersion",      "0.0.1.0\0"
+      VALUE "FileVersion",      "0.0.0.2\0"
       VALUE "InternalName",     "DKC Level Builder Toolkit\0"
       VALUE "LegalCopyright",   "\0"
       VALUE "LegalTrademarks",  "\0"
       VALUE "OriginalFilename", "dkclb.exe\0"
       VALUE "PrivateBuild",     "\0"
       VALUE "ProductName",      "DKC Level Builder Toolkit\0"
-      VALUE "ProductVersion",   "0.0.1.0\0"
+      VALUE "ProductVersion",   "0.0.0.2\0"
       VALUE "SpecialBuild",     "\0"
       VALUE "Support",          "\0"
       VALUE "Users",            "Unlimited.\0"

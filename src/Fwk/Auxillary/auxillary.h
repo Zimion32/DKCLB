@@ -1,7 +1,7 @@
 #pragma once
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -19,3 +19,20 @@
 **===========================================================================*/
 TXT __ngui_textf(TXT fmt, ...);
 #define Tx(...) __ngui_textf(__VA_ARGS__)
+
+void PwrUpScale(BMP src, BMP dst, F64 power = 20.0);
+void PixelUpScale(BMP src, BMP dst, U32 transparent);
+void PixelUpScaleWithRatio(BMP src, BMP dst, S32 bw, S32 bh, U32 transparent);
+SPoint PixelUpScaleEx(BMP src, BMP dst, S32 bw, S32 bh, SRect hitbox, SPoint src_center, SRect src_abounds, S32 src_aborder, U32 transparent, U32 palette);
+SPoint PixelUpScaleEx_CalcNewCenter(S32 bx, S32 by, S32 bw, S32 bh, 
+    SPoint src_center, SRect src_abounds, S32 src_border, S32 mouse_x, S32 mouse_y);
+
+U32 GeneratePercentageColor(F64 p);
+U32 GenerateFpsColor(F64 hz, F64 fps);
+
+BIT PixelIsMagic(U32 pixel);
+SRect GetBitmapBounds(BMP input);
+SRect GetBitmapBoundsQuick(BMP input);
+
+void PrepareBitmapForFastAlpha(BMP bmp);
+void PrepareBitmapForFastAlphaWithColor(BMP bmp, U32 rgbcolor);

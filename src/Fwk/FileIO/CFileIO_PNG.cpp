@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -322,7 +322,7 @@ can_throw_t CFileIO::SaveOpaquePNG(BMP bmp, TXT filename)
 		}
 	}
 	SavePNG(saving, filename);
-	Nullify(saving);
+	NullifyF(saving);
 	return can_throw_t();
 }
 //##############################################################################
@@ -335,6 +335,7 @@ can_throw_t CFileIO::SaveOpaquePNG(BMP bmp, TXT filename)
 //##############################################################################
 can_throw_tt<BMP> CFileIO::LoadPNG(TXT filename)
 {
+	BegAbortProtect("Tried to load a malformed PNG. LIBPNG called abort().");
 	PACKFILE *fp = NULL;
     BITMAP *bmp = NULL;
     fp = pack_fopen(filename.c_str(), "r");
@@ -352,10 +353,12 @@ can_throw_tt<BMP> CFileIO::LoadPNG(TXT filename)
     	last_error_ += "\".\n\nThere was an error processing the file.";
     	throw exception(last_error_);
     }
+    EndAbortProtect();
     return bmp;
 }
 can_throw_tt<BMP> CFileIO::GvPNG()
 {
+	BegAbortProtect("Tried to load a malformed PNG. LIBPNG called abort().");
 	U32 size = GvHex(4); //this can fail if out of data
 	if(size == 0x00000000){
         return NULL;
@@ -384,7 +387,7 @@ can_throw_tt<BMP> CFileIO::GvPNG()
     }else{
 		/*color convert*/blit(temp_abmp, BmpPtr, 0, 0, 0, 0, temp_abmp->w, temp_abmp->h);
 	}
-	Nullify(temp_abmp);
+	NullifyF(temp_abmp);
     for(IND yy = (BmpPtr->h - 1); yy >= 0; --yy)
     {
         for(IND xx = (BmpPtr->w - 1); xx >= 0; --xx)
@@ -397,6 +400,7 @@ can_throw_tt<BMP> CFileIO::GvPNG()
             _putpixel32(BmpPtr, xx, yy, color);//Put the pixel back.
         }
     }
+    EndAbortProtect();
 	return BmpPtr;
 }
 can_throw_t CFileIO::GvSkipPNG()

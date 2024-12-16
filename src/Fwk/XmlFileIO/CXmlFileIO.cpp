@@ -17,24 +17,28 @@
  *  with DKCLB. If not, see <https://www.gnu.org/licenses/>. 
 **===========================================================================*/
 #include "include.h"
-#include "CMain.h"
-static void DisplayLegalNotice()
+#include "CXmlFileIO.h"
+// This software uses pugixml library (https://pugixml.org).
+// pugixml is Copyright (C) 2006-2024 Arseny Kapoulkine.
+//---------------------------------------------------------------
+CXmlFileIO::CXmlFileIO()
 {
-    cout << "--------------------------------------------------------------------------------" << endl;
-    cout << "  DKC Level Builder Toolkit - Copyright (C) 2025 Simion32" << endl;
-    cout << "--------------------------------------------------------------------------------" << endl;
-    cout << "  This program comes with ABSOLUTELY NO WARRANTY." << endl;
-    cout << "  This is free software, and you are welcome to redistribute it" << endl;
-    cout << "  under certain conditions. See the included file \"COPYING.txt\"." << endl;
-    cout << "--------------------------------------------------------------------------------" << endl;
+    filepath_ = "";
+	headers_end_ = 0;
+	selected_subfile_ = 0xFFFFFFFF;
+	cdl_build_detect_ = 0;
+	is_cdl_ = false;
+	res_data_ = NULL;
+	res_bytes_ = 0;
+	xmldoc_.reset();
 }
-void CMain::Program(Vx<TXT> args)
+CXmlFileIO::~CXmlFileIO()
 {
-    DisplayLegalNotice();
-    cout << endl;
-    cout << endl;
-    cout << "Processing Complete, Press ENTER to Exit." << endl;
-    cin.get();
+	
 }
 
-
+//escape < with &lt;
+//escape & with &amp;
+//escape > with &gt;
+//escape ' with &apos;
+//escape " with &quot;

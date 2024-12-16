@@ -1,6 +1,7 @@
+#include "include.h"
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -16,7 +17,6 @@
  *  You should have received a copy of the GNU General Public License along 
  *  with DKCLB. If not, see <https://www.gnu.org/licenses/>. 
 **===========================================================================*/
-#include "include.h"
 
 CFileIO FIO;
 
@@ -26,6 +26,10 @@ CFileIO::CFileIO()
     set_position_ = 0;
     last_error_ = "";
     SetupChunkValues_();
+    has_subfiles_ = false;
+    subfile_offset_ = 0;
+    subfile_sizes_.clear();
+    subfile_dgeids_.clear();
 }
 CFileIO::~CFileIO()
 {
@@ -56,6 +60,10 @@ void CFileIO::FreeMemory()
     buffer_.clear();
     Vx<U08>().swap(buffer_);///This de-allocates any used memory.
     SetupChunkValues_();
+    has_subfiles_ = false;
+    subfile_offset_ = 0;
+    subfile_sizes_.clear();
+    subfile_dgeids_.clear();
 }
 //############################################################################//
 //############################################################################//

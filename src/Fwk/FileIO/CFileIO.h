@@ -1,7 +1,7 @@
 #pragma once
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -22,6 +22,15 @@
 #define CT can_throw_tt
 #define LCD LUCID
 #define XHD EXTHD
+#define SVD SVirtualData
+struct SVirtualData
+{
+        TXT     path;
+        U32     size;
+        U08*    data;
+                SVirtualData(const SVirtualData& s): path(s.path), size(s.size), data(s.data){}
+                SVirtualData(TXT path, U32 size, U08* data): path(path), size(size), data(data){}
+};
 class CFileIO
 {
 	public:
@@ -75,8 +84,6 @@ class CFileIO
 		CTHW    SvEndSection();
 		CTHW    SvBeginSectionArray();
 		CTHW    SvEndSectionArray();
-		
-		CTHW    RcSHA256(); //this is for forcing a recalculation of a DMS/DSS hash when building CDLs
 		
 		CT<U64>	GvHex(U32 bytes)		qyz;
 		CT<S64>	GvVsx(U32 bytes)		qyz;
@@ -147,6 +154,13 @@ CT< Vx<U08> >   GvFile();
 		UVL     operator()(U32 index, U32 bytes);
 		
 		//=======================================================================
+		//=======================================================================
+		
+		void    SvSubFile(U32 type);
+		CT<U32>	GetSubFileCount();
+		CT<U32>	GetSubFileSize(U32 which);
+		CT<DGEID>	GetSubFileDgeid(U32 which);
+		
     private:
 		Vx<U08> buffer_;
 		U32     get_position_;
@@ -158,6 +172,11 @@ CT< Vx<U08> >   GvFile();
 		U32     last_chunk_length_;
 		U32     last_chunk_id_;
 		U32     sha256_calc_start_;
+		BIT     has_subfiles_;
+		U32     subfile_offset_;
+		Vx<U32> subfile_sizes_;
+		Vx<DGEID> subfile_dgeids_;
+static  Vx<SVD> VirtualFileArray;
 
 		void    SetupChunkValues_();
 		void    EndChunk_();

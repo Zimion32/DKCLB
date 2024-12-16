@@ -1,6 +1,7 @@
+#include "include.h"
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -16,7 +17,6 @@
  *  You should have received a copy of the GNU General Public License along 
  *  with DKCLB. If not, see <https://www.gnu.org/licenses/>. 
 **===========================================================================*/
-#include "include.h"
 TXT KFileSystem::ParsePathReparsePoints(TXT path)
 {
 	U32 wantsz = ExpandEnvironmentStrings(String.ToWideC(path), NULL, 0);
@@ -118,6 +118,70 @@ TXT	KFileSystem::FileExt(TXT path_string)
 	if(found2 == tempf.npos) return TXT("");
 	return tempf.substr(found2+1);
 }
+void KFileSystem::Run(TXT command, BIT wait)
+{
+	STARTUPINFO si;
+	PROCESS_INFORMATION pi;
+	ZeroMemory( &si, sizeof(si) );
+	si.cb = sizeof(si);
+	ZeroMemory( &pi, sizeof(pi) );
+	//PROGRAMMER'S NOTE: 
+	//CreateProcess avoids doing heap allocations, thus it uses the TXT memory
+	//that you pass in to figure out where command arguments are (using the stack).
+	//Here, as a workaround, I'm cheating a bit and passing a pointer to the T16's memory.
+	T16 cmd = String.ToWide(command);
+	CreateProcess(NULL, const_cast<C16*>(cmd.c_str()), NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+	if((pi.hProcess != NULL) && wait){
+		WaitForSingleObject(pi.hProcess, INFINITE);
+	}
+	CloseHandle(pi.hProcess);
+}
+void KFileSystem::RunFile(TXT path, BIT wait)
+{
+	if((path.size() >= 2) && (path[1] != ':')){
+		path = ProgramDirectory() + path;
+	}
+	T16 wpath = String.ToWide(ParsePathReparsePoints(path));
+	SHELLEXECUTEINFO lpExecInfo;
+		lpExecInfo.cbSize  = sizeof(SHELLEXECUTEINFO);
+		lpExecInfo.lpFile = wpath.c_str();
+		lpExecInfo.fMask=SEE_MASK_DOENVSUBST|SEE_MASK_NOCLOSEPROCESS ;     
+		lpExecInfo.hwnd = NULL;  
+		lpExecInfo.lpVerb = L"open";
+		lpExecInfo.lpParameters = NULL;
+		lpExecInfo.lpDirectory = NULL;   
+		lpExecInfo.nShow = SW_SHOW;
+		lpExecInfo.hInstApp = (HINSTANCE) SE_ERR_DDEFAIL;
+		ShellExecuteEx(&lpExecInfo);
+	if((lpExecInfo.hProcess != NULL) && wait)
+	{
+		WaitForSingleObject(lpExecInfo.hProcess, INFINITE);
+		CloseHandle(lpExecInfo.hProcess);
+	}
+}
+void KFileSystem::RunFolder(TXT path, BIT wait)
+{
+	if((path.size() >= 2) && (path[1] != ':')){
+		path = ProgramDirectory() + path;
+	}
+	T16 wpath = String.ToWide(ParsePathReparsePoints(path));
+	SHELLEXECUTEINFO lpExecInfo;
+		lpExecInfo.cbSize  = sizeof(SHELLEXECUTEINFO);
+		lpExecInfo.lpFile = wpath.c_str();
+		lpExecInfo.fMask=SEE_MASK_DOENVSUBST|SEE_MASK_NOCLOSEPROCESS;     
+		lpExecInfo.hwnd = NULL;  
+		lpExecInfo.lpVerb = L"explore";
+		lpExecInfo.lpParameters = NULL;
+		lpExecInfo.lpDirectory = NULL;   
+		lpExecInfo.nShow = SW_SHOW;
+		lpExecInfo.hInstApp = (HINSTANCE) SE_ERR_DDEFAIL;
+		ShellExecuteEx(&lpExecInfo);
+	if((lpExecInfo.hProcess != NULL) && wait)
+	{
+		WaitForSingleObject(lpExecInfo.hProcess, INFINITE);
+		CloseHandle(lpExecInfo.hProcess);
+	}
+}
 TXT KFileSystem::ProgramDirectory()
 {
 	C16 programcpath[MAX_PATH+1]; programcpath[MAX_PATH] = L'\0';
@@ -133,6 +197,44 @@ TXT KFileSystem::ProgramFile()
 	//Windows XP:  The TXT is truncated to nSize characters and is not null-terminated.
 	GetModuleFileName(NULL, programcpath, MAX_PATH);
 	return String.FromWide(programcpath);
+}
+BIT KFileSystem::CleanFolderPathText(TXT& text)
+{
+	TXT& x = text;
+	BIT input_error = false;
+	size_t found = 0;
+	while((found = x.find_first_not_of(
+	" :\\/!#$%&'()+,.-;=@[]^_`{}~0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")) != TXT::npos){
+		x.erase(x.begin()+found);
+		found = 0;
+		input_error = true;
+	}
+	while(x.size() && (x[0] == ' ')){
+        x.erase(x.begin()+0);
+		input_error = true;
+	}
+	if((x.size() >= 3) && (x[1] == ':')){
+        x[0] = toupper(x[0]);
+        if(x.find_first_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ") != 0){
+            x[0] = 'C'; input_error = true;
+        }
+        found = 2;
+        while((found = x.find_first_of(':',found)) != TXT::npos){
+            x.erase(x.begin()+found);
+            input_error = true;
+        }
+	}
+	TXT u = String.ToUpper(x);
+	if((u.find("CON" ,0) == 0) || (u.find("PRN" ,0) == 0) || (u.find("AUX" ,0) == 0) || (u.find("NUL" ,0) == 0)
+    || (u.find("COM1",0) == 0) || (u.find("COM2",0) == 0) || (u.find("COM3",0) == 0) || (u.find("COM4",0) == 0)
+    || (u.find("COM5",0) == 0) || (u.find("COM6",0) == 0) || (u.find("COM7",0) == 0) || (u.find("COM8",0) == 0)
+    || (u.find("COM9",0) == 0) || (u.find("COM0",0) == 0) || (u.find("LPT1",0) == 0) || (u.find("LPT2",0) == 0)
+    || (u.find("LPT3",0) == 0) || (u.find("LPT4",0) == 0) || (u.find("LPT5",0) == 0) || (u.find("LPT6",0) == 0)
+    || (u.find("LPT7",0) == 0) || (u.find("LPT8",0) == 0) || (u.find("LPT9",0) == 0) || (u.find("LPT0",0) == 0)){
+        x = "INVALID";
+		input_error = true;
+	}
+	return input_error;
 }
 BIT KFileSystem::CleanFolderNameText(TXT& text)
 {
@@ -831,6 +933,85 @@ void KFileSystem::FolderGetObjectNamesList(TXT path, TXT_callback_t cb)
 //####################################################################################
 //####################################################################################
 //####################################################################################
+SFileInfo::SFileInfo(): folderpath(""), file(""), filesize(0), attributes(0), created(dtime()), modified(dtime()){}
+SFileInfo::SFileInfo(TXT folderpath, TXT file, U64 filesize, U32 attributes, dtime& created, dtime& modified):
+folderpath(folderpath), file(file), filesize(filesize), attributes(attributes), created(created), modified(modified)
+{
+    TXT filepath = folderpath + file;
+    typeinfo = FileType(FileSystem.FileExt(filepath), filepath, true);
+}
+void KFileSystem::FolderGetFileNamesListEx(TXT path, Vx<SFileInfo>& list)
+{
+	list.clear();
+	HANDLE hFind;
+	WIN32_FIND_DATA FindData;
+	if((hFind = FindFirstFile(String.ToWideC(path+"*"), &FindData)) != INVALID_HANDLE_VALUE){
+		do{
+			if(~FindData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY){
+				U32 at = FindData.dwFileAttributes;
+				FILETIME f_ct;
+				FILETIME f_mt;
+				FileTimeToLocalFileTime(&(FindData.ftCreationTime),&f_ct);
+				FileTimeToLocalFileTime(&(FindData.ftLastWriteTime),&f_mt);
+				dtime ct(f_ct);
+				dtime mt(f_mt);
+				U64 sz = ((U64(FindData.nFileSizeHigh) << 32) | U64(FindData.nFileSizeLow));
+				TXT f = String.FromWide(FindData.cFileName);
+				SFileInfo thefile(path, f, sz, at, ct, mt);
+				list.push_back(thefile);
+			}
+		}while(FindNextFile(hFind, &FindData));
+		FindClose(hFind);
+	}
+}
+void KFileSystem::FolderGetFolderNamesListEx(TXT path, Vx<SFileInfo>& list)
+{
+	list.clear();
+	HANDLE hFind;
+	WIN32_FIND_DATA FindData;
+	if((hFind = FindFirstFile(String.ToWideC(path+"*"), &FindData)) != INVALID_HANDLE_VALUE){
+		do{
+			if(FindData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY){
+				U32 at = FindData.dwFileAttributes;
+				FILETIME f_ct;
+				FILETIME f_mt;
+				FileTimeToLocalFileTime(&(FindData.ftCreationTime),&f_ct);
+				FileTimeToLocalFileTime(&(FindData.ftLastWriteTime),&f_mt);
+				dtime ct(f_ct);
+				dtime mt(f_mt);
+				U64 sz = ((U64(FindData.nFileSizeHigh) << 32) | U64(FindData.nFileSizeLow));
+				TXT f = String.FromWide(FindData.cFileName);
+				if((f == ".") || (f == "..")) continue;
+				SFileInfo thefile(path+f+"\\", f, sz, at, ct, mt);
+				list.push_back(thefile);
+			}
+		}while(FindNextFile(hFind, &FindData));
+		FindClose(hFind);
+	}
+}
+void KFileSystem::GetFileInfo(TXT filepath, SFileInfo& info)
+{
+	HANDLE hFind;
+	WIN32_FIND_DATA FindData;
+	if((hFind = FindFirstFile(String.ToWideC(filepath), &FindData)) != INVALID_HANDLE_VALUE){
+		if(~FindData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY){
+            U32 at = FindData.dwFileAttributes;
+            FILETIME f_ct;
+            FILETIME f_mt;
+            FileTimeToLocalFileTime(&(FindData.ftCreationTime),&f_ct);
+            FileTimeToLocalFileTime(&(FindData.ftLastWriteTime),&f_mt);
+            dtime ct(f_ct);
+            dtime mt(f_mt);
+            U64 sz = ((U64(FindData.nFileSizeHigh) << 32) | U64(FindData.nFileSizeLow));
+            TXT f = String.FromWide(FindData.cFileName);
+            if((f == ".") || (f == "..")){
+                FindClose(hFind); return;
+            }
+            info = SFileInfo(FileSystem.Directory(filepath), f, sz, at, ct, mt);
+        }
+		FindClose(hFind);
+	}
+}
 TXT KFileSystem::GetDriveLabel(TXT drive)
 {
 	C16 label[MAX_PATH];

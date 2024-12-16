@@ -3809,7 +3809,9 @@
 	"include.h"
 	"SerializeChunk.h"
 
-1687390288 s:\dkclbv0.0.0.1\src\main\include.h
+1734396159 s:\dkclbv0.0.0.1\src\main\include.h
+	"pugixml.h"
+	"program_id.h"
 	<stdio.h>
 	<fcntl.h>
 	<io.h>
@@ -3828,56 +3830,61 @@
 	"Types\LUCID.h"
 	"Types\EXTHD.h"
 	"CFileIO.h"
+	"CFileType.h"
+	"CXmlFileIO.h"
 	"auxillary.h"
+	"nitro_error.h"
 
-1687394830 s:\dkclbv0.0.0.1\src\main\types\types.h
+1734396248 s:\dkclbv0.0.0.1\src\main\types\types.h
 	<cstddef>
 	"checked.h"
 
-1674798030 s:\dkclbv0.0.0.1\src\main\types\checked.h
+1732631773 s:\dkclbv0.0.0.1\src\main\types\checked.h
 	<vector>
 	<string>
 
-1687390288 s:\dkclbv0.0.0.1\src\main\alleg_win.h
+1734396248 s:\dkclbv0.0.0.1\src\main\alleg_win.h
 	<allegro.h>
 	<winalleg.h>
+	<wtsapi32.h>
 
-1611456483 s:\dkclbv0.0.0.1\src\\libs\nvwa\debug_new.h
+1611452883 s:\dkclbv0.0.0.1\src\\libs\nvwa\debug_new.h
 	<new>
 	<stdio.h>
 	<stdlib.h>
 
-1687390287 s:\dkclbv0.0.0.1\src\\libs\7zcrypto\7zcrypto.h
+1734396118 s:\dkclbv0.0.0.1\src\\libs\7zcrypto\7zcrypto.h
 
-1687390288 s:\dkclbv0.0.0.1\src\\libs\crcfn\crc.h
+1734396118 s:\dkclbv0.0.0.1\src\\libs\crcfn\crc.h
 
-1610417870 s:\dkclbv0.0.0.1\src\\libs\murmurhash2a.h
+1610414270 s:\dkclbv0.0.0.1\src\\libs\murmurhash2a.h
 
 1605210629 s:\dkclbv0.0.0.1\src\\libs\sysmf.h
 	"Shlobj.h"
 
-1687390287 s:\dkclbv0.0.0.1\src\main\defines.h
+1734396118 s:\dkclbv0.0.0.1\src\main\defines.h
 
-1687390287 s:\dkclbv0.0.0.1\src\fwk\kframework.h
+1734396660 s:\dkclbv0.0.0.1\src\fwk\kframework.h
+	"Types\dtime.h"
 	"CConfig.h"
 	"CConfigManager.h"
 
-1687390287 s:\dkclbv0.0.0.1\src\fwk\config\cconfig.h
+1734396536 s:\dkclbv0.0.0.1\src\fwk\config\cconfig.h
 	"CConfigSection.h"
 
-1687390287 s:\dkclbv0.0.0.1\src\fwk\config\cconfigsection.h
+1734396536 s:\dkclbv0.0.0.1\src\fwk\config\cconfigsection.h
 
-1687390287 s:\dkclbv0.0.0.1\src\fwk\config\cconfigmanager.h
+1734396536 s:\dkclbv0.0.0.1\src\fwk\config\cconfigmanager.h
 
-1687390287 s:\dkclbv0.0.0.1\src\main\types\dtime.h
+1734396248 s:\dkclbv0.0.0.1\src\main\types\dtime.h
 
-1687390287 s:\dkclbv0.0.0.1\src\main\types\lucid.h
+1734396248 s:\dkclbv0.0.0.1\src\main\types\lucid.h
 
-1687390287 s:\dkclbv0.0.0.1\src\main\types\exthd.h
+1734396248 s:\dkclbv0.0.0.1\src\main\types\exthd.h
 
-1687390287 s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio.h
+1734396536 s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio.h
 
-1687390288 s:\dkclbv0.0.0.1\src\fwk\auxillary\auxillary.h
+1734396536 s:\dkclbv0.0.0.1\src\fwk\auxillary\auxillary.h
 
 1687390287 s:\dkclbv0.0.0.1\src\_filetypeclasses\filetypes\serializechunk.h
 
@@ -3888,130 +3895,136 @@
 	"include.h"
 	"SerializeChunk.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\auxillary\textformat.cpp
+1704927014 source:s:\dkclbv0.0.0.1\src\fwk\auxillary\textformat.cpp
 	<stdarg.h>
 	"include.h"
 	"Hex128.h"
 
-1687390287 s:\dkclbv0.0.0.1\src\main\types\hex128.h
+1734396248 s:\dkclbv0.0.0.1\src\main\types\hex128.h
 	"types.h"
 	"Vsx128.h"
 
-1687390287 s:\dkclbv0.0.0.1\src\main\types\vsx128.h
+1734396248 s:\dkclbv0.0.0.1\src\main\types\vsx128.h
 	"types.h"
 	"Hex128.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfigmanager.cpp
+1732844520 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfigmanager.cpp
 	"include.h"
 	"CConfigManager.h"
 	"CConfigSection.h"
 	"CConfig.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfigsection.cpp
+1684808080 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfigsection.cpp
 	"include.h"
 	"CConfigSection.h"
 	"CConfig.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfig.cpp
+1734394789 source:s:\dkclbv0.0.0.1\src\fwk\config\cconfig.cpp
 	"include.h"
 	"CConfig.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio.cpp
+1686262833 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_chunks.cpp
+1686266396 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_chunks.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_getset.cpp
+1620531102 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_getset.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png_c.c
+1671045011 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png_c.c
 	<png.h>
 	<pngstruct.h>
 	<allegro.h>
 	<allegro/internal/aintern.h>
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png_fast.cpp
+1619708416 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png_fast.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\debug.cpp
+1734394860 source:s:\dkclbv0.0.0.1\src\fwk\debug.cpp
+	<stdio.h>
+	<signal.h>
+	<stdlib.h>
+	<unistd.h>
+	<exception>
+	"include.h"
+	"CMain.h"
+
+1662403297 source:s:\dkclbv0.0.0.1\src\fwk\kframework.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\kframework.cpp
+1681936889 source:s:\dkclbv0.0.0.1\src\fwk\utils.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\utils.cpp
-	"include.h"
-
-1687390287 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\7zcrypto.cpp
+1734396118 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\7zcrypto.cpp
 	"include.h"
 	"Sha256.h"
 	"Aes.h"
 
-1360485395 s:\dkclbv0.0.0.1\src\libs\7zcrypto\sha256.h
+1360481795 s:\dkclbv0.0.0.1\src\libs\7zcrypto\sha256.h
 	"Types7z.h"
 
-1342242387 s:\dkclbv0.0.0.1\src\libs\7zcrypto\types7z.h
+1342238787 s:\dkclbv0.0.0.1\src\libs\7zcrypto\types7z.h
 	<stddef.h>
 	<windows.h>
 
-1360485395 s:\dkclbv0.0.0.1\src\libs\7zcrypto\aes.h
+1360481795 s:\dkclbv0.0.0.1\src\libs\7zcrypto\aes.h
 	"Types7z.h"
 
-1671048631 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\aes.cpp
+1671045031 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\aes.cpp
 	"Aes.h"
 	"CpuArch.h"
 
-1306785890 s:\dkclbv0.0.0.1\src\libs\7zcrypto\cpuarch.h
+1306782290 s:\dkclbv0.0.0.1\src\libs\7zcrypto\cpuarch.h
 
-1342242387 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\sha256.cpp
+1342238787 source:s:\dkclbv0.0.0.1\src\libs\7zcrypto\sha256.cpp
 	"Sha256.h"
 	"RotateDefs.h"
 
-1306785708 s:\dkclbv0.0.0.1\src\libs\7zcrypto\rotatedefs.h
+1306782108 s:\dkclbv0.0.0.1\src\libs\7zcrypto\rotatedefs.h
 	<stdlib.h>
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\filesystem.cpp
+1734394860 source:s:\dkclbv0.0.0.1\src\fwk\filesystem.cpp
 	"include.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\registry.cpp
+1734394860 source:s:\dkclbv0.0.0.1\src\fwk\registry.cpp
 	<TChar.H>
 	"include.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\string.cpp
+1734394860 source:s:\dkclbv0.0.0.1\src\fwk\string.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\libs\crcfn\adler32.cpp
+1734396118 source:s:\dkclbv0.0.0.1\src\libs\crcfn\adler32.cpp
 	"include.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\libs\crcfn\crc32.cpp
+1734396118 source:s:\dkclbv0.0.0.1\src\libs\crcfn\crc32.cpp
 	"include.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_szio.cpp
+1734395152 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_szio.cpp
 	<cstdio>
 	"include.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\libs\crcfn\crc64.cpp
+1734396118 source:s:\dkclbv0.0.0.1\src\libs\crcfn\crc64.cpp
 	"include.h"
 
-1610417870 source:s:\dkclbv0.0.0.1\src\libs\murmurhash2a.cpp
+1610414270 source:s:\dkclbv0.0.0.1\src\libs\murmurhash2a.cpp
 	"MurmurHash2A.h"
 
-1610417870 s:\dkclbv0.0.0.1\src\libs\murmurhash2a.h
+1610414270 s:\dkclbv0.0.0.1\src\libs\murmurhash2a.h
 
-1618892177 source:s:\dkclbv0.0.0.1\src\libs\nvwa\bool_array.cpp
+1618888577 source:s:\dkclbv0.0.0.1\src\libs\nvwa\bool_array.cpp
 	<limits.h>
 	<string.h>
 	"bool_array.h"
 
-1618892188 s:\dkclbv0.0.0.1\src\libs\nvwa\bool_array.h
+1618888588 s:\dkclbv0.0.0.1\src\libs\nvwa\bool_array.h
 	<assert.h>
 	<stdlib.h>
 	<new>
 	<stdexcept>
 	<string>
 
-1674092500 source:s:\dkclbv0.0.0.1\src\libs\nvwa\debug_new.cpp
+1674088900 source:s:\dkclbv0.0.0.1\src\libs\nvwa\debug_new.cpp
 	<new>
 	<assert.h>
 	<limits.h>
@@ -4025,35 +4038,35 @@
 	<stdexcept>
 	"debug_new.h"
 
-1342242388 s:\dkclbv0.0.0.1\src\libs\nvwa\fast_mutex.h
+1342238788 s:\dkclbv0.0.0.1\src\libs\nvwa\fast_mutex.h
 	<stdio.h>
 	<stdlib.h>
 	<pthread.h>
 	<windows.h>
 
-1219542174 s:\dkclbv0.0.0.1\src\libs\nvwa\static_assert.h
+1219538574 s:\dkclbv0.0.0.1\src\libs\nvwa\static_assert.h
 
-1611456483 s:\dkclbv0.0.0.1\src\libs\nvwa\debug_new.h
+1611452883 s:\dkclbv0.0.0.1\src\libs\nvwa\debug_new.h
 	<new>
 	<stdio.h>
 	<stdlib.h>
 
-1219542166 source:s:\dkclbv0.0.0.1\src\libs\nvwa\mem_pool_base.cpp
+1219538566 source:s:\dkclbv0.0.0.1\src\libs\nvwa\mem_pool_base.cpp
 	<stdlib.h>
 	<new>
 	"mem_pool_base.h"
 
-1219542168 s:\dkclbv0.0.0.1\src\libs\nvwa\mem_pool_base.h
+1219538568 s:\dkclbv0.0.0.1\src\libs\nvwa\mem_pool_base.h
 	<stddef.h>
 
-1219542174 source:s:\dkclbv0.0.0.1\src\libs\nvwa\static_mem_pool.cpp
+1219538574 source:s:\dkclbv0.0.0.1\src\libs\nvwa\static_mem_pool.cpp
 	<algorithm>
 	"cont_ptr_utils.h"
 	"static_mem_pool.h"
 
-1619324555 s:\dkclbv0.0.0.1\src\libs\nvwa\cont_ptr_utils.h
+1619320955 s:\dkclbv0.0.0.1\src\libs\nvwa\cont_ptr_utils.h
 
-1619976996 s:\dkclbv0.0.0.1\src\libs\nvwa\static_mem_pool.h
+1619973396 s:\dkclbv0.0.0.1\src\libs\nvwa\static_mem_pool.h
 	<new>
 	<stdexcept>
 	<string>
@@ -4064,61 +4077,148 @@
 	"mem_pool_base.h"
 	<iostream>
 
-1342242388 s:\dkclbv0.0.0.1\src\libs\nvwa\class_level_lock.h
+1342238788 s:\dkclbv0.0.0.1\src\libs\nvwa\class_level_lock.h
 	"fast_mutex.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\main\alleg_win.cpp
+1734396248 source:s:\dkclbv0.0.0.1\src\main\alleg_win.cpp
 	"include.h"
 
-1687390288 source:s:\dkclbv0.0.0.1\src\main\types\dtime.cpp
+1734396248 source:s:\dkclbv0.0.0.1\src\main\types\dtime.cpp
 	<stdio.h>
 	<stdlib.h>
 	"include.h"
 	<time.h>
 
-1687390288 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png.cpp
+1734395143 source:s:\dkclbv0.0.0.1\src\fwk\fileio\cfileio_png.cpp
 	<png.h>
 	<pngstruct.h>
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\system.cpp
+1734394860 source:s:\dkclbv0.0.0.1\src\fwk\system.cpp
 	"include.h"
 	<winsock2.h>
 	<iphlpapi.h>
 
-1687390287 source:s:\dkclbv0.0.0.1\src\main\types\exthd.cpp
+1734396248 source:s:\dkclbv0.0.0.1\src\main\types\exthd.cpp
 	"include.h"
 
-1492435320 source:s:\dkclbv0.0.0.1\src\main\types\hex128.cpp
+1492431720 source:s:\dkclbv0.0.0.1\src\main\types\hex128.cpp
 
-1687390287 source:s:\dkclbv0.0.0.1\src\main\types\lucid.cpp
+1734396248 source:s:\dkclbv0.0.0.1\src\main\types\lucid.cpp
 	"include.h"
 
-1687390287 source:s:\dkclbv0.0.0.1\src\main\types\types.cpp
+1734396248 source:s:\dkclbv0.0.0.1\src\main\types\types.cpp
 	<limits>
 	"include.h"
 
-1492435322 source:s:\dkclbv0.0.0.1\src\main\types\vsx128.cpp
+1492431722 source:s:\dkclbv0.0.0.1\src\main\types\vsx128.cpp
 
-1687230549 source:s:\dkclbv0.0.0.1\src\resources.rc
+1734393401 source:s:\dkclbv0.0.0.1\src\resources.rc
 	<windows.h>
 	<commctrl.h>
 	<richedit.h>
 
-1687390287 source:s:\dkclbv0.0.0.1\src\main\cmain.cpp
+1734396118 source:s:\dkclbv0.0.0.1\src\main\cmain.cpp
 	"include.h"
 	"CMain.h"
 
-1687390287 s:\dkclbv0.0.0.1\src\main\cmain.h
+1734396118 s:\dkclbv0.0.0.1\src\main\cmain.h
 
-1687390287 source:s:\dkclbv0.0.0.1\src\fwk\deltaerror.cpp
+1661959580 source:s:\dkclbv0.0.0.1\src\fwk\deltaerror.cpp
 	"include.h"
 
 1687229318 source:s:\dkclbv0.0.0.1\src\main.cpp
 	"include.h"
 	"CMain.h"
 
-1687391437 source:s:\dkclbv0.0.0.1\src\program.cpp
+1734396118 source:s:\dkclbv0.0.0.1\src\program.cpp
 	"include.h"
 	"CMain.h"
+
+1732557493 s:\dkclbv0.0.0.1\src\fwk\xmlfileio\pugixml.h
+	"pugiconfig.h"
+	<stddef.h>
+	<exception>
+	<iterator>
+	<iosfwd>
+	<string>
+	<string_view>
+
+1731799506 s:\dkclbv0.0.0.1\src\fwk\xmlfileio\pugiconfig.h
+
+1734396660 s:\dkclbv0.0.0.1\src\fwk\xmlfileio\cxmlfileio.h
+
+1732574872 source:s:\dkclbv0.0.0.1\src\fwk\xmlfileio\cxmlfileio.cpp
+	"include.h"
+	"CXmlFileIO.h"
+
+1732557460 source:s:\dkclbv0.0.0.1\src\fwk\xmlfileio\pugixml.cpp
+	"pugixml.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<limits.h>
+	<wchar.h>
+	<math.h>
+	<float.h>
+	<istream>
+	<ostream>
+	<string>
+	<new>
+	<sys/stat.h>
+	<stdint.h>
+
+1726597872 s:\dkclbv0.0.0.1\src\\program_id.h
+
+1619709982 s:\dkclbv0.0.0.1\src\main\nitro_error.h
+
+1734396660 s:\dkclbv0.0.0.1\src\fwk\filetypeinfo\cfiletype.h
+
+1684086360 source:s:\dkclbv0.0.0.1\src\fwk\filetypeinfo\cfiletypemanager.cpp
+	"include.h"
+	"CFileTypeManager.h"
+	"CFileType.h"
+
+1684086360 s:\dkclbv0.0.0.1\src\fwk\filetypeinfo\cfiletypemanager.h
+
+1732235908 source:s:\dkclbv0.0.0.1\src\fwk\filetypeinfo\filetypeinfo.cpp
+	"include.h"
+	"Shellapi.h"
+	"math.h"
+
+1734395316 source:s:\dkclbv0.0.0.1\src\fwk\filetypeinfo\cfiletype.cpp
+	"include.h"
+	"CFileTypeManager.h"
+	"CFileType.h"
+
+1733616089 source:s:\dkclbv0.0.0.1\src\fwk\xmlfileio\cxmlfileio_get.cpp
+	"include.h"
+	"CXmlFileIO.h"
+
+1733618537 source:s:\dkclbv0.0.0.1\src\fwk\xmlfileio\cxmlfileio_set.cpp
+	"include.h"
+	"CXmlFileIO.h"
+
+1734394860 source:s:\dkclbv0.0.0.1\src\fwk\xmlfileio\cxmlfileio_szio.cpp
+	"include.h"
+	"CXmlFileIO.h"
+
+1728179486 source:s:\dkclbv0.0.0.1\src\main\nitro_error.cpp
+	"include.h"
+	<csignal>
+
+1734394948 source:s:\dkclbv0.0.0.1\src\program_id.cpp
+	"include.h"
+
+1729739427 source:s:\dkclbv0.0.0.1\src\fwk\auxillary\auxillary.cpp
+	"include.h"
+
+1619708417 source:s:\dkclbv0.0.0.1\src\fwk\auxillary\pwr_upscale.cpp
+	"include.h"
+
+1734396276 source:s:\dkclbv0.0.0.1\src\libs\stacktrace.cpp
+	<list>
+	"include.h"
+	"dbghelp.h"
 

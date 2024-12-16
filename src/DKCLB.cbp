@@ -7,36 +7,13 @@
 		<Option pch_mode="2" />
 		<Option default_target="Release" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Fwk\;Main\Types\;Main\;Libs\7zCrypto\;Res\;Libs\Nvwa\;Fwk\Auxillary\;Fwk\Config\;Fwk\FileIO\;Libs\;Libs\CrcFn\;_FileTypeClasses\;_FileTypeClasses\FileTypes\;" />
+		<Option virtualFolders="Fwk\;Main\Types\;Main\;Libs\7zCrypto\;Res\;Libs\Nvwa\;Fwk\Auxillary\;Fwk\Config\;Fwk\FileIO\;Libs\;Libs\CrcFn\;Fwk\XmlFileIO\;Fwk\FileTypeInfo\;DKCLB\;" />
 		<Build>
-			<Target title="Final Release -O3X -UPX">
-				<Option platforms="Windows;" />
-				<Option output="./../rel/dkclb.exe" prefix_auto="0" extension_auto="0" />
-				<Option working_dir="./../rel" />
-				<Option object_output="S:/build/dkclb/objs" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-fomit-frame-pointer" />
-					<Add option="-fexpensive-optimizations" />
-					<Add option="-flto" />
-					<Add option="-O3" />
-					<Add option="-DRELEASE_BUILD=1" />
-					<Add option="-DFINAL_RELEASE_MODE=1" />
-				</Compiler>
-				<Linker>
-					<Add option="-flto" />
-					<Add option="-s" />
-				</Linker>
-				<ExtraCommands>
-					<Add after='&quot;$(CODEBLOCKS)\UPX\upx.exe&quot; --best --compress-icons=0 &quot;$(PROJECT_DIR)$(TARGET_OUTPUT_FILE)&quot;' />
-				</ExtraCommands>
-			</Target>
 			<Target title="Release -O3X -UPX">
 				<Option platforms="Windows;" />
-				<Option output="./../bin_rm/DKCLB.exe" prefix_auto="0" extension_auto="0" />
-				<Option working_dir="./../bin_rm" />
-				<Option object_output="S:/build/dkclb/objs_rm" />
+				<Option output="./../rel/DKCLB.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="./../rel" />
+				<Option object_output="./../obj/rel" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -51,9 +28,9 @@
 			</Target>
 			<Target title="Debug Mode">
 				<Option platforms="Windows;" />
-				<Option output="./../bin_db/DKCLB [DM].exe" prefix_auto="0" extension_auto="0" />
-				<Option working_dir="./../bin_db/" />
-				<Option object_output="S:/build/dkclb/objs_db/" />
+				<Option output="./../dbg/DKCLB [DM].exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="./../dbg" />
+				<Option object_output="./../obj/dbg" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -80,6 +57,8 @@
 			<Add option="-mno-ms-bitfields" />
 			<Add option="-ftrack-macro-expansion=0" />
 			<Add option="-fno-diagnostics-show-caret" />
+			<Add option="-Wno-write-strings" />
+			<Add option="-std=gnu++11" />
 			<Add option="-DNITRO_WIN32=1" />
 			<Add option="-DALLEGRO_STATICLINK" />
 			<Add option="-DALLEGRO_NO_MAGIC_MAIN" />
@@ -133,6 +112,7 @@
 			<Add directory="Z_dlo_physics" />
 			<Add directory="Z_dlo_base" />
 			<Add directory="__ProgramClasses/EditorDialogs/DLV" />
+			<Add directory="Fwk/XmlFileIO" />
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,--stack,4194304" />
@@ -151,14 +131,21 @@
 			<Add library="libwinmm.a" />
 			<Add library="libdsound.a" />
 			<Add library="libpng.a" />
-			<Add library="C:/MinGW/lib/libz.a" />
+			<Add library="libz.a" />
 			<Add library="libhid.a" />
 			<Add library="libiphlpapi.a" />
 			<Add library="libntdll.a" />
 			<Add library="libuuid.a" />
 			<Add library="libshlwapi.a" />
+			<Add library="libdbghelp.a" />
 		</Linker>
+		<Unit filename="Fwk/Auxillary/Pwr_UpScale.cpp">
+			<Option virtualFolder="Fwk/Auxillary/" />
+		</Unit>
 		<Unit filename="Fwk/Auxillary/TextFormat.cpp">
+			<Option virtualFolder="Fwk/Auxillary/" />
+		</Unit>
+		<Unit filename="Fwk/Auxillary/auxillary.cpp">
 			<Option virtualFolder="Fwk/Auxillary/" />
 		</Unit>
 		<Unit filename="Fwk/Auxillary/auxillary.h">
@@ -216,6 +203,21 @@
 		<Unit filename="Fwk/FileSystem.cpp">
 			<Option virtualFolder="Fwk/" />
 		</Unit>
+		<Unit filename="Fwk/FileTypeInfo/CFileType.cpp">
+			<Option virtualFolder="Fwk/FileTypeInfo/" />
+		</Unit>
+		<Unit filename="Fwk/FileTypeInfo/CFileType.h">
+			<Option virtualFolder="Fwk/FileTypeInfo/" />
+		</Unit>
+		<Unit filename="Fwk/FileTypeInfo/CFileTypeManager.cpp">
+			<Option virtualFolder="Fwk/FileTypeInfo/" />
+		</Unit>
+		<Unit filename="Fwk/FileTypeInfo/CFileTypeManager.h">
+			<Option virtualFolder="Fwk/FileTypeInfo/" />
+		</Unit>
+		<Unit filename="Fwk/FileTypeInfo/FileTypeInfo.cpp">
+			<Option virtualFolder="Fwk/FileTypeInfo/" />
+		</Unit>
 		<Unit filename="Fwk/KFramework.cpp">
 			<Option virtualFolder="Fwk/" />
 		</Unit>
@@ -233,6 +235,30 @@
 		</Unit>
 		<Unit filename="Fwk/Utils.cpp">
 			<Option virtualFolder="Fwk/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/CXmlFileIO.cpp">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/CXmlFileIO.h">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/CXmlFileIO_Get.cpp">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/CXmlFileIO_Set.cpp">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/CXmlFileIO_SzIO.cpp">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/pugiconfig.h">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/pugixml.cpp">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
+		</Unit>
+		<Unit filename="Fwk/XmlFileIO/pugixml.h">
+			<Option virtualFolder="Fwk/XmlFileIO/" />
 		</Unit>
 		<Unit filename="Libs/7zCrypto/7zCrypto.cpp">
 			<Option virtualFolder="Libs/7zCrypto/" />
@@ -327,6 +353,9 @@
 		<Unit filename="Libs/Nvwa/static_mem_pool.h">
 			<Option virtualFolder="Libs/Nvwa/" />
 		</Unit>
+		<Unit filename="Libs/stacktrace.cpp">
+			<Option virtualFolder="Libs/" />
+		</Unit>
 		<Unit filename="Main/CMain.cpp">
 			<Option virtualFolder="Main/" />
 		</Unit>
@@ -357,6 +386,9 @@
 		<Unit filename="Main/Types/Vsx128.h">
 			<Option virtualFolder="Main/Types/" />
 		</Unit>
+		<Unit filename="Main/Types/checked.h">
+			<Option virtualFolder="Main/Types/" />
+		</Unit>
 		<Unit filename="Main/Types/dtime.cpp">
 			<Option virtualFolder="Main/Types/" />
 		</Unit>
@@ -381,29 +413,20 @@
 		<Unit filename="Main/include.h">
 			<Option virtualFolder="Main/" />
 		</Unit>
-		<Unit filename="_FileTypeClasses/CFileInfo.cpp">
-			<Option virtualFolder="_FileTypeClasses/" />
+		<Unit filename="Main/nitro_error.cpp">
+			<Option virtualFolder="Main/" />
 		</Unit>
-		<Unit filename="_FileTypeClasses/CFileInfo.h">
-			<Option virtualFolder="_FileTypeClasses/" />
-		</Unit>
-		<Unit filename="_FileTypeClasses/FileTypes/CDlvHandler.cpp">
-			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
-		</Unit>
-		<Unit filename="_FileTypeClasses/FileTypes/CDpxHandler.cpp">
-			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
-		</Unit>
-		<Unit filename="_FileTypeClasses/FileTypes/SerializeChunk.cpp">
-			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
-		</Unit>
-		<Unit filename="_FileTypeClasses/FileTypes/SerializeChunk.h">
-			<Option virtualFolder="_FileTypeClasses/FileTypes/" />
-		</Unit>
-		<Unit filename="_FileTypeClasses/file_chunk_id.h">
-			<Option virtualFolder="_FileTypeClasses/" />
+		<Unit filename="Main/nitro_error.h">
+			<Option virtualFolder="Main/" />
 		</Unit>
 		<Unit filename="program.cpp">
-			<Option virtualFolder="Main/" />
+			<Option virtualFolder="DKCLB/" />
+		</Unit>
+		<Unit filename="program_id.cpp">
+			<Option virtualFolder="Res/" />
+		</Unit>
+		<Unit filename="program_id.h">
+			<Option virtualFolder="Res/" />
 		</Unit>
 		<Unit filename="resources.rc">
 			<Option compilerVar="WINDRES" />

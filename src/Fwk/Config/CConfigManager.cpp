@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -610,8 +610,8 @@ U64 KConfig::GetHex64(TXT section, TXT variable, U64 def, INT index)
 	if(variable == "") variable = nullvariable_name;
 	CConfigSection* section_ptr = config_manager_.GetConfigSection(section); if(!section_ptr) return def;
 	CConfig* variable_ptr = section_ptr->GetConfig(variable); if(!variable_ptr) return def;
-	U32 result = variable_ptr->GetHex64(index);
-	if(result == 0x80000000) return def;
+	U64 result = variable_ptr->GetHex64(index);
+	if(result == 0x8000000000000000LL) return def;
 	return result;
 }
 S64 KConfig::GetVsx64(TXT section, TXT variable, S64 def, INT index)
@@ -621,7 +621,7 @@ S64 KConfig::GetVsx64(TXT section, TXT variable, S64 def, INT index)
 	CConfigSection* section_ptr = config_manager_.GetConfigSection(section); if(!section_ptr) return def;
 	CConfig* variable_ptr = section_ptr->GetConfig(variable); if(!variable_ptr) return def;
 	S64 result = variable_ptr->GetVsx64(index);
-	if(result == 0x80000000) return def;
+	if(result == 0x8000000000000000LL) return def;
 	return result;
 }
 U32 KConfig::GetHex(TXT section, TXT variable, U32 def, INT index)
@@ -743,4 +743,24 @@ void KConfig::Delete(TXT section)
 S32 KConfig::GetSetInt(TXT section, TXT variable, S32 value)
 {
     return SetInt(section, variable, GetInt(section, variable, value));
+}
+U32 KConfig::GetSetHex(TXT section, TXT variable, U32 value)
+{
+    return SetHex(section, variable, GetHex(section, variable, value));
+}
+U64 KConfig::GetSetHex64(TXT section, TXT variable, U64 value)
+{
+    return SetHex64(section, variable, GetHex64(section, variable, value));
+}
+S32 KConfig::GetSetVsx(TXT section, TXT variable, S32 value)
+{
+    return SetVsx(section, variable, GetVsx(section, variable, value));
+}
+S64 KConfig::GetSetVsx64(TXT section, TXT variable, S64 value)
+{
+    return SetVsx64(section, variable, GetVsx64(section, variable, value));
+}
+TXT KConfig::GetSetStr(TXT section, TXT variable, TXT value)
+{
+    return SetStr(section, variable, GetStr(section, variable, value));
 }

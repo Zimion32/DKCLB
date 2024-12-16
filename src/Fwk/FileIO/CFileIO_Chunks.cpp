@@ -1,6 +1,7 @@
+#include "include.h"
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -16,7 +17,6 @@
  *  You should have received a copy of the GNU General Public License along 
  *  with DKCLB. If not, see <https://www.gnu.org/licenses/>. 
 **===========================================================================*/
-#include "include.h"
 void CFileIO::SetupChunkValues_()
 {
     len_buffer_.clear();
@@ -108,20 +108,17 @@ can_throw_t CFileIO::SvFooter()
     for(IND i = (len_buffer_.size()-1); i >= 0; i--){ //must be in reverse order!!
         SvHex(len_buffer_[i], 4);
     }
-    B32 hash_value = SHA256(&buffer_[sha256_calc_start_], ByteSize()-sha256_calc_start_);
+    B32 hash_value = SHA256(
+        &buffer_[has_subfiles_ ?            subfile_offset_ :            sha256_calc_start_ ], 
+                (has_subfiles_ ?(ByteSize()-subfile_offset_):(ByteSize()-sha256_calc_start_)));
     U32 hash_write_position = GetW();
     for(IND i = 0; i < 32; i++){
         SvHex(0x00, 1);
         buffer_[hash_write_position++] = ((U08*)&hash_value)[i];
     }
-    return can_throw_t();
-}
-can_throw_t CFileIO::RcSHA256()
-{
-    B32 hash_value = SHA256(&buffer_[64], ByteSize()-64-32);
-    U32 hash_write_position = ByteSize()-32;
-    for(IND i = 0; i < 32; i++){
-        buffer_[hash_write_position++] = ((U08*)&hash_value)[i];
+    if(has_subfiles_){
+        subfile_sizes_.push_back(GetW() - subfile_offset_);
+        subfile_offset_ = GetW();
     }
     return can_throw_t();
 }
@@ -140,4 +137,32 @@ can_throw_t CFileIO::SvBeginSectionArray()
 can_throw_t CFileIO::SvEndSectionArray()
 {
     return SvChunkID(0);
+}
+
+//############################################################################//
+//############################################################################//
+
+void CFileIO::SvSubFile(U32 type)
+{
+    if(!has_subfiles_){
+        has_subfiles_ = true;
+        subfile_offset_ = GetW();
+        subfile_sizes_.clear();
+        subfile_dgeids_.clear();
+    }
+    subfile_dgeids_.push_back(type);
+}
+can_throw_tt<U32> CFileIO::GetSubFileCount()
+{
+    return subfile_sizes_.size();
+}
+can_throw_tt<U32> CFileIO::GetSubFileSize(U32 which)
+{
+    if(which >= subfile_sizes_.size()) return 0;
+    return subfile_sizes_[which];
+}
+can_throw_tt<DGEID> CFileIO::GetSubFileDgeid(U32 which)
+{
+    if(which >= subfile_dgeids_.size()) return (DGEID)0;
+    return subfile_dgeids_[which];
 }

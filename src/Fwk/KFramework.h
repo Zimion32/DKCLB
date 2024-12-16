@@ -1,7 +1,7 @@
 #pragma once
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -17,6 +17,20 @@
  *  You should have received a copy of the GNU General Public License along 
  *  with DKCLB. If not, see <https://www.gnu.org/licenses/>. 
 **===========================================================================*/
+#include "Types\dtime.h"
+class CFileType;
+struct SFileInfo
+{
+	TXT folderpath, file;
+	Vx< BITMAP* >* icons;
+	U64 filesize;
+	U32 attributes;
+	dtime created;
+	dtime modified;
+	CFileType*  typeinfo;
+    SFileInfo();
+	SFileInfo(TXT folderpath, TXT file, U64 filesize, U32 attributes, dtime& created, dtime& modified);
+};
 class KDeltaError
 {
     public:
@@ -36,6 +50,9 @@ class KDeltaError
 class KDebug
 {
     public:
+        void    Abort();
+        void    Abort(TXT information);
+        void    AbortBox(TXT information);
         void    Log(TXT text);
         void    Box();
         void    Box(TXT text);
@@ -49,8 +66,30 @@ class KDebug
         void    Box(INT value1, INT value2, INT value3, INT value4, TXT title);
         TXT		GetLastErrorAsString();
         void    Error(INT what);
+static  void    OnSigAbrt(int signal);
+static  void    CrashDump(PCONTEXT context);
                 KDebug();
                 ~KDebug();
+};
+class KClipboard
+{
+    public:
+        void    SetBinary(Vx<U08>& data, U32 id);
+        Vx<U08> GetBinary(U32 id);
+        void    SetText(TXT clipText);
+        TXT     GetText();
+        BIT     GetOperation();
+        void    SetOperation(BIT is_cutting);
+        BIT     HasFiles();
+        void    GetFilesList(Vx<TXT>& path_list);
+        void    CopyFiles(Vx<TXT>& path_list);
+        void    CutFiles(Vx<TXT>& path_list);
+        void    PasteFiles(TXT where, Vx<TXT>& error_list);
+        
+        BIT     SetBitmapData(BMP bmp);
+        
+    private:
+        void    CutCopyFilesList_(Vx<TXT>& path_list, BIT is_cutting);
 };
 class KSystem
 {
@@ -74,8 +113,9 @@ static  INT		MainCursorIndex;
         BIT     OneInstanceOnly();
         INT     GetTaskBarHeight();
         void    LoadCursors();
-        void    CheckAndResetCursor();
+        void    CheckAndResetCursor(INT c);
         void    ChangeCursor(INT c);
+        void    FixFullScreenCursor();
         void    PlayRegistrySound(TXT app, TXT event);
         
     private:
@@ -100,8 +140,12 @@ class KFileSystem
         TXT		FileName(TXT path_string);
         TXT		FileDot(TXT path_string);
         TXT		FileExt(TXT path_string);
+        void 	Run(TXT command, BIT wait);
+        void 	RunFile(TXT path, BIT wait);
+        void 	RunFolder(TXT path, BIT wait);
         TXT 	ProgramDirectory();
         TXT 	ProgramFile();
+        BIT     CleanFolderPathText(TXT& text);
         BIT     CleanFolderNameText(TXT& text);
         BIT 	CleanFilenameText(TXT& text, BIT extensive_validation);
         BIT 	CleanFileExtension(TXT& x);
@@ -139,8 +183,11 @@ class KFileSystem
         void 	FolderGetFolderNamesList(TXT path, TXT_callback_t cb);
         void 	FolderGetObjectNamesList(TXT path, TXT_callback_t cb);
         //============================================
+        void    FolderGetFileNamesListEx(TXT path, Vx<SFileInfo>& list);
+        void    FolderGetFolderNamesListEx(TXT path, Vx<SFileInfo>& list);
         TXT     GetDriveLabel(TXT drive);
-    
+        void    GetFileInfo(TXT filepath, SFileInfo& info);
+        
     private:
         BIT 	MoveFolder_(TXT old_path, TXT new_path, Vx<TXT>& error_list, BIT toplevel);
         BIT 	CopyFolder_(TXT old_path, TXT new_path, Vx<TXT>& error_list, BIT toplevel);
@@ -148,6 +195,30 @@ class KFileSystem
 class KUtils
 {
     public:
+        void    SerializeVector(Vx< Vx<U08> >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx<U16> >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx<U32> >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx<S08> >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx<S16> >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx<S32> >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx< Vx<U08> > >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx< Vx<U16> > >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx< Vx<U32> > >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx< Vx<S08> > >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx< Vx<S16> > >& in, Vx<U08>& out);
+        void    SerializeVector(Vx< Vx< Vx<S32> > >& in, Vx<U08>& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx<U08> >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx<U16> >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx<U32> >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx<S08> >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx<S16> >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx<S32> >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx< Vx<U08> > >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx< Vx<U16> > >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx< Vx<U32> > >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx< Vx<S08> > >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx< Vx<S16> > >& out);
+        void    UnserializeVector(Vx<U08>& in, Vx< Vx< Vx<S32> > >& out);
         U64     SuperRandom();
         TXT     ConvertToUrlBase64(U08* data, U32 size);
         Vx<U08> ConvertFromUrlBase64(TXT str);
@@ -179,8 +250,8 @@ static  INT     w_persist_index_;
         TXT		ToUpper(TXT x);
         TXT		ToLower(TXT x);
         TXT     FileSizeXP(U64 size);
+        Vx<TXT> InfixToPostfix(TXT infix);
 };
-#undef CTG
 class KRegistry
 {
     public:
@@ -243,11 +314,17 @@ class KConfig
         void	Copy(TXT src_section, TXT dst_section);
         void	Delete(TXT section);
         S32	    GetSetInt(TXT section, TXT variable, S32 value);
+        U32     GetSetHex(TXT section, TXT variable, U32 value);
+        U64     GetSetHex64(TXT section, TXT variable, U64 value);
+        S32     GetSetVsx(TXT section, TXT variable, S32 value);
+        S64     GetSetVsx64(TXT section, TXT variable, S64 value);
+        TXT     GetSetStr(TXT section, TXT variable, TXT value);
 };
 
 //Objects
 extern KDeltaError DeltaError;
 extern KDebug Debug;
+extern KClipboard Clipboard;
 extern KSystem System;
 extern KFileSystem FileSystem;
 extern KUtils Utils;
@@ -262,6 +339,11 @@ template<typename T> T Derr(TXT function_name, T value, TXT error_string){
 void Derr(TXT function_name, TXT error_string);
 
 #define De(...) Derr(__PRETTY_FUNCTION__, __VA_ARGS__)
+
+
+INT TileModulus(INT x, INT tilesize);
+INT InBox(INT xx, INT yy, INT l, INT t, INT r, INT b);
+INT InBoxClipped(INT xx, INT yy, INT l, INT t, INT r, INT b, SRect clip);
 
 #define CURSOR_ARROW		 0
 #define CURSOR_WAIT			 1
