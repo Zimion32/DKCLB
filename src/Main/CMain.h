@@ -1,7 +1,7 @@
 #pragma once
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -20,6 +20,9 @@
 class CMain
 {
 	public:
+static LONG             DebugCrashFunc(_EXCEPTION_POINTERS *exception_info);
+static LONG             CrashFunc(LPEXCEPTION_POINTERS p);
+static BOOL CALLBACK    CrashDialog(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam);
 static INT              Init(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, INT nCmdShow);
 static void             Fail();
 static void             Exit(INT failure = 0);

@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -29,7 +29,30 @@ static void SetupLogging()
     
     DeltaError.Configure(ENABLE_LOGGING_DELTAERRORS, true);
 }
-
+extern U32 abort_called_status;
+LONG CMain::DebugCrashFunc(_EXCEPTION_POINTERS *exception_info)
+{
+    abort_called_status = 0;
+    Debug.CrashDump(exception_info->ContextRecord);
+	return EXCEPTION_CONTINUE_SEARCH;
+	//return EXCEPTION_CONTINUE_EXECUTION;
+}
+LONG CMain::CrashFunc(LPEXCEPTION_POINTERS p)
+{
+	DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(55555), NULL, CrashDialog);
+	return EXCEPTION_EXECUTE_HANDLER;
+}
+BOOL CALLBACK CMain::CrashDialog(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
+{
+	switch(Message)
+	{
+		case WM_INITDIALOG:	{PostMessage(hwnd, WM_MOUSEMOVE, 0, 0); return true;} break;
+		case WM_MOUSEMOVE:	{SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE|SWP_NOSIZE);} break;
+		case WM_COMMAND:    {if(LOWORD(wParam) == IDOK){TerminateProcess(GetCurrentProcess(), 0);}} break;
+		default:            return false; break;
+	}
+	return true;
+}
 void WinExit()
 {
 	Debug.Log("EXIT SUCCESSFUL");
@@ -59,8 +82,12 @@ INT CMain::Init(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, I
 	for(INT i = 0; i < num_args; i++) args.push_back(String.FromWide(argv[i]));
 	
 	Debug.Log("CMain::Init()");
+	if(!System.OneInstanceOnly()) return Error::NONE;
 	SetCurrentDirectory(String.ToWideC(FileSystem.ProgramDirectory()));
+	ConvertThreadToFiber(NULL);
     SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);
+	//SetUnhandledExceptionFilter((LPTOP_LEVEL_EXCEPTION_FILTER)&CrashFunc);
+    AddVectoredExceptionHandler(1, (PVECTORED_EXCEPTION_HANDLER)&DebugCrashFunc);
 
 	INI.Open(FileSystem.FileName(FileSystem.ProgramFile())+".ini");
 	SetupLogging();

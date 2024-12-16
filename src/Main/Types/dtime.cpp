@@ -1,6 +1,6 @@
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -111,4 +111,25 @@ void dtime::RefreshStamp()
 	_stamp |= (U64(_M) << (6+6+5+5));
 	_stamp |= (U64(_Y) << (6+6+5+5+4));
 	_stamp &= 0xFFFFFFFFFFLL; //14 bits for years
+}
+TXT dtime::ToDataString() const
+{
+    TXT result = String.FromInt(_Y,4);
+    result += String.FromInt(_M+1,2);
+    result += String.FromInt(_D+1,2);
+    result += String.FromInt(_h,2);
+    result += String.FromInt(_m,2);
+    result += String.FromInt(_s,2);
+    return result;
+}
+dtime& dtime::SetToData(TXT datastring)
+{
+    _Y = String.ToInt(datastring.substr(0,4));
+    _M = String.ToInt(datastring.substr(4,2))-1;
+    _D = String.ToInt(datastring.substr(6,2))-1;
+    _h = String.ToInt(datastring.substr(8,2));
+    _m = String.ToInt(datastring.substr(10,2));
+    _s = String.ToInt(datastring.substr(12,2));
+	RefreshStamp();
+	return *this;
 }

@@ -1,7 +1,7 @@
 #pragma once
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -35,9 +35,11 @@
 #undef MoveDirectory //just incase
 #undef CreateFolder //just incase
 #undef CreateDirectory
-void Nullify(BMP volatile& object);
+void NullifyF(BMP& object);
 void Nullify(BMP& object);
 void Nullify(BMP& object, STR what);
 void Nullify(SAMPLE*& object);
 void Nullify(FONT*& object);
 void Nullify2(BMP object);
+void AllegroCompleteNullifications();
+#include <wtsapi32.h>

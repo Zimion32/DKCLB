@@ -16,19 +16,23 @@ template <class T>
 struct checked_string
 {
     T value;
+    U64 tracking;
+    //==================================================================
+    checked_string<T>& set_track(U64 track){tracking = track; return *this;}
+    U64 get_track(){return tracking;}
     //==================================================================
     checked_string<T>(){}
-    checked_string<T>(const T& str): value(str) {}
-    checked_string<T>(const checked_string<T>& str): value(str.value) {}
-    checked_string<T>(const checked_string<T>& str, size_t pos, size_t len = npos): value(str.value,pos,len) {}
-    checked_string<T>(const char* s): value(s) {}
-    checked_string<T>(const char* s, size_t n): value(s, n) {}
-    checked_string<T>(size_t n, char c): value(n,c) {}
-    template<class InputIterator> checked_string<T>(InputIterator first, InputIterator last): value(first,last) {}
+    checked_string<T>(const T& str): value(str), tracking(0LL) {}
+    checked_string<T>(const checked_string<T>& str): value(str.value), tracking(str.tracking) {}
+    checked_string<T>(const checked_string<T>& str, size_t pos, size_t len = npos): value(str.value,pos,len), tracking(str.tracking) {}
+    checked_string<T>(const char* s): value(s), tracking(0LL) {}
+    checked_string<T>(const char* s, size_t n): value(s, n), tracking(0LL) {}
+    checked_string<T>(size_t n, char c): value(n,c), tracking(0LL) {}
+    template<class InputIterator> checked_string<T>(InputIterator first, InputIterator last): value(first,last), tracking(0LL) {}
     ~checked_string<T>(){}
-    checked_string<T>& operator=(const checked_string<T>& str){value = str.value; return *this;}
-    checked_string<T>& operator=(const char* s){value = s; return *this;}
-    checked_string<T>& operator=(char c){value = c; return *this;}
+    checked_string<T>& operator=(const checked_string<T>& str){value = str.value; tracking = str.tracking; return *this;}
+    checked_string<T>& operator=(const char* s){value = s; tracking = 0LL; return *this;}
+    checked_string<T>& operator=(char c){value = c; tracking = 0LL; return *this;}
     typename T::iterator begin() {return value.begin();}  typename T::const_iterator begin()  const {return value.begin();}
     typename T::iterator end()   {return value.end();}    typename T::const_iterator end()    const {return value.end();}
     typename T::iterator rbegin(){return value.rbegin();} typename T::const_iterator rbegin() const {return value.rbegin();}

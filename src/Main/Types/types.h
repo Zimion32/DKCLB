@@ -1,7 +1,7 @@
 #pragma once
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -19,8 +19,6 @@
 **===========================================================================*/
 #define BUILD_BUG_ON(condition) ((void)sizeof(char[1 - 2*!!(condition)]))
 #include <cstddef> //Standard Definitions: ptrdiff_t, size_t, NULL
-
-#include "checked.h" //checked vector and string types
 
 typedef unsigned long long          uint64_t;
 typedef unsigned int                uint32_t;
@@ -64,23 +62,47 @@ typedef     int64_t  BLL;
 typedef        void  VOI;
 typedef      double  POS;
 
+#include "checked.h" //checked vector and string types
 
+#define DD2(lx, x) ((lx) + (((x) - (lx)) * delta))
+struct SPoint;
+struct SRect;
+struct SFPoint;
+struct SFRect;
 struct SPoint
 {
     S32 x, y;
     SPoint(): x(0), y(0) {}
     SPoint(S32 x, S32 y): x(x), y(y) {}
+    SPoint(S32 dummy): x((S32)0x80000000), y((S32)0x80000000) {}
     SPoint(const SPoint& other): x(other.x), y(other.y) {}
     SPoint(SPoint* other): x(other->x), y(other->y) {}
+    SPoint(const SFPoint& other);
+    SPoint(SFPoint* other);
     SPoint& Translate(S32 xx, S32 yy){x+=xx; y+=yy; return *this;}
+    BIT operator==(const SPoint& right){
+        return ((x == right.x) && (y == right.y));
+    }
+    BIT operator!=(const SPoint& right){
+        return ((x != right.x) || (y != right.y));
+    }
+    operator SFPoint();
+    SPoint& ScaleBy(SPoint scale){x *= scale.x; y *= scale.y; return *this;}
+    SPoint& ScaleByInverseOf(SPoint scale);
+    SPoint Delta(SPoint p, F64 delta){return SPoint(DD2(p.x, x),DD2(p.y, y));}
 };
+static SPoint operator+(SPoint lhs, SPoint rhs){return SPoint(lhs.x + rhs.x, lhs.y + rhs.y);}
+static SPoint operator-(SPoint lhs, SPoint rhs){return SPoint(lhs.x - rhs.x, lhs.y - rhs.y);}
 struct SRect
 {
     S32 l, t, r, b;
     SRect(): l(0), t(0), r(0), b(0) {}
+    SRect(S32 dummy): l(-0x7FFFFFFF), t(-0x7FFFFFFF), r(0x7FFFFFFF), b(0x7FFFFFFF) {}
     SRect(S32 l, S32 t, S32 r, S32 b): l(l), t(t), r(r), b(b) {}
     SRect(const SRect& other): l(other.l), t(other.t), r(other.r), b(other.b) {}
     SRect(SRect* other): l(other->l), t(other->t), r(other->r), b(other->b) {}
+    SRect(const SFRect& other);
+    SRect(SFRect* other);
     SRect& Translate(S32 xx, S32 yy){l+=xx; t+=yy; r+=xx; b+=yy; return *this;}
     SRect& ClipWith(SRect other){
         if(other.l > l) l = other.l;
@@ -96,24 +118,82 @@ struct SRect
         if(other->b < b) b = other->b;
         return *this;
     }
+    SRect& ExpandBy(SRect other){
+        if(other.l < l) l = other.l;
+        if(other.t < t) t = other.t;
+        if(other.r > r) r = other.r;
+        if(other.b > b) b = other.b;
+        return *this;
+    }
+    SRect& ExpandBy(SRect* other){
+        if(other->l < l) l = other->l;
+        if(other->t < t) t = other->t;
+        if(other->r > r) r = other->r;
+        if(other->b > b) b = other->b;
+        return *this;
+    }
+    BIT operator==(const SRect& right){
+        return ((l == right.l) && (t == right.t) && (r == right.r) && (b == right.b));
+    }
+    BIT operator!=(const SRect& right){
+        return ((l != right.l) || (t != right.t) || (r != right.r) || (b != right.b));
+    }
+    operator SFRect();
+    SRect& ScaleBy(SPoint scale){l *= scale.x; t *= scale.y; r *= scale.x; b *= scale.y; return *this;}
+    SRect& ScaleByInverseOf(SPoint scale);
+    BIT IsEmpty(){
+        return ((r <= l) || (b <= t));
+    }
+    SPoint Span(){
+        return SPoint((r - l),(b - t));
+    }
+    SRect& FlipBy(S32 flip){
+        if(flip & 1){S32 tmp = l; l = -r; r = -tmp;}//flip back
+        if(flip & 2){S32 tmp = t; t = -b; b = -tmp;}//flip back
+        return *this;
+    }
+    SRect Delta(SRect p, F64 delta){return SRect(
+        DD2(p.l, l),DD2(p.t, t),DD2(p.r, r),DD2(p.b, b));}
 };
+static SRect operator+(SRect lhs, SRect rhs){return SRect(lhs.l + rhs.l, lhs.t + rhs.t, lhs.r + rhs.r, lhs.b + rhs.b);}
+static SRect operator-(SRect lhs, SRect rhs){return SRect(lhs.l - rhs.l, lhs.t - rhs.t, lhs.r - rhs.r, lhs.b - rhs.b);}
+static SRect operator+(SRect lhs, SPoint rhs){return SRect(lhs.l + rhs.x, lhs.t + rhs.y, lhs.r + rhs.x, lhs.b + rhs.y);}
+static SRect operator-(SRect lhs, SPoint rhs){return SRect(lhs.l - rhs.x, lhs.t - rhs.y, lhs.r - rhs.x, lhs.b - rhs.y);}
 struct SFPoint
 {
     FLO x, y;
     INT flags, side;
     SFPoint(): x(0), y(0) {}
     SFPoint(FLO x, FLO y): x(x), y(y) {}
+    SFPoint(S32 dummy): x((S32)0x80000000), y((S32)0x80000000) {}
     SFPoint(const SFPoint& other) {*this = other;}
     SFPoint(SFPoint* other) {*this = *other;}
+    SFPoint(const SPoint& other);
+    SFPoint(SPoint* other);
     SFPoint& Translate(FLO xx, FLO yy){x+=xx; y+=yy; return *this;}
+    BIT operator==(const SFPoint& right){
+        return ((x == right.x) && (y == right.y));
+    }
+    BIT operator!=(const SFPoint& right){
+        return ((x != right.x) || (y != right.y));
+    }
+    operator SPoint();
+    SFPoint& ScaleBy(SFPoint scale){x *= scale.x; y *= scale.y; return *this;}
+    SFPoint& ScaleByInverseOf(SFPoint scale);
+    SFPoint Delta(SFPoint p, F64 delta){return SFPoint(DD2(p.x, x),DD2(p.y, y));}
 };
+static SFPoint operator+(SFPoint lhs, SFPoint rhs){return SFPoint(lhs.x + rhs.x, lhs.y + rhs.y);}
+static SFPoint operator-(SFPoint lhs, SFPoint rhs){return SFPoint(lhs.x - rhs.x, lhs.y - rhs.y);}
 struct SFRect
 {
     F64 l, t, r, b;
     SFRect(): l(0), t(0), r(0), b(0) {}
     SFRect(F64 l, F64 t, F64 r, F64 b): l(l), t(t), r(r), b(b) {}
+    SFRect(S32 dummy): l(-0x7FFFFFFF), t(-0x7FFFFFFF), r(0x7FFFFFFF), b(0x7FFFFFFF) {}
     SFRect(const SFRect& other): l(other.l), t(other.t), r(other.r), b(other.b) {}
     SFRect(SFRect* other): l(other->l), t(other->t), r(other->r), b(other->b) {}
+    SFRect(const SRect& other);
+    SFRect(SRect* other);
     SFRect& Translate(F64 xx, F64 yy){l+=xx; t+=yy; r+=xx; b+=yy; return *this;}
     SFRect& ClipWith(SFRect other){
         if(other.l > l) l = other.l;
@@ -129,7 +209,47 @@ struct SFRect
         if(other->b < b) b = other->b;
         return *this;
     }
+    SFRect& ExpandBy(SFRect other){
+        if(other.l < l) l = other.l;
+        if(other.t < t) t = other.t;
+        if(other.r > r) r = other.r;
+        if(other.b > b) b = other.b;
+        return *this;
+    }
+    SFRect& ExpandBy(SFRect* other){
+        if(other->l < l) l = other->l;
+        if(other->t < t) t = other->t;
+        if(other->r > r) r = other->r;
+        if(other->b > b) b = other->b;
+        return *this;
+    }
+    BIT operator==(const SFRect& right){
+        return ((l == right.l) && (t == right.t) && (r == right.r) && (b == right.b));
+    }
+    BIT operator!=(const SFRect& right){
+        return ((l != right.l) || (t != right.t) || (r != right.r) || (b != right.b));
+    }
+    operator SRect();
+    SFRect& ScaleBy(SFPoint scale){l *= scale.x; t *= scale.y; r *= scale.x; b *= scale.y; return *this;}
+    SFRect& ScaleByInverseOf(SFPoint scale);
+    BIT IsEmpty(){
+        return ((r <= l) || (b <= t));
+    }
+    SFPoint Span(){
+        return SFPoint((r - l),(b - t));
+    }
+    SFRect& FlipBy(S32 flip){
+        if(flip & 1){F64 tmp = l; l = -r; r = -tmp;}//flip back
+        if(flip & 2){F64 tmp = t; t = -b; b = -tmp;}//flip back
+        return *this;
+    }
+    SFRect Delta(SFRect p, F64 delta){return SFRect(
+        DD2(p.l, l),DD2(p.t, t),DD2(p.r, r),DD2(p.b, b));}
 };
+static SFRect operator+(SFRect lhs, SFRect rhs){return SFRect(lhs.l + rhs.l, lhs.t + rhs.t, lhs.r + rhs.r, lhs.b + rhs.b);}
+static SFRect operator-(SFRect lhs, SFRect rhs){return SFRect(lhs.l - rhs.l, lhs.t - rhs.t, lhs.r - rhs.r, lhs.b - rhs.b);}
+static SFRect operator+(SFRect lhs, SFPoint rhs){return SFRect(lhs.l + rhs.x, lhs.t + rhs.y, lhs.r + rhs.x, lhs.b + rhs.y);}
+static SFRect operator-(SFRect lhs, SFPoint rhs){return SFRect(lhs.l - rhs.x, lhs.t - rhs.y, lhs.r - rhs.x, lhs.b - rhs.y);}
 struct SFLine
 {
     union{
@@ -159,8 +279,16 @@ struct SFLine
     BIT Intersect(SFPoint& I, const SFLine& B, BIT all_edges = true);
     INT Tolerance(SFPoint& I, const SFLine& B, FLO tolerance);
     INT CalcSide(INT wall);
+    BIT operator==(const SFLine& right){
+        return ((x0 == right.x0) && (y0 == right.y0) && (x1 == right.x1) && (y1 == right.y1));
+    }
+    BIT operator!=(const SFLine& right){
+        return ((x0 != right.x0) || (y0 != right.y0) || (x1 != right.x1) || (y1 != right.y1));
+    }
+    SFLine Delta(SFLine p, F64 delta){return SFLine(
+        DD2(p.x0, x0),DD2(p.y0, y0),DD2(p.x1, x1),DD2(p.y1, y1));}
 };
-
+#undef DD2
 
 
 #pragma pack(push, 1)
@@ -215,106 +343,74 @@ struct B32
 };
 class UVL
 {
-	friend class CFileIO;
-	protected:
-		void* data;
-		U32 length;
-		UVL();
-		UVL(const UVL& o);
-		UVL(void* qData, U32 qLength)
-		{
-			data = qData;
-			length = ((qLength-1) & 3);
-		}
-		
 	public:
+		PTR data;
+		U32 length;
+		UVL(){};
+		UVL(const UVL& o){};
+		UVL(PTR d, U32 len)
+		{
+			data = d;
+			length = ((len-1) & 3);
+		}
 		operator U32(){
 			switch(length){
 				case 0x00: return (((U32)(*((U08*)data))) & ((U32)0x000000FF));
 				case 0x01: return (((U32)(*((U16*)data))) & ((U32)0x0000FFFF));
-				case 0x02: return ((((U32)(*((U16*)data))) & ((U32)0x0000FFFF)) | ((((U32)(*(((U08*)data)+2))) << 16) & ((U32)0x00FF0000)));
 				case 0x03: return (((U32)(*((U32*)data))) & ((U32)0xFFFFFFFF));
 			} return 0; }
 		UVL& operator=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) = ((U08)(i & ((U32)0x000000FF)));		break;
 				case 0x01:	(*((U16*)data)) = ((U16)(i & ((U32)0x0000FFFF)));		break;
-				case 0x02:	(*((U16*)data)) = ((U16)(i & ((U32)0x0000FFFF)));
-						(*(((U08*)data)+2)) = ((U08)((i >> 16) & ((U32)0x000000FF)));	break;
 				case 0x03:	(*((U32*)data)) = ((U32)(i & ((U32)0xFFFFFFFF)));		break;
 			} return *this; }
 		UVL& operator+=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) += ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) += ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:{	U32 value = ((((U32)(*((U16*)data))) & ((U32)0x0000FFFF)) | ((((U32)(*(((U08*)data)+2))) << 16) & 0x00FF0000));
-							value			  += 		 (i & ((U32)0x00FFFFFF));
-							(*((U16*)data)) = ((U16)(value & ((U32)0x0000FFFF)));
-							(*(((U08*)data)+2)) = ((U08)((value >> 16) & ((U32)0x000000FF)));}break;
 				case 0x03:	(*((U32*)data)) += ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator-=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) -= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) -= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:{	U32 value = ((((U32)(*((U16*)data))) & ((U32)0x0000FFFF)) | ((((U32)(*(((U08*)data)+2))) << 16) & 0x00FF0000));
-							value			  -= 		 (i & ((U32)0x00FFFFFF));
-							(*((U16*)data)) = ((U16)(value & ((U32)0x0000FFFF)));
-							(*(((U08*)data)+2)) = ((U08)((value >> 16) & ((U32)0x000000FF)));}break;
 				case 0x03:	(*((U32*)data)) -= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator*=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) *= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) *= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:{	U32 value = ((((U32)(*((U16*)data))) & ((U32)0x0000FFFF)) | ((((U32)(*(((U08*)data)+2))) << 16) & 0x00FF0000));
-							value			  *= 		 (i & ((U32)0x00FFFFFF));
-							(*((U16*)data)) = ((U16)(value & ((U32)0x0000FFFF)));
-							(*(((U08*)data)+2)) = ((U08)((value >> 16) & ((U32)0x000000FF)));}break;
 				case 0x03:	(*((U32*)data)) *= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator/=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) /= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) /= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:{	U32 value = ((((U32)(*((U16*)data))) & ((U32)0x0000FFFF)) | ((((U32)(*(((U08*)data)+2))) << 16) & 0x00FF0000));
-							value			  /= 		 (i & ((U32)0x00FFFFFF));
-							(*((U16*)data)) = ((U16)(value & ((U32)0x0000FFFF)));
-							(*(((U08*)data)+2)) = ((U08)((value >> 16) & ((U32)0x000000FF)));}break;
 				case 0x03:	(*((U32*)data)) /= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator%=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) %= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) %= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:{	U32 value = ((((U32)(*((U16*)data))) & ((U32)0x0000FFFF)) | ((((U32)(*(((U08*)data)+2))) << 16) & 0x00FF0000));
-							value			  %= 		 (i & ((U32)0x00FFFFFF));
-							(*((U16*)data)) = ((U16)(value & ((U32)0x0000FFFF)));
-							(*(((U08*)data)+2)) = ((U08)((value >> 16) & ((U32)0x000000FF)));}break;
 				case 0x03:	(*((U32*)data)) %= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator&=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) &= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) &= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:	(*((U16*)data)) &= ((U16)(i & ((U32)0x0000FFFF)));
-						(*(((U08*)data)+2)) &= ((U08)((i >> 16) & ((U32)0x000000FF))); break;
 				case 0x03:	(*((U32*)data)) &= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator|=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) |= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) |= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:	(*((U16*)data)) |= ((U16)(i & ((U32)0x0000FFFF)));
-						(*(((U08*)data)+2)) |= ((U08)((i >> 16) & ((U32)0x000000FF))); break;
 				case 0x03:	(*((U32*)data)) |= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 		UVL& operator^=(const U32& i){
 			switch(length){
 				case 0x00:	(*((U08*)data)) ^= ((U08)(i & ((U32)0x000000FF)));	break;
 				case 0x01:	(*((U16*)data)) ^= ((U16)(i & ((U32)0x0000FFFF)));	break;
-				case 0x02:	(*((U16*)data)) ^= ((U16)(i & ((U32)0x0000FFFF)));
-						(*(((U08*)data)+2)) ^= ((U08)((i >> 16) & ((U32)0x000000FF))); break;
 				case 0x03:	(*((U32*)data)) ^= ((U32)(i & ((U32)0xFFFFFFFF)));	break;
 			} return *this; }
 };
@@ -417,3 +513,31 @@ class VectorBuilder
 		VectorBuilder(){}
 		~VectorBuilder(){}
 };
+
+///This creates a deferred delete system to help prevent crashes in case of access bugs.
+///It is effectively a last resort to improve program stability.
+typedef void (*DeferredDeleteFn)(PTR pointer);
+class DeferredDelete
+{
+    public:
+        static Vx<DeferredDeleteFn> values;
+        static Vx<PTR> pointers;
+		template <typename T> void operator[](T* value){
+		    values.push_back([](PTR pointer){delete[] (T*)pointer;});
+		    pointers.push_back((PTR)value);
+		}
+		template <typename T> void operator()(T* value){
+		    values.push_back([](PTR pointer){delete (T*)pointer;});
+		    pointers.push_back((PTR)value);
+		}
+		void ProcessDeletions(){
+		    for(U32 i = 0; i < values.size(); i++){
+                values[i](pointers[i]);
+		    }
+		    values.clear();
+		    pointers.clear();
+		}
+		DeferredDelete(){}
+		~DeferredDelete(){}
+};
+extern DeferredDelete defdel;

@@ -1,6 +1,7 @@
+#include "include.h"
 /*===========================================================================*\
  *  DKC Level Builder Toolkit
- *  Copyright (C) 2023 Simion32
+ *  Copyright (C) 2025 Simion32
  *
  *  This file is part of the DKC Level Builder Toolkit (DKCLB).
  *
@@ -16,8 +17,6 @@
  *  You should have received a copy of the GNU General Public License along 
  *  with DKCLB. If not, see <https://www.gnu.org/licenses/>. 
 **===========================================================================*/
-#include "include.h"
-
 dtime EXTHD::GetDateLastSaved()
 {
     U64 result = (
